@@ -1,0 +1,214 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Top header */
+#changingText {
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+#changingText a {
+    color: #ffffff; /* Custom link color */
+    font-weight: bold; /* Bold link */
+}
+
+
+/* middle header global icon */
+.modal-md {
+    max-width: 400px; /* Set your desired medium width */
+  }
+
+  .global .dropdown-menu {
+    height: 400px;
+    overflow: auto;
+    width: 400px;
+}
+
+.global .dropdown-item {
+    font-size: 16px;
+    color: #333;
+    position: relative;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.global .dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.global .dropdown-item:hover {
+    background-color: #dde2e7;
+}
+
+.global .check-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+}
+
+.global .dropdown-item.active .check-icon {
+    display: inline-block;
+}
+
+.global .close-dropdown {
+    cursor: pointer;
+}
+
+.global .dropdown-item.active,
+.global .dropdown-item:active {
+    color: black;
+    text-decoration: none;
+    background-color: white;
+}
+
+
+
+
+/* Men women section */
+  /* Image Hover Zoom Effect */
+  .hover-zoom {
+    overflow: hidden;
+    position: relative;
+}
+
+.hover-zoom img {
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.hover-zoom:hover img {
+    transform: scale(1.1);
+}
+
+/* Text Overlay Styling */
+.content-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.content-overlay h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.btn-custom {
+    background-color: white;
+    color: black;
+    border: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: black;
+    color: white;
+}
+
+
+/* product image */
+/* General styling for the product card */
+.product .image-container {
+    position: relative;
+    width: 100%;
+    max-width: 350px; /* Maximum width for responsiveness */
+    height: auto;
+    overflow: hidden;
+    aspect-ratio: 4 / 5; /* Maintain aspect ratio for responsiveness */
+}
+
+.product .image-container img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Smooth transitions */
+}
+
+.product .image-container img.second-image {
+    opacity: 0;
+    transform: scale(1.05); /* Slightly zoomed-out initially for hover effect */
+}
+
+.product .image-container:hover img.first-image {
+    opacity: 0;
+    transform: scale(1.05); /* Slightly zoomed-in on hover */
+}
+
+.product .image-container:hover img.second-image {
+    opacity: 1;
+    transform: scale(1); /* Restore to normal size on hover */
+}
+
+/* Badge styling */
+.product .image-container .badge {
+    font-size: 12px;
+    padding: 5px 10px;
+    z-index: 1;
+    opacity: 0.9;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .product .image-container {
+        max-width: 100%;
+        aspect-ratio: 3 / 4; /* Adjust aspect ratio for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .product .image-container {
+        aspect-ratio: 1 / 1; /* Square aspect ratio for very small screens */
+    }
+
+    .product .image-container .badge {
+        font-size: 10px;
+        padding: 4px 8px; /* Adjust badge size for smaller screens */
+    }
+}
+
+
+ /* Checkout page */
+ .payment-option {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.payment-option img {
+    width: 60px;
+    height: 30px;
+}
+
+.payment-option.selected {
+    border-color: #28a745;
+    background-color: #f9f9f9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .payment-option img {
+        width: 50px;
+    }
+}
+
+
+/* product details */
