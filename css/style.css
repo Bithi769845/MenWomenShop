@@ -212,41 +212,30 @@ body {
 
 
 /* product details */
-   /* Custom styles for zoom functionality */
-   .zoom-container {
-    position: relative;
+
+
+.DetailsProduct .zoomimage .carousel-item img {
+    transition: transform 0.2s ease-out; /* Smooth transition for zoom effect */
+    cursor: zoom-in; /* Change cursor to indicate zoom functionality */
     overflow: hidden;
-    cursor: zoom-in;
   }
-
-  .zoom-container img {
-    transition: transform 0.3s ease;
-  }
-
-  .zoom-container:hover img {
-    transform: scale(1.2);
-  }
-
-  .zoom-container.clicked img {
-    transform: scale(2);
-  }
-
-  .thumbnail-carousel img {
+  
+  .DetailsProduct .thumbnail-carousel img {
     height: 130px;
     object-fit: cover;
     cursor: pointer;
   }
 
   /* Style for black carousel control icons */
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
+  .DetailsProduct .carousel-control-prev-icon,
+  .DetailsProduct .carousel-control-next-icon {
     background-color: black;
     width: 35px;
     height: 35px;
     border-radius: 20px;
   }
 
-  .carousel-indicators [data-bs-target] {
+  .DetailsProduct .carousel-indicators [data-bs-target] {
     background-color: rgb(255, 255, 255);
     width: 10px;
     height: 10px;
@@ -254,22 +243,22 @@ body {
     border-radius: 40px;
   }
 
-  .suggested-section h4 {
+  .DetailsProduct .suggested-section h4 {
     font-weight: bold;
     color: #343a40;
     margin-bottom: 20px;
   }
 
-  .suggested-section img {
+  .DetailsProduct .suggested-section img {
     border-radius: 10px;
     transition: transform 0.3s;
   }
 
-  .suggested-section img:hover {
+  .DetailsProduct .suggested-section img:hover {
     transform: scale(1.05);
   }
 
 
-  .form-check img {
+  .DetailsProduct .form-check img {
     margin-right: 8px;
   }
