@@ -75,33 +75,49 @@ function selectPayment(element) {
 
 
 // product details
- // Get the main images and zoomed image div
-const mainImages = document.querySelectorAll('.mainImage');
-const zoomedImageDiv = document.getElementById('zoomedImage');
-
-// Add event listener for zoom-in on mouseenter
-mainImages.forEach(image => {
-  image.addEventListener('mouseenter', (e) => {
-    const imgSrc = e.target.src;
-    const zoomedImg = document.createElement('img');
-    zoomedImg.src = imgSrc; // Use the same image for zoom effect
-    zoomedImageDiv.innerHTML = ''; // Clear any previous zoomed images
-    zoomedImageDiv.appendChild(zoomedImg); // Add the zoomed image
-    zoomedImageDiv.style.display = 'block'; // Show the zoomed image
+// Quantity
+document.getElementById('minusButton').addEventListener('click', function() {
+    var quantity = document.getElementById('quantity');
+    var currentValue = parseInt(quantity.value);
+    if (currentValue > 1) {
+      quantity.value = currentValue - 1;
+    }
   });
 
-  // Add event listener for zoom-out on mouseleave
-  image.addEventListener('mouseleave', () => {
-    zoomedImageDiv.style.display = 'none'; // Hide the zoomed image
+  document.getElementById('plusButton').addEventListener('click', function() {
+    var quantity = document.getElementById('quantity');
+    var currentValue = parseInt(quantity.value);
+    if (currentValue < 10) {
+      quantity.value = currentValue + 1;
+    }
   });
 
-  // Add event listener to apply zoom effect when mouse is moving
-  image.addEventListener('mousemove', (e) => {
-    const rect = e.target.getBoundingClientRect();
-    const offsetX = e.clientX - rect.left; // X position of mouse
-    const offsetY = e.clientY - rect.top; // Y position of mouse
-    const xPercent = offsetX / rect.width * 100; // X percentage of mouse position
-    const yPercent = offsetY / rect.height * 100; // Y percentage of mouse position
-    e.target.style.transform = `scale(1.5) translate(-${xPercent}%, -${yPercent}%)`;
+  $(document).ready(function () {
+    // Zoom on click functionality
+    $('.zoom-container').on('click', function () {
+      $(this).toggleClass('clicked');
+      $(this).css('cursor', $(this).hasClass('clicked') ? 'zoom-out' : 'zoom-in');
+    });
+
+    // Thumbnail click functionality
+    $('.thumbnail').on('click', function () {
+      const slideIndex = $(this).data('bs-slide-to');
+      $('#carouselExampleIndicators').carousel(slideIndex);
+    });
   });
-});
+
+  document.getElementById('minusButton').addEventListener('click', function () {
+    var quantity = document.getElementById('quantity');
+    var currentValue = parseInt(quantity.value);
+    if (currentValue > 1) {
+      quantity.value = currentValue - 1;
+    }
+  });
+
+  document.getElementById('plusButton').addEventListener('click', function () {
+    var quantity = document.getElementById('quantity');
+    var currentValue = parseInt(quantity.value);
+    if (currentValue < 10) {
+      quantity.value = currentValue + 1;
+    }
+  });
