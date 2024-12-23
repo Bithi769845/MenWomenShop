@@ -51,17 +51,6 @@ setInterval(updateCountdown, 1000);
 updateText();
 
 
-
-
-
-
-
-
-
-
-
-
-
 // JavaScript for handling language selection
 //middle header and main header global icon
 document.querySelectorAll('.global .dropdown-item').forEach((item) => {
@@ -137,3 +126,14 @@ carouselItems.forEach((image) => {
     });
   });
 
+
+  // checkout
+  function toggleAccountFields() {
+    const accountFields = document.getElementById('accountFields');
+    accountFields.classList.toggle('d-none');
+}
+
+function toggleShippingAddress() {
+    const shippingAddress = document.getElementById('shippingAddress');
+    shippingAddress.classList.toggle('d-none');
+}
