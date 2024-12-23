@@ -110,7 +110,7 @@ carouselItems.forEach((image) => {
     const scale = 3; // Adjust scale for zoom level
 
     image.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
-    image.style.transition = "transform 0.2s ease-out"; // Smooth transition
+    image.style.transition = "transform 0.3s ease-out"; // Smooth transition
   });
 
   image.addEventListener("mouseleave", () => {
@@ -137,3 +137,28 @@ function toggleShippingAddress() {
     const shippingAddress = document.getElementById('shippingAddress');
     shippingAddress.classList.toggle('d-none');
 }
+
+
+// product page
+        // Update price range value display
+        const priceRange = document.getElementById('price-range');
+        const priceValue = document.getElementById('price-value');
+        priceRange.addEventListener('input', function () {
+            priceValue.textContent = `${priceRange.value} €`;
+        });
+
+        // Handle size button click event
+        const sizeButtons = document.querySelectorAll('.size-button');
+        sizeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                sizeButtons.forEach(b => b.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+
+        // Clear all filters
+        document.getElementById('clear-filters').addEventListener('click', function() {
+            document.getElementById('filter-form').reset();
+            priceValue.textContent = '500 €';
+            sizeButtons.forEach(button => button.classList.remove('selected'));
+        });

@@ -251,14 +251,14 @@ body {
 
 /* product details */
 .DetailsProduct .zoomimage .carousel-item img {
-    transition: transform 0.2s ease-out; /* Smooth transition for zoom effect */
-    cursor: zoom-in; /* Change cursor to indicate zoom functionality */
+    transition: transform 0.3s ease-out; 
+    cursor: zoom-in;
     overflow: hidden;
   }
   
   .DetailsProduct .thumbnail-carousel img {
     height: 130px;
-    object-fit: cover;
+    object-fit: center;
     cursor: pointer;
   }
 
@@ -296,6 +296,57 @@ body {
 
 
 
+/* product page */
 
+.filter-card {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+.filter-header {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #343a40;
+}
+.filter-section {
+    margin-bottom: 15px;
+}
+.clear-filters-btn {
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.clear-filters-btn:hover {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+.slider-value {
+    display: inline-block;
+    margin-top: 10px;
+    
+}
+.filter-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #6c757d;
+}
+.rating-stars i {
+    color: #ffbc00;
+}
+   /* Customize the slider track */
+#price-range::-webkit-slider-runnable-track {
+  background-color: black; 
+}
 
- 
+/* Customize the slider thumb */
+#price-range::-webkit-slider-thumb {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #000; 
+}
