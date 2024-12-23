@@ -51,6 +51,17 @@ setInterval(updateCountdown, 1000);
 updateText();
 
 
+
+
+
+
+
+
+
+
+
+
+
 // JavaScript for handling language selection
 //middle header and main header global icon
 document.querySelectorAll('.global .dropdown-item').forEach((item) => {
