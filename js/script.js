@@ -7,7 +7,7 @@ const texts = [
 
 // Function to calculate the countdown
 function getCountdown() {
-    const endDate = new Date("2024-12-18T12:00:00"); // Replace with your desired end date
+    const endDate = new Date("2024-12-25T12:00:00"); // Replace with your desired end date
     const now = new Date();
     const diff = endDate - now;
 
@@ -87,37 +87,7 @@ function selectPayment(element) {
 
 // product details
 // Quantity
-document.getElementById('minusButton').addEventListener('click', function() {
-    var quantity = document.getElementById('quantity');
-    var currentValue = parseInt(quantity.value);
-    if (currentValue > 1) {
-      quantity.value = currentValue - 1;
-    }
-  });
-
-  document.getElementById('plusButton').addEventListener('click', function() {
-    var quantity = document.getElementById('quantity');
-    var currentValue = parseInt(quantity.value);
-    if (currentValue < 10) {
-      quantity.value = currentValue + 1;
-    }
-  });
-
-  $(document).ready(function () {
-    // Zoom on click functionality
-    $('.zoom-container').on('click', function () {
-      $(this).toggleClass('clicked');
-      $(this).css('cursor', $(this).hasClass('clicked') ? 'zoom-out' : 'zoom-in');
-    });
-
-    // Thumbnail click functionality
-    $('.thumbnail').on('click', function () {
-      const slideIndex = $(this).data('bs-slide-to');
-      $('#carouselExampleIndicators').carousel(slideIndex);
-    });
-  });
-
-  document.getElementById('minusButton').addEventListener('click', function () {
+document.getElementById('minusButton').addEventListener('click', function () {
     var quantity = document.getElementById('quantity');
     var currentValue = parseInt(quantity.value);
     if (currentValue > 1) {
@@ -132,3 +102,38 @@ document.getElementById('minusButton').addEventListener('click', function() {
       quantity.value = currentValue + 1;
     }
   });
+
+//  zoom functionality  
+const carouselItems = document.querySelectorAll(".zoomimage .carousel-item img");
+
+// Add zoom functionality to each image
+carouselItems.forEach((image) => {
+  image.addEventListener("mousemove", (e) => {
+    const containerWidth = image.offsetWidth;
+    const containerHeight = image.offsetHeight;
+
+    const x = e.pageX - image.offsetLeft;
+    const y = e.pageY - image.offsetTop;
+
+    const translateX = (containerWidth / 2 - x) * 2;
+    const translateY = (containerHeight / 2 - y) * 2;
+
+    const scale = 3; // Adjust scale for zoom level
+
+    image.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+    image.style.transition = "transform 0.2s ease-out"; // Smooth transition
+  });
+
+  image.addEventListener("mouseleave", () => {
+    image.style.transform = "translate(0%, 0%) scale(1)"; // Reset zoom on mouse leave
+  });
+});
+
+// Thumbnail click functionality
+  $(document).ready(function () {   
+    $('.thumbnail').on('click', function () {
+      const slideIndex = $(this).data('bs-slide-to');
+      $('#carouselExampleIndicators').carousel(slideIndex);
+    });
+  });
+
