@@ -1,3 +1,4 @@
+
 // Tob Header 
 const texts = [
     () => `Get an extra 20% off | Ends in ${getCountdown()} | <a href="https://www.example.com/holiday-gifts" target="_blank">Shop holiday gifts and more</a>`,
@@ -162,3 +163,14 @@ function toggleShippingAddress() {
             priceValue.textContent = '500 €';
             sizeButtons.forEach(button => button.classList.remove('selected'));
         });
+
+
+
+
+
+
+
+
+
+
+        

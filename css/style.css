@@ -20,9 +20,7 @@ body {
     font-weight: bold; /* Bold link */
 }
 
-.brand-name{
-    font-size: 1.7rem;
-}
+
 
 /* middle header global icon */
 .modal-md {
@@ -73,47 +71,80 @@ body {
     text-decoration: none;
     background-color: white;
 }
-
-/* main menu */
-/* Default styles for larger screens (non-hamburger behavior) */
-.navbar-collapse {
-    position: static; /* Normal behavior for larger screens */
-    transform: none; /* No sliding effect */
-    transition: none; /* Disable sliding for larger screens */
-    width: auto;
-    background-color: transparent;
-    padding: 0;
-    border: none;
+/* main menu header */
+.Main-header .offcanvas {
+    transition: transform 0.9s ease, opacity 0.3s ease;
 }
-/* Styles for small and medium screens (hamburger menu) */
-@media (max-width: 991.98px) { /* Bootstrap breakpoint for medium and smaller screens */
-    .navbar-collapse {
-        position: absolute; /* Make it a floating menu */
-        top: 100%; /* Position it below the navbar toggler */
-        left: 0; /* Start off-screen to the left */
-        width: 250px; /* Fixed width for sliding effect */
-        background-color: #ffffff; /* Menu background */
-        border: 1px solid #ddd; /* Optional border */
-        z-index: 1050; /* Ensure it appears above other content */
-        transform: translateX(-100%); /* Initially hidden (off-screen) */
-        transition: transform 0.4s ease-in-out; /* Smooth sliding */
-        padding: 15px; /* Add spacing inside the menu */
-    }
 
-    /* During collapse, ensure smooth sliding out */
-    .navbar-collapse.collapsing {
-        transform: translateX(-100%);
-        transition: transform 0.4s ease-in-out;
-    }
+.Main-header .offcanvas-backdrop {
+    width: 300px;
+    background-color: #6e6e6e; /* Adjust overlay color and opacity */
+    transition: opacity 0.1s ease;
+}
 
-    /* When menu is open, slide it into view */
-    .navbar-collapse.show {
-        transform: translateX(0); /* Fully visible */
-        transition: transform 0.4s ease-in-out;
+.bagcanvas .offcanvas-backdrop {
+    width: 100%;    
+}
+
+/* hero */
+/* Set the height for carousel images to scale responsively for the custom carousel */
+.custom-carousel .carousel-inner img {
+    height: auto;
+    max-height: 70vh; /* Limit the height to avoid overflow */
+    width: 100%;
+    object-fit: center; /* Maintain aspect ratio */
+}
+
+/* Fade-in-right keyframe animation */
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
     }
 }
 
+/* Initially hide the text */
+.custom-carousel .carousel-caption {
+    opacity: 0;
+    transform: translateX(50%);
+}
 
+/* Add animation to the active slide's text */
+.custom-carousel .carousel-item.active .carousel-caption {
+    animation: fadeInRight 1s ease forwards;
+}
+
+/* Adjust text styles for responsiveness */
+.custom-carousel .carousel-caption h1 {
+    font-size: calc(1.5rem + 3vw); 
+}
+
+.custom-carousel .carousel-caption h2 {
+    font-size: calc(1rem + 1vw);
+}
+
+.custom-carousel .carousel-caption p {
+    font-size: calc(0.8rem + 0.5vw);
+}
+
+/* Ensure proper padding and positioning for small screens */
+.custom-carousel .carousel-caption {
+    bottom: 10%; 
+}
+
+@media (max-width: 480px) {
+    .custom-carousel .carousel-caption {
+        text-align: center; /* Center align text on smaller screens */
+    }
+
+    .custom-carousel .carousel-caption h1, .custom-carousel .carousel-caption h2, .custom-carousel .carousel-caption p {
+        font-size: calc(0.5rem + 1vw); /* Adjust font sizes for smaller screens */
+    }
+}
 
 /* Men women section */
   /* Image Hover Zoom Effect */
@@ -357,3 +388,4 @@ body {
     background-color: rgb(255, 255, 255);
     border: 2px solid #000; 
 }
+
