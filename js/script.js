@@ -93,6 +93,7 @@ document.querySelectorAll('.global .dropdown-item').forEach((item) => {
         delay: 5000,
         disableOnInteraction: false,
       },
+      autoplay: false,
       loop: true,
     });
 
