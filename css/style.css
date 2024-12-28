@@ -1,10 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
-
+html,
 body {
-    font-family: "Lora", serif;
+  position: relative;
+  height: 100%;
+}
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap'); 
+body {
+    font-family: "Manrope", serif;
     margin: 0;
     padding: 0;
 }
+
+/* Style for the Scroll to Top Button */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Hidden by default */
+    width: 50px;
+    height: 50px;
+    background-color: #0f0f0f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease-in-out;
+    z-index: 2000;
+  }
+  
+  #scrollToTopBtn:hover {
+    background-color: #ffffff;
+    color: #000;
+  }
+  
+  /* Add smooth scrolling effect */
+  html {
+    scroll-behavior: smooth;
+  }
+  
 /* Top header */
 #changingText {
     font-size: 0.9em;
@@ -87,66 +121,98 @@ body {
 }
 
 /* hero */
-/* Set the height for carousel images to scale responsively for the custom carousel */
-.custom-carousel .carousel-inner img {
-    height: auto;
-    max-height: 70vh; /* Limit the height to avoid overflow */
+.swiper {
     width: 100%;
-    object-fit: center; /* Maintain aspect ratio */
-}
+    height: 100%;
+  }
 
-/* Fade-in-right keyframe animation */
-@keyframes fadeInRight {
+  .swiper-slide {
+    position: relative;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .text-content {
+    position: absolute;
+    left: 100px;
+    color: white;
+    transform: translateX(50px);
+    animation: fadeInRight 1s ease forwards;
+    max-width: 800px;
+  }
+
+  .text-content h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .text-content h1 {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 10px 0;
+    margin-bottom: 5%;
+  }
+
+  .text-content p {
+    font-size: 20px;
+    line-height: 1.5;
+
+  }
+
+  @keyframes fadeInRight {
     0% {
-        opacity: 0;
-        transform: translateX(50%);
+      opacity: 0;
+      transform: translateX(50%);
     }
     100% {
-        opacity: 1;
-        transform: translateX(0%);
+      opacity: 1;
+      transform: translateX(0%);
     }
-}
+  }
 
-/* Initially hide the text */
-.custom-carousel .carousel-caption {
-    opacity: 0;
-    transform: translateX(50%);
-}
-
-/* Add animation to the active slide's text */
-.custom-carousel .carousel-item.active .carousel-caption {
-    animation: fadeInRight 1s ease forwards;
-}
-
-/* Adjust text styles for responsiveness */
-.custom-carousel .carousel-caption h1 {
-    font-size: calc(1.5rem + 3vw); 
-}
-
-.custom-carousel .carousel-caption h2 {
-    font-size: calc(1rem + 1vw);
-}
-
-.custom-carousel .carousel-caption p {
-    font-size: calc(0.8rem + 0.5vw);
-}
-
-/* Ensure proper padding and positioning for small screens */
-.custom-carousel .carousel-caption {
-    bottom: 10%; 
-}
-
-@media (max-width: 480px) {
-    .custom-carousel .carousel-caption {
-        text-align: center; /* Center align text on smaller screens */
+  @media (max-width: 768px) {
+      .text-content {
+          max-width: 600px;
+      }
+    .text-content h2 {
+      font-size: 24px;
     }
-
-    .custom-carousel .carousel-caption h1, .custom-carousel .carousel-caption h2, .custom-carousel .carousel-caption p {
-        font-size: calc(0.5rem + 1vw); /* Adjust font sizes for smaller screens */
+    .text-content h1 {
+      font-size: 40px;
     }
-}
+    .text-content p {
+      font-size: 16px;
+    }
+  }
 
-/* Men women section */
+  @media (max-width: 480px) {
+      .text-content {
+          max-width: 350px;
+          left: 20px;
+      }
+    .text-content h2 {
+      font-size: 20px;
+    }
+    .text-content h1 {
+      font-size: 26px;
+    }
+    .text-content p {
+      font-size: 16px;
+    }
+  }
+
+/* Category section */
   /* Image Hover Zoom Effect */
   .hover-zoom {
     overflow: hidden;
@@ -182,7 +248,6 @@ body {
     background-color: white;
     color: black;
     border: none;
-    font-weight: bold;
     padding: 10px 20px;
     transition: all 0.3s ease;
 }
@@ -192,70 +257,82 @@ body {
     color: white;
 }
 
+/* Media Queries */
 
-/* product image */
-/* General styling for the product card */
-.product .image-container {
+/* Extra small devices (up to 576px) */
+@media (max-width: 576px) {
+    .cdr-category .MWtext h2 {
+        font-size: 1.8rem; /* Adjust for smaller screens */
+    }
+
+    .cdr-category .btn-custom {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+/* Small devices (577px to 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .cdr-category .MWtext h2 {
+        font-size: 1.8rem; /* Slightly larger for tablets */
+    }
+
+    .cdr-category .btn-custom {
+        font-size: 1rem;
+        padding: 4px 9px;
+    }
+}
+
+/* Medium devices (769px to 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+    .cdr-category .MWtext h2 {
+        font-size: 2rem;
+    }
+
+    .cdr-category .btn-custom {
+        font-size: 1.1rem;
+        padding: 5px 10px;
+    }
+}
+
+/* Large devices (993px and above) */
+@media (min-width: 993px) {
+    .cdr-category .MWtext h2 {
+        font-size: 2.5rem; /* Larger size for desktops */
+    }
+
+    .cdr-category .btn-custom {
+        font-size: 1.2rem;
+        padding: 5px 10px;
+    }
+}
+
+/* Index product image */
+   /* Product image hover effect */
+   .product .image-container {
     position: relative;
     width: 100%;
-    max-width: 350px; /* Maximum width for responsiveness */
-    height: auto;
     overflow: hidden;
-    aspect-ratio: 4 / 5; /* Maintain aspect ratio for responsiveness */
 }
 
 .product .image-container img {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     width: 100%;
-    height: 100%;
-    position: absolute;
-    object-fit: contain;
-    top: 0;
-    left: 0;
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Smooth transitions */
 }
 
 .product .image-container img.second-image {
-    opacity: 0;
-    transform: scale(1.05); /* Slightly zoomed-out initially for hover effect */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Hidden by default */
 }
 
 .product .image-container:hover img.first-image {
-    opacity: 0;
-    transform: scale(1.05); /* Slightly zoomed-in on hover */
+    opacity: 0; /* Hide the first image on hover */
 }
 
 .product .image-container:hover img.second-image {
-    opacity: 1;
-    transform: scale(1); /* Restore to normal size on hover */
-}
-
-/* Badge styling */
-.product .image-container .badge {
-    font-size: 12px;
-    padding: 5px 10px;
-    z-index: 1;
-    opacity: 0.9;
-    margin-left: 20px;
-    border-radius: 0;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .product .image-container {
-        max-width: 100%;
-        aspect-ratio: 3 / 4; /* Adjust aspect ratio for smaller screens */
-    }
-}
-
-@media (max-width: 576px) {
-    .product .image-container {
-        aspect-ratio: 1 / 1; /* Square aspect ratio for very small screens */
-    }
-
-    .product .image-container .badge {
-        font-size: 10px;
-        padding: 4px 8px; /* Adjust badge size for smaller screens */
-    }
+    opacity: 1; /* Show the second image on hover */
 }
 
 
