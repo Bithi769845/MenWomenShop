@@ -121,97 +121,106 @@
         </div>
     </header>
 
+    <!-- cart page title  -->
+    <section class="page-title mt-2">
+        <div class="container">
+            <h2 class="text-center">CART</h2>
+            <p class="text-center">Review and finalize your purchase</p>
+        </div>
+    </section>
+
     <!-- Cart Section -->
     <section class="cdr-cart mt-5">
         <div class="container my-3">
-            <div class="row d-flex  justify-content-center ">
-                <!-- Product Summary -->
-                <div class="col-md-6 mt-2">
-                    <div class="row border border-dark rounded align-items-center p-1 ms-1 me-1">
-                        <div class="col-2"><img src="images/cardimage.png" alt=""
-                                style="width: 40px; height: 40px; object-fit: center;"></div>
-                        <div class="col-5 text-start">
-                            <h5 style="font-size: calc(0.5rem + 0.5vw);" class="fw-bold">Style Backpack</h5>
-                            <h6 class="text-muted" style="font-size: calc(0.5rem + 0.3vw);">Waterproof, High-quality
-                            </h6>
-                            <h6 class="text-muted" style="font-size: calc(0.5rem + 0.3vw);">Color:Black|Size:Medium</h6>
-                        </div>
-                        <div class="col-5 d-flex justify-content-end align-items-center ">
-                            <h5 class="me-1" style="font-size: calc(0.5rem + 0.5vw);">$79.00</h5>
-                            <input type="number" class="form-control form-control-sm w-25 me-2 shadow-none" value="1"
-                                min="1">
-                            <button class="btn btn-danger d-flex align-items-center justify-content-center"
-                                style="width: auto; padding: 0.5rem; height: auto; min-width: 20px; min-height: 20px;">
-                                <i class="fas fa-trash-alt" style="font-size: calc(0.5rem + 0.5vw);"></i>
-                            </button>
 
-                        </div>
-                    </div>
-                    <div class="row mt-2 border border-dark rounded align-items-center p-1 ms-1 me-1">
-                        <div class="col-2"><img src="images/cardimage2.png" alt=""
-                                style="width: 40px; height: 40px; object-fit: center;"></div>
-                        <div class="col-5 text-start">
-                            <h5 style="font-size: calc(0.5rem + 0.5vw);" class="fw-bold">Style Backpack</h5>
-                            <h6 class="text-muted" style="font-size: calc(0.5rem + 0.3vw);">Waterproof, High-quality
-                            </h6>
-                            <h6 class="text-muted" style="font-size: calc(0.5rem + 0.3vw);">Color:Black|Size:Medium</h6>
-                        </div>
-                        <div class="col-5 d-flex justify-content-end align-items-center ">
-                            <h5 class="me-1" style="font-size: calc(0.5rem + 0.5vw);">$79.00</h5>
-                            <input type="number" class="form-control form-control-sm w-25 me-2 shadow-none" value="1"
-                                min="1">
-                            <button class="btn btn-danger d-flex align-items-center justify-content-center"
-                                style="width: auto; padding: 0.5rem; height: auto; min-width: 20px; min-height: 20px;">
-                                <i class="fas fa-trash-alt" style="font-size: calc(0.5rem + 0.5vw);"></i>
-                            </button>
-
-                        </div>
-                    </div>
-                    <div class="row mt-2 border border-dark rounded align-items-center p-1 ms-1 me-1">
-                        <div class="col-2"><img src="images/cardimage.png" alt=""
-                                style="width: 40px; height: 40px; object-fit: center;"></div>
-                        <div class="col-5 text-start">
-                            <h5 style="font-size: calc(0.5rem + 0.5vw);" class="fw-bold">Style Backpack</h5>
-                            <h6 class="text-muted" style="font-size: calc(0.5rem + 0.3vw);">Waterproof, High-quality
-                            </h6>
-                            <h6 class="text-muted" style="font-size: calc(0.5rem + 0.3vw);">Color:Black|Size:Medium</h6>
-                        </div>
-                        <div class="col-5 d-flex justify-content-end align-items-center ">
-                            <h5 class="me-1" style="font-size: calc(0.5rem + 0.5vw);">$79.00</h5>
-                            <input type="number" class="form-control form-control-sm w-25 me-2 shadow-none" value="1"
-                                min="1">
-                            <button class="btn btn-danger d-flex align-items-center justify-content-center"
-                                style="width: auto; padding: 0.5rem; height: auto; min-width: 20px; min-height: 20px;">
-                                <i class="fas fa-trash-alt" style="font-size: calc(0.5rem + 0.5vw);"></i>
-                            </button>
-
-                        </div>
+            <div class="cart-product-sum">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="align-middle"><span class="cart-remove"><i class="fa-solid fa-xmark"></i></span></td>
+                            <td class="align-middle">
+                                <div class="d-flex gap-3">
+                                    <img width="80" height="100" src="images/cardimage.png" alt="Product Image"
+                                        class="img-fluid rounded-start">
+                                    <div class="media-body">
+                                        <h5 class="mt-0 fs-6">Test product 1</h5>
+                                        <p class="muted fs-7">Size: XL</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="align-middle">
+                                <div class="input-group w-50">
+                                    <input type="number" class="form-control" value="1" min="1">
+                                </div>
+                            </td>
+                            <td class="align-middle">$99.00</td>
+                            <td class="align-middle">$99.00</td>
+                        </tr>
+                        <tr>
+                            <td class="align-middle"><span class="cart-remove"><i class="fa-solid fa-xmark"></i></span></td>
+                            <td class="align-middle">
+                                <div class="d-flex gap-3">
+                                    <img width="80" height="100" src="images/cardimage.png" alt="Product Image"
+                                        class="img-fluid rounded-start">
+                                    <div class="media-body">
+                                        <h5 class="mt-0 fs-6">Test product 2</h5>
+                                        <p class="muted fs-7">Size: XL</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="align-middle">
+                                <div class="input-group w-50">
+                                    <input type="number" class="form-control" value="1" min="1">
+                                </div>
+                            </td>
+                            <td class="align-middle">$99.00</td>
+                            <td class="align-middle">$99.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="row justify-content-between">
+                <div class="col-12 col-md-6 col-lg-4 mt-2">
+                    <div class="cart-coupon">
+                        <h4 class="fw-bold fs-5">Apply Coupon</h4>
+                        <input type="text" class="form-control form-control-sm mb-3 py-2" placeholder="Enter coupon code">
+                        <button class="btn btn-dark w-100">Apply</button>
                     </div>
                 </div>
-
-                <!-- Cart Summary -->
-                <div class="col-md-6">
+                <div class="col-12 col-md-6 col-lg-4 mt-2">
+                    <!-- Cart Summary -->
                     <div class="order-summary">
-                        <h3 class="mb-4">Order Summary</h3>
+                        <h3 class="fw-bold text-dark mb-4 fs-5">Order Summary</h3>
                         <ul class="list-group mb-3">
-                            <li class="list-group-item d-flex justify-content-between border-0 shadow">
+                            <li class="list-group-item d-flex justify-content-between">
                                 <span>Subtotal</span>
-                                <strong>$79.00</strong>
+                                <strong>$128.00</strong>
                             </li>
-                            <li class="list-group-item d-flex justify-content-between border-0 border-bottom shadow">
+                            <li class="list-group-item d-flex justify-content-between">
                                 <span>Shipping</span>
-                                <strong>$5.00</strong>
+                                <strong>$10.00</strong>
                             </li>
-                            <li class="list-group-item d-flex justify-content-between bg-light border-0 shadow">
-                                <span class="fw-bold">Total</span>
-                                <strong class="fw-bold">$84.00</strong>
+                            <li class="list-group-item d-flex justify-content-between bg-light">
+                                <span>Total</span>
+                                <strong class="text-gold">$138.00</strong>
                             </li>
                         </ul>
-                        <button class="btn btn-dark w-100"><i class="fas fa-credit-card me-2"></i>Proceed to
+                        <button class="btn-checkout w-100"><i class="fas fa-credit-card me-2"></i>Proceed to
                             Checkout</button>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -430,7 +439,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- help section -->
     <section class="cdr-help pt-5">
