@@ -1,532 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Header</title>
+    <title>Cycasdor Home</title>
     <!-- Font Awesome (optional, for icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-     <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!-- Custom css -->
     <link rel="stylesheet" href="css\style.css">
 </head>
+
 <body>
-     <!--scrolltop  -->
-     <button id="scrollToTopBtn">↑</button>
-     <!-- Header Section -->
-     <header>
-         <!-- TopHeader -->
-         <div id="changingText"></div>
-         <!-- Middle Header -->
-         <div class="container-fluid mt-2">
-             <div class="row d-flex justify-content-center align-items-center">
-                 <div class="col-12 col-md-5 col-lg-3">
-                     <a href="/" class="text-decoration-none text-dark text-center text-md-start" href="#">
-                         <h4>CYCAS D'OR</h4>
-                     </a>
-                 </div>
-                 <div class="col-12 col-md-7 col-lg-4 ms-auto">
-                     <form class="d-flex justify-content-center">
-                         <div class="input-group border  rounded w-100">
-                             <span class="input-group-text bg-transparent border-0" id="search-icon">
-                                 <i class="bi bi-search fs-5"></i>
-                             </span>
-                             <input type="search" class="form-control border-0 shadow-none" placeholder="Search"
-                                 aria-label="Search" aria-describedby="search-icon" data-bs-toggle="modal"
-                                 data-bs-target="#exampleModal">
-                         </div>
-                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                             aria-hidden="true">
-                             <div class="modal-dialog">
-                                 <div class="modal-content">
-                                     <div class="modal-header border-0">
-                                         <h5 class="modal-title mx-auto fs-2 fw-bold" id="exampleModalLabel">FARFETCH
-                                         </h5>
- 
-                                     </div>
-                                     <div class="modal-body ">
-                                         <form class="d-flex justify-content-center">
-                                             <div class="input-group border rounded w-100">
-                                                 <span class="input-group-text bg-transparent border-0" id="search-icon">
-                                                     <i class="bi bi-search fs-5"></i>
-                                                 </span>
-                                                 <input type="search" class="form-control border-0 shadow-none"
-                                                     placeholder="Search" aria-label="Search"
-                                                     aria-describedby="search-icon">
-                                             </div>
-                                         </form>
-                                     </div>
-                                     <div class="modal-footer border-0">
-                                         <button type="button"
-                                             class="badge  bg-white text-dark border-0 position-absolute top-0 end-0 mt-2"
-                                             data-bs-dismiss="modal"><i class="fa-solid fa-x fs-5"></i></button>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
-                     </form>
-                 </div>
- 
-                 <div class="col-lg-3 d-lg-block d-none">
-                     <div class="d-flex justify-content-end ">
-                         <div class="global">
-                             <!-- Globe Icon -->
-                             <div class="dropdown">
-                                 <i class="nav-item bi bi-globe fs-5 me-3" type="button" id="dropdownMenuButton"
-                                     data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;"></i>
- 
-                                 <!-- Dropdown Menu -->
-                                 <div class="dropdown-menu dropdown-menu-end p-3 shadow "
-                                     aria-labelledby="dropdownMenuButton">
-                                     <div
-                                         class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-2">
-                                         <h6 class="mb-0">LANGUAGE</h6>
-                                         <span class="bi bi-x-lg close-dropdown" data-bs-dismiss="dropdown"
-                                             aria-label="Close"></span>
-                                     </div>
-                                     <p class="mb-2">Choose the language you’d like to browse the site in:</p>
-                                     <ul class="list-unstyled" id="language-list">
-                                         <li class="dropdown-item d-flex align-items-center" data-language="German">
-                                             <img src="images\uk.png" width="30" height="20" alt="German Flag"
-                                                 class="me-3">
-                                             <div>
-                                                 <div>Deutsch</div>
-                                                 <div class="text-muted">German</div>
-                                             </div>
- 
-                                             <i class="bi bi-check check-icon"></i>
-                                         </li>
-                                         <li class="dropdown-item d-flex align-items-center" data-language="French">
-                                             <img src="images\uk.png" width="30" height="20" alt="German Flag"
-                                                 class="me-3">
-                                             <div>
-                                                 <div>Français</div>
-                                                 <div>French</div>
-                                             </div>
-                                             <i class="bi bi-check check-icon"></i>
-                                         </li>
-                                         <li class="dropdown-item d-flex align-items-center" data-language="Spanish">
-                                             <img src="images\uk.png" width="30" height="20" alt="German Flag"
-                                                 class="me-3">
-                                             <div>
-                                                 <div>Español (latinoamericano)</div>
-                                                 <div>Spanish (Latin American)</div>
-                                             </div>
-                                             <i class="bi bi-check check-icon"></i>
-                                         </li>
-                                         <li class="dropdown-item d-flex align-items-center" data-language="Chinese">
-                                             <img src="images\uk.png" width="30" height="20" alt="German Flag"
-                                                 class="me-3">
-                                             <div>
-                                                 <div>中文 (简体)</div>
-                                                 <div>Chinese (Simplified)</div>
-                                             </div>
-                                             <i class="bi bi-check check-icon"></i>
-                                         </li>
-                                         <li class="dropdown-item active d-flex align-items-center"
-                                             data-language="English">
-                                             <img src="images\uk.png" width="30" height="20" alt="German Flag"
-                                                 class="me-3">
-                                             <div>
-                                                 <div>English (American)</div>
-                                                 <div>English (American)</div>
-                                             </div>
-                                             <i class="bi bi-check check-icon"></i>
-                                         </li>
-                                         <li class="dropdown-item d-flex align-items-center" data-language="Russian">
-                                             <img src="images\uk.png" width="30" height="20" alt="German Flag"
-                                                 class="me-3">
-                                             <div>
-                                                 <div>Русский</div>
-                                                 <div>Russian</div>
-                                             </div>
-                                             <i class="bi bi-check check-icon"></i>
-                                         </li>
-                                     </ul>
-                                 </div>
-                             </div>
-                         </div>
-                         <div class="Sign-In">
-                             <i class="nav-item bi bi-person fs-5 me-3" data-bs-toggle="modal"
-                                 data-bs-target="#signInModal" title="Sign In" style="cursor: pointer;"></i>
- 
-                             <!-- Scrollable modal -->
-                             <div class="modal rounded fade" tabindex="-1" id="signInModal"
-                                 aria-labelledby="signInModalLabel" aria-hidden="true">
-                                 <div class="modal-dialog modal-md modal-dialog-scrollable modal-dialog-centered">
-                                     <div class="modal-content">
-                                         <div class="modal-header border-0">
-                                             <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
-                                             <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"
-                                                 aria-label="Close"></button>
-                                         </div>
-                                         <div class="modal-body">
-                                             <form class="row g-3">
-                                                 <div class="col-12">
-                                                     <label for="inputEmail4" class="form-label">Email</label>
-                                                     <input type="email" class="form-control shadow-none"
-                                                         id="inputEmail4">
-                                                 </div>
-                                                 <div class="col-12">
-                                                     <label for="inputPassword4" class="form-label">Password</label>
-                                                     <input type="password" class="form-control shadow-none"
-                                                         id="inputPassword4">
-                                                 </div>
-                                                 <div class="col-12">
-                                                     <a class="text-dark" href="#">Forgot your password?</a>
-                                                 </div>
-                                                 <div class="col-12">
-                                                     <button type="submit" class="btn btn-dark text-light w-100">Sign
-                                                         in</button>
-                                                 </div>
-                                                 <p class="text-center">OR</p>
-                                                 <div class="col-12 ">
-                                                     <button type="submit"
-                                                         class="btn bg-white btn-outline-dark text-dark w-100"><span
-                                                             class="me-5"><img src="images\google.png" width="30px"
-                                                                 alt="google"></span> Continue With Google</button>
-                                                 </div>
-                                                 <div class="col-12 ">
-                                                     <button type="submit"
-                                                         class="btn bg-white btn-outline-dark text-dark w-100"><span
-                                                             class="me-5"><img src="images\apple.png" width="30px"
-                                                                 alt="google"></span> Continue With Apple</button>
-                                                 </div>
-                                                 <div class="col-12 ">
-                                                     <button type="submit"
-                                                         class="btn bg-white btn-outline-dark text-dark w-100"><span
-                                                             class="me-5"><img src="images\facebook.png" width="30px"
-                                                                 alt="google"></span> Continue With Facebook</button>
-                                                 </div>
-                                                 <div class="col-12 text-center fw-bold" style="font-size: 12px;">
-                                                     <a class="text-dark " href="#">New to CYCASDOR? Register.</a>
-                                                 </div>
-                                             </form>
- 
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
- 
-                         <div class="Cart-Bag ">
-                             <i class="nav-item bi bi-bag fs-5" data-bs-toggle="offcanvas"
-                                 data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" title="Bag"
-                                 style="cursor: pointer;"></i>
-                             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
-                                 aria-labelledby="offcanvasRightLabel">
-                                 <div class="offcanvas-header">
-                                     <h5 id="offcanvasRightLabel">Shopping Cart</h5>
-                                     <button type="button" class="btn-close text-reset shadow-none"
-                                         data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                                 </div>
-                                 <div class="offcanvas-body">
-                                     <div class="d-flex align-items-center">
-                                         <img src="images\cardimage.png" class="me-2" width="50px" alt="cart-image">
-                                         <div>
-                                             <div><a class="text-decoration-none text-dark " style="font-size: 16px;"
-                                                     href="#">Wiciewiel Multi osseuse</a></div>
-                                             <div style="font-size: 12px;">QTY : 1</div>
-                                             <div style="font-size: 12px;">$79.00</div>
-                                         </div>
-                                         <div class="ms-auto text-danger" style="font-size: 16px;"><i
-                                                 class="fa-solid fa-trash"></i></div>
- 
-                                     </div>
-                                     <hr>
-                                 </div>
- 
-                                 <div class="offcanvas-footer p-3 mt-auto">
-                                     <div class="d-flex justify-content-between align-items-center">
-                                         <span class="fs-5 fw-bold">Total Price:</span>
-                                         <span class="fs-5 text-success">$100.00</span>
-                                     </div>
-                                     <div class="d-flex gap-1 justify-content-center align-items-center ">
-                                         <button class="btn btn-dark w-100 " onclick="location.href='cart.html'">View
-                                             Cart</button>
-                                         <button class="btn btn-dark w-100 "
-                                             onclick="location.href='checkout.html'">Check
-                                             Out</button>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-         <!-- Main Header Menu -->
-         <div class="container-fluid ">
-             <div class="row d-flex justify-content-center align-items-center Main-header">
-                 <div class="col-4">
-                     <nav class="navbar navbar-expand-lg navbar-light ">
-                         <div class="container-fluid">
-                             <!-- Hamburger Button -->
-                             <button class="navbar-toggler shadow-none " type="button" data-bs-toggle="offcanvas"
-                                 data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
-                                 <span class="navbar-toggler-icon " style="font-size: 15px;"></span>
-                             </button>
-                             <!-- Normal Navbar (Visible for large screens) -->
-                             <div class="collapse navbar-collapse" id="navbarMenu">
-                                 <ul class="navbar-nav">
-                                     <li class="nav-item">
-                                         <a class="nav-link active" aria-current="page" href="#">HOME</a>
-                                     </li>
-                                     <li class="nav-item">
-                                         <a class="nav-link" href="#">MAN</a>
-                                     </li>
-                                     <li class="nav-item dropdown">
-                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                             data-bs-toggle="dropdown" aria-expanded="false">
-                                             WOMEN
-                                         </a>
-                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                             <li><a class="dropdown-item" href="#">Action</a></li>
-                                             <li><a class="dropdown-item" href="#">Another action</a></li>
-                                             <li>
-                                                 <hr class="dropdown-divider">
-                                             </li>
-                                             <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                         </ul>
-                                     </li>
-                                 </ul>
-                             </div>
-                         </div>
-                     </nav>
- 
-                     <!-- Offcanvas Menu -->
-                     <div class="offcanvas  offcanvas-start" style="width: 300px;" tabindex="-1" id="offcanvasMenu"
-                         aria-labelledby="offcanvasMenuLabels">
-                         <div class="offcanvas-header">
-                             <h5 class="offcanvas-title" id="offcanvasMenuLabels">Menu</h5>
-                             <button type="button" class="btn-close text-reset shadow-none" data-bs-dismiss="offcanvas"
-                                 aria-label="Close"></button>
-                         </div>
-                         <div class="offcanvas-body ">
-                             <ul class="navbar-nav">
-                                 <li class="nav-item">
-                                     <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                 </li>
-                                 <li class="nav-item">
-                                     <a class="nav-link" href="#">Man</a>
-                                 </li>
-                                 <li class="nav-item dropdown">
-                                     <a class="nav-link dropdown-toggle" href="#" id="offcanvasDropdown" role="button"
-                                         data-bs-toggle="dropdown" aria-expanded="false">
-                                         Women
-                                     </a>
-                                     <ul class="dropdown-menu" aria-labelledby="offcanvasDropdown">
-                                         <li><a class="dropdown-item" href="#">Action</a></li>
-                                         <li><a class="dropdown-item" href="#">Another action</a></li>
-                                         <li>
-                                             <hr class="dropdown-divider">
-                                         </li>
-                                         <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                     </ul>
-                                 </li>
-                             </ul>
-                         </div>
-                     </div>
- 
-                 </div>
-                 <div class="col-8 d-md-block d-lg-none">
-                     <div class="d-flex justify-content-end">
-                         <div class="global ">
-                             <!-- Globe Icon -->
-                             <div class="dropdown">
-                                 <i class="nav-item bi bi-globe fs-5 me-3" type="button" id="dropdownMenuSmall"
-                                     data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;"></i>
- 
-                                 <!-- Dropdown Menu -->
-                                 <div class="dropdown-menu dropdown-menu-end p-3 shadow"
-                                     aria-labelledby="dropdownMenuSmall">
-                                     <div
-                                         class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-2">
-                                         <h6 class="mb-0">LANGUAGE</h6>
-                                         <span class="bi bi-x-lg close-dropdown" data-bs-dismiss="dropdown"
-                                             aria-label="Close"></span>
-                                     </div>
-                                     <p class="mb-2">Choose the language you’d like to browse the site in:</p>
-                                     <ul class="list-unstyled" id="languageListSmall">
-                                         <li class="dropdown-item d-flex align-items-center" data-language="German">
-                                             <img src="images/uk.png" width="30" height="20" alt="German Flag"
-                                                 class="me-3">
-                                             <div>
-                                                 <div>Deutsch</div>
-                                                 <div class="text-muted">German</div>
-                                             </div>
-                                             <i class="bi bi-check check-icon"></i>
-                                         </li>
-                                         <li class="dropdown-item d-flex align-items-center" data-language="French">
-                                             <img src="images/uk.png" width="30" height="20" alt="French Flag"
-                                                 class="me-3">
-                                             <div>
-                                                 <div>Français</div>
-                                                 <div>French</div>
-                                             </div>
-                                             <i class="bi bi-check check-icon"></i>
-                                         </li>
-                                         <li class="dropdown-item d-flex align-items-center" data-language="Spanish">
-                                             <img src="images/uk.png" width="30" height="20" alt="Spanish Flag"
-                                                 class="me-3">
-                                             <div>
-                                                 <div>Español (latinoamericano)</div>
-                                                 <div>Spanish (Latin American)</div>
-                                             </div>
-                                             <i class="bi bi-check check-icon"></i>
-                                         </li>
-                                         <li class="dropdown-item d-flex align-items-center" data-language="Chinese">
-                                             <img src="images/uk.png" width="30" height="20" alt="Chinese Flag"
-                                                 class="me-3">
-                                             <div>
-                                                 <div>中文 (简体)</div>
-                                                 <div>Chinese (Simplified)</div>
-                                             </div>
-                                             <i class="bi bi-check check-icon"></i>
-                                         </li>
-                                         <li class="dropdown-item active d-flex align-items-center"
-                                             data-language="English">
-                                             <img src="images/uk.png" width="30" height="20" alt="English Flag"
-                                                 class="me-3">
-                                             <div>
-                                                 <div>English (American)</div>
-                                                 <div>English (American)</div>
-                                             </div>
-                                             <i class="bi bi-check check-icon"></i>
-                                         </li>
-                                         <li class="dropdown-item d-flex align-items-center" data-language="Russian">
-                                             <img src="images/uk.png" width="30" height="20" alt="Russian Flag"
-                                                 class="me-3">
-                                             <div>
-                                                 <div>Русский</div>
-                                                 <div>Russian</div>
-                                             </div>
-                                             <i class="bi bi-check check-icon"></i>
-                                         </li>
-                                     </ul>
-                                 </div>
-                             </div>
-                         </div>
-                         <div class="Sign-In">
-                             <i class="nav-item bi bi-person fs-5 me-3" data-bs-toggle="modal"
-                                 data-bs-target="#signInModalSmall" title="Sign In"></i>
- 
-                             <!-- Scrollable modal -->
-                             <div class="modal rounded fade" tabindex="-1" id="signInModalSmall"
-                                 aria-labelledby="signInModalSmallLabel" aria-hidden="true">
-                                 <div class="modal-dialog modal-md modal-dialog-scrollable modal-dialog-centered">
-                                     <div class="modal-content">
-                                         <div class="modal-header border-0">
-                                             <h5 class="modal-title" id="signInModalSmallLabel">Sign In</h5>
-                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                 aria-label="Close"></button>
-                                         </div>
-                                         <div class="modal-body">
-                                             <form class="row g-3">
-                                                 <div class="col-12">
-                                                     <label for="emailSmall" class="form-label">Email</label>
-                                                     <input type="email" class="form-control shadow-none"
-                                                         id="emailSmall">
-                                                 </div>
-                                                 <div class="col-12">
-                                                     <label for="passwordSmall" class="form-label">Password</label>
-                                                     <input type="password" class="form-control shadow-none"
-                                                         id="passwordSmall">
-                                                 </div>
-                                                 <div class="col-12">
-                                                     <a class="text-dark" href="#">Forgot your password?</a>
-                                                 </div>
-                                                 <div class="col-12">
-                                                     <button type="submit" class="btn btn-dark text-light w-100">Sign
-                                                         in</button>
-                                                 </div>
-                                                 <p class="text-center">OR</p>
-                                                 <div class="col-12">
-                                                     <button type="submit"
-                                                         class="btn bg-white btn-outline-dark text-dark w-100">
-                                                         <span class="me-5">
-                                                             <img src="images/google.png" width="30px" alt="google">
-                                                         </span>
-                                                         Continue With Google
-                                                     </button>
-                                                 </div>
-                                                 <div class="col-12">
-                                                     <button type="submit"
-                                                         class="btn bg-white btn-outline-dark text-dark w-100">
-                                                         <span class="me-5">
-                                                             <img src="images/apple.png" width="30px" alt="apple">
-                                                         </span>
-                                                         Continue With Apple
-                                                     </button>
-                                                 </div>
-                                                 <div class="col-12">
-                                                     <button type="submit"
-                                                         class="btn bg-white btn-outline-dark text-dark w-100">
-                                                         <span class="me-5">
-                                                             <img src="images/facebook.png" width="30px" alt="facebook">
-                                                         </span>
-                                                         Continue With Facebook
-                                                     </button>
-                                                 </div>
-                                                 <div class="col-12 text-center fw-bold" style="font-size: 12px;">
-                                                     <a class="text-dark" href="#">New to CYCASDOR? Register.</a>
-                                                 </div>
-                                             </form>
-                                         </div>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
-                         <div class="Bag bagcanvas">
-                             <i class="nav-item bi bi-bag fs-5" data-bs-toggle="offcanvas"
-                                 data-bs-target="#offcanvasBagSmall" aria-controls="offcanvasBagSmall" title="Bag"></i>
-                             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasBagSmall"
-                                 aria-labelledby="offcanvasBagSmallLabel">
-                                 <div class="offcanvas-header">
-                                     <h5 id="offcanvasBagSmallLabel">Shopping Cart</h5>
-                                     <button type="button" class="btn-close text-reset shadow-none" data-bs-dismiss="offcanvas"
-                                         aria-label="Close"></button>
-                                 </div>
-                                 <div class="offcanvas-body">
-                                     <div class="d-flex align-items-center">
-                                         <img src="images\cardimage.png" width="50px" alt="">
-                                         <div>
-                                             <div><a class="text-decoration-none text-dark" style="font-size: 16px;"
-                                                     href="#">Wiciewiel Multi osseuse</a></div>
-                                             <div style="font-size: 12px;">QTY : 1</div>
-                                             <div style="font-size: 12px;">$79.00</div>
-                                         </div>
-                                         <div class="ms-auto text-danger" style="font-size: 16px;"><i
-                                                 class="fa-solid fa-trash"></i></div>
-                                     </div>
-                                     <hr>
-                                 </div>
-                                 <div class="offcanvas-footer p-3 mt-auto">
-                                     <div class="d-flex justify-content-between align-items-center">
-                                         <span class="fs-5 fw-bold">Total Price:</span>
-                                         <span class="fs-5 text-success">$100.00</span>
-                                     </div>
-                                     <div class="d-flex gap-1 justify-content-center align-items-center">
-                                         <button class="btn btn-dark w-100">View Cart</button>
-                                         <button class="btn btn-dark w-100">Check Out</button>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </header>
+    <!--scrolltop  -->
+    <button id="scrollToTopBtn">↑</button>
+
+    <!-- TopHeader -->
+    <div id="changingText"></div>
+
+    <!-- country selector overlay  -->
+    <div id="cdr-overly" class="overlay" style="display: none;"></div>
+
+    <!-- Header Section -->
+    <header class="cdr-header">
+        <!-- main header -->
+        <div class="main-header py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4 col-lg-3 main-menu-left">
+                        <div class="cdr-country-selector" id="showCountrySelector">
+                            <i class="nav-item bi bi-globe fs-5 me-3" type="button" id="cpuntry-selector"
+                                style="cursor: pointer;"></i><span>Choose Language</span>
+                        </div>
+                    </div>
+                    <div class="col-8 col-md-5 col-lg-6 main-menu-middle">
+                        <div class="cdr-logo">
+                            <a href="/" class="text-decoration-none text-dark">
+                                <h4>CYCAS D'OR</h4>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-3 col-lg-3 main-menu-right">
+                        <div class="d-flex justify-content-end align-items-center">
+                            <div class="Sign-In">
+                                <i class="nav-item bi bi-person fs-4 me-3" data-bs-toggle="modal"
+                                    data-bs-target="#signInModal" title="Sign In" style="cursor: pointer;"></i>
+                            </div>
+
+                            <div class="Cart-Bag">
+                                <i class="nav-item bi bi-bag fs-5" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" title="Bag"
+                                    style="cursor: pointer;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- sub header -->
+        <div class="sub-header py-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8">
+                        <!-- nav menu  -->
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <!-- Hamburger Button -->
+                            <button class="navbar-toggler shadow-none " type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                                <span class="navbar-toggler-icon " style="font-size: 15px;"></span>
+                            </button>
+                            <!-- Normal Navbar (Visible for large screens) -->
+                            <div class="collapse navbar-collapse" id="navbarMenu">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">MAN</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            WOMEN
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="col-4 d-flex align-items-center">
+                        <form class="cdr-search-box">
+                            <div class="input-group border  rounded w-100">
+                                <input type="search" class="form-control border-0 shadow-none" placeholder="Search"
+                                    aria-label="Search">
+                                <button class="input-group-text bg-transparent border-0">
+                                    <i class="bi bi-search fs-5"></i>
+                                </button>
+                            </div>
+                        </form>
+                        <div class="cdr-mobile-search">
+                            <span aria-describedby="search-icon" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <i class="bi bi-search fs-5 text-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <!-- Product Details  -->
-     <section class="cdr-productDetails">
+    <section class="cdr-productDetails">
         <div class="container mt-5">
             <!-- Product Gallery -->
             <div class="row DetailsProduct">
@@ -595,25 +191,33 @@
                             <div class="carousel-item active">
                                 <div class="d-flex justify-content-center">
                                     <img src="images\cardimage.png" width="200px" height="200px" class="thumbnail"
-                                        data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" alt="Thumbnail 1">
+                                        data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                        alt="Thumbnail 1">
                                     <img src="images\cardimage2.png" width="200px" height="200px" class="thumbnail mx-2"
-                                        data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" alt="Thumbnail 2">
+                                        data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                        alt="Thumbnail 2">
                                     <img src="images\cardimage.png" width="200px" height="200px" class="thumbnail mx-2"
-                                        data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" alt="Thumbnail 3">
+                                        data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                        alt="Thumbnail 3">
                                     <img src="images\cardimage2.png" width="200px" height="200px" class="thumbnail mx-2"
-                                        data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" alt="Thumbnail 4">
+                                        data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                                        alt="Thumbnail 4">
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="d-flex justify-content-center">
                                     <img src="images\cardimage.png" width="200px" height="200px" class="thumbnail"
-                                        data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" alt="Thumbnail 5">
+                                        data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                                        alt="Thumbnail 5">
                                     <img src="images\cardimage2.png" width="200px" height="200px" class="thumbnail mx-2"
-                                        data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" alt="Thumbnail 6">
+                                        data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                                        alt="Thumbnail 6">
                                     <img src="images\cardimage.png" width="200px" height="200px" class="thumbnail mx-2"
-                                        data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" alt="Thumbnail 7">
+                                        data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
+                                        alt="Thumbnail 7">
                                     <img src="images\cardimage2.png" width="200px" height="200px" class="thumbnail mx-2"
-                                        data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" alt="Thumbnail 8">
+                                        data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"
+                                        alt="Thumbnail 8">
                                 </div>
                             </div>
                         </div>
@@ -634,7 +238,8 @@
                     <h1 class="product-title">Elegant Summer Dress</h1>
                     <p class="product-price fs-4">$79.99</p>
                     <hr style="margin-top: 50px;">
-                    <p class="product-description">A lightweight, breathable, and stylish summer dress designed to keep you
+                    <p class="product-description">A lightweight, breathable, and stylish summer dress designed to keep
+                        you
                         cool and
                         fashionable.
                         Perfect for a sunny day out or a casual gathering with friends.A lightweight, breathable, and
@@ -644,7 +249,7 @@
                         stylish summer
                         dress designed to keep you cool and fashionable.
                         Perfect for a sunny day out or a casual gathering with friends.</p>
-    
+
                     <!-- Size Selector (Dropdown with Placeholder) -->
                     <div class="mb-3">
                         <select class="form-select shadow-none" id="sizeSelect" name="size">
@@ -656,33 +261,30 @@
                             <option value="42">42</option>
                         </select>
                     </div>
-    
-    
-    
-    
+
                     <!-- Quantity Selector -->
                     <div class="mb-3">
                         <label for="quantity" class="form-label">Quantity</label>
                         <div class="input-group" style="width: 120px;">
                             <button type="button" class="btn btn-outline-secondary" id="minusButton">-</button>
-                            <input type="number" id="quantity" class="form-control shadow-none" value="1" min="1" max="10"
-                                readonly>
+                            <input type="number" id="quantity" class="form-control shadow-none" value="1" min="1"
+                                max="10" readonly>
                             <button type="button" class="btn btn-outline-secondary" id="plusButton">+</button>
                         </div>
                     </div>
-    
+
                     <!-- Add to Cart Button -->
                     <div class="d-flex gap-4">
                         <div class="mt-3">
                             <button class="btn btn-dark btn-lg ps-5 pe-5">Add to Cart</button>
                         </div>
-    
+
                         <div class=" mt-3">
                             <button class="btn btn-dark btn-lg ps-5 pe-5">Buy Now</button>
                         </div>
                     </div>
                     <hr style="margin-top: 40px;">
-    
+
                     <div class="accordion " id="accordionExample">
                         <div class="accordion-item border-0 border-bottom">
                             <h2 class="accordion-header" id="headingOne">
@@ -738,7 +340,7 @@
                                         data-bs-toggle="modal" data-bs-target="#exampleModals">
                                         Open size guide
                                     </button>
-    
+
                                     <!-- Modal -->
                                     <div class="modal fade" id="exampleModals" tabindex="-1"
                                         aria-labelledby="exampleModalLabels" aria-hidden="true">
@@ -750,12 +352,13 @@
                                                         aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <p>Find out which size you are across different countries with our handy
+                                                    <p>Find out which size you are across different countries with our
+                                                        handy
                                                         conversion guide.
                                                         It’s best to use this as a rule of thumb, since sizes and
                                                         measurements can vary from brand to
                                                         brand.</p>
-    
+
                                                     <h6 class="mb-3 mt-2">Size Conversions</h6>
                                                     <table class="table table-striped ">
                                                         <thead>
@@ -791,7 +394,7 @@
                                                             </tr>
                                                         </tbody>
                                                     </table>
-    
+
                                                     <h6 class="mb-3 mt-5">Body Measurments</h6>
                                                     <table class="table table-striped ">
                                                         <thead>
@@ -827,17 +430,19 @@
                                                             </tr>
                                                         </tbody>
                                                     </table>
-    
+
                                                     <h6 class="mb-3 mt-5 ">How to Measure Yourselft</h6>
                                                     <img src="images\bodymeasurement.jpg" width="450px"
                                                         alt="bodymeasurement">
-                                                    <p class="mt-2"><strong>Bust</strong>Bring the measuring tape underneath
+                                                    <p class="mt-2"><strong>Bust</strong>Bring the measuring tape
+                                                        underneath
                                                         your armpits and
                                                         measure around the fullest part of your bust</p>
                                                     <p><strong>Waist</strong>Bring the measuring tape underneath your
                                                         armpits and measure around the
                                                         fullest part of your bust</p>
-                                                    <p><strong>Hip</strong>Bring the measuring tape underneath your armpits
+                                                    <p><strong>Hip</strong>Bring the measuring tape underneath your
+                                                        armpits
                                                         and measure around the
                                                         fullest part of your bust</p>
                                                 </div>
@@ -848,8 +453,8 @@
                             </div>
                         </div>
                     </div>
-    
-    
+
+
                 </div>
             </div>
             <!-- Description Section -->
@@ -857,17 +462,17 @@
                 <h3 class="text-center fw-bold  mt-5">Description</h3>
                 <hr style="width: 100px; " class="mx-auto">
                 <div class=" d-flex flex-column flex-md-row gap-4 justify-content-center ">
-                    <div><img src="images\cardimage.png" width="300px" height="200px" alt="description_image"></div>
                     <div>
-                        <h6>Brand</h6>
-                        <hr style="width: 30px; ">
-                        <p class="text-muted">With eye-catching artwork, step-by-step diagrams, and illustrations that break
+                        <p class="text-muted">With eye-catching artwork, step-by-step diagrams, and illustrations that
+                            break
                             down complicated ideas into manageable concepts,
-                            The Science Book will have readers conversant in genetic engineering, black holes, and global
+                            The Science Book will have readers conversant in genetic engineering, black holes, and
+                            global
                             warming in no time. Along the way
                             are found mini-biographies of the most well-known scientists, and a glossary of helpful
                             scientific terms. For students, and students
-                            of the world, there is no better way to explore the fascinating, strange, and mysterious world
+                            of the world, there is no better way to explore the fascinating, strange, and mysterious
+                            world
                             of science than in The Science Book.</p>
                     </div>
                 </div>
@@ -883,16 +488,22 @@
                                     <div class="card border-0">
                                         <div class="image-container">
                                             <a href="productdetails.html">
-                                                <img src="images/cardimage.png" alt="Shoe image" class="first-image card-img-top">
-                                                <img src="images/cardimage2.png" alt="Hover image" class="second-image card-img-top">
+                                                <img src="images/cardimage.png" alt="Shoe image"
+                                                    class="first-image card-img-top">
+                                                <img src="images/cardimage2.png" alt="Hover image"
+                                                    class="second-image card-img-top">
                                             </a>
-                                            <span class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra 20% off</span>
+                                            <span
+                                                class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra
+                                                20% off</span>
                                         </div>
                                         <div class="card-body">
                                             <h6 class="card-title fw-bold" style="font-size: 0.8rem;">Nina Ricci</h6>
-                                            <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend jumper</p>
+                                            <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend
+                                                jumper</p>
                                             <p class="card-text " style="font-size: 0.8rem;">
-                                                <span><del>750 €</del></span> -40% <span class="text-danger">1.272 €</span>
+                                                <span><del>750 €</del></span> -40% <span class="text-danger">1.272
+                                                    €</span>
                                             </p>
                                         </div>
                                     </div>
@@ -901,16 +512,22 @@
                                     <div class="card border-0">
                                         <div class="image-container">
                                             <a href="productdetails.html">
-                                                <img src="images/cardimage2.png" alt="Shoe image" class="first-image card-img-top">
-                                                <img src="images/cardimage.png" alt="Hover image" class="second-image card-img-top">
+                                                <img src="images/cardimage2.png" alt="Shoe image"
+                                                    class="first-image card-img-top">
+                                                <img src="images/cardimage.png" alt="Hover image"
+                                                    class="second-image card-img-top">
                                             </a>
-                                            <span class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra 20% off</span>
+                                            <span
+                                                class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra
+                                                20% off</span>
                                         </div>
                                         <div class="card-body">
                                             <h6 class="card-title fw-bold" style="font-size: 0.8rem;">Nina Ricci</h6>
-                                            <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend jumper</p>
+                                            <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend
+                                                jumper</p>
                                             <p class="card-text " style="font-size: 0.8rem;">
-                                                <span><del>750 €</del></span> -40% <span class="text-danger">1.272 €</span>
+                                                <span><del>750 €</del></span> -40% <span class="text-danger">1.272
+                                                    €</span>
                                             </p>
                                         </div>
                                     </div>
@@ -919,16 +536,22 @@
                                     <div class="card border-0">
                                         <div class="image-container">
                                             <a href="productdetails.html">
-                                                <img src="images/cardimage.png" alt="Shoe image" class="first-image card-img-top">
-                                                <img src="images/cardimage2.png" alt="Hover image" class="second-image card-img-top">
+                                                <img src="images/cardimage.png" alt="Shoe image"
+                                                    class="first-image card-img-top">
+                                                <img src="images/cardimage2.png" alt="Hover image"
+                                                    class="second-image card-img-top">
                                             </a>
-                                            <span class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra 20% off</span>
+                                            <span
+                                                class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra
+                                                20% off</span>
                                         </div>
                                         <div class="card-body">
                                             <h6 class="card-title fw-bold" style="font-size: 0.8rem;">Nina Ricci</h6>
-                                            <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend jumper</p>
+                                            <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend
+                                                jumper</p>
                                             <p class="card-text " style="font-size: 0.8rem;">
-                                                <span><del>750 €</del></span> -40% <span class="text-danger">1.272 €</span>
+                                                <span><del>750 €</del></span> -40% <span class="text-danger">1.272
+                                                    €</span>
                                             </p>
                                         </div>
                                     </div>
@@ -937,16 +560,22 @@
                                     <div class="card border-0">
                                         <div class="image-container">
                                             <a href="productdetails.html">
-                                                <img src="images/cardimage2.png" alt="Shoe image" class="first-image card-img-top">
-                                                <img src="images/cardimage.png" alt="Hover image" class="second-image card-img-top">
+                                                <img src="images/cardimage2.png" alt="Shoe image"
+                                                    class="first-image card-img-top">
+                                                <img src="images/cardimage.png" alt="Hover image"
+                                                    class="second-image card-img-top">
                                             </a>
-                                            <span class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra 20% off</span>
+                                            <span
+                                                class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra
+                                                20% off</span>
                                         </div>
                                         <div class="card-body">
                                             <h6 class="card-title fw-bold" style="font-size: 0.8rem;">Nina Ricci</h6>
-                                            <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend jumper</p>
+                                            <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend
+                                                jumper</p>
                                             <p class="card-text " style="font-size: 0.8rem;">
-                                                <span><del>750 €</del></span> -40% <span class="text-danger">1.272 €</span>
+                                                <span><del>750 €</del></span> -40% <span class="text-danger">1.272
+                                                    €</span>
                                             </p>
                                         </div>
                                     </div>
@@ -960,16 +589,22 @@
                                     <div class="card border-0">
                                         <div class="image-container">
                                             <a href="productdetails.html">
-                                                <img src="images/cardimage.png" alt="Shoe image" class="first-image card-img-top">
-                                                <img src="images/cardimage2.png" alt="Hover image" class="second-image card-img-top">
+                                                <img src="images/cardimage.png" alt="Shoe image"
+                                                    class="first-image card-img-top">
+                                                <img src="images/cardimage2.png" alt="Hover image"
+                                                    class="second-image card-img-top">
                                             </a>
-                                            <span class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra 20% off</span>
+                                            <span
+                                                class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra
+                                                20% off</span>
                                         </div>
                                         <div class="card-body">
                                             <h6 class="card-title fw-bold" style="font-size: 0.8rem;">Nina Ricci</h6>
-                                            <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend jumper</p>
+                                            <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend
+                                                jumper</p>
                                             <p class="card-text " style="font-size: 0.8rem;">
-                                                <span><del>750 €</del></span> -40% <span class="text-danger">1.272 €</span>
+                                                <span><del>750 €</del></span> -40% <span class="text-danger">1.272
+                                                    €</span>
                                             </p>
                                         </div>
                                     </div>
@@ -978,16 +613,22 @@
                                     <div class="card border-0">
                                         <div class="image-container">
                                             <a href="productdetails.html">
-                                                <img src="images/cardimage2.png" alt="Shoe image" class="first-image card-img-top">
-                                                <img src="images/cardimage.png" alt="Hover image" class="second-image card-img-top">
+                                                <img src="images/cardimage2.png" alt="Shoe image"
+                                                    class="first-image card-img-top">
+                                                <img src="images/cardimage.png" alt="Hover image"
+                                                    class="second-image card-img-top">
                                             </a>
-                                            <span class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra 20% off</span>
+                                            <span
+                                                class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra
+                                                20% off</span>
                                         </div>
                                         <div class="card-body">
                                             <h6 class="card-title fw-bold" style="font-size: 0.8rem;">Nina Ricci</h6>
-                                            <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend jumper</p>
+                                            <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend
+                                                jumper</p>
                                             <p class="card-text " style="font-size: 0.8rem;">
-                                                <span><del>750 €</del></span> -40% <span class="text-danger">1.272 €</span>
+                                                <span><del>750 €</del></span> -40% <span class="text-danger">1.272
+                                                    €</span>
                                             </p>
                                         </div>
                                     </div>
@@ -996,16 +637,22 @@
                                     <div class="card border-0">
                                         <div class="image-container">
                                             <a href="productdetails.html">
-                                                <img src="images/cardimage.png" alt="Shoe image" class="first-image card-img-top">
-                                                <img src="images/cardimage2.png" alt="Hover image" class="second-image card-img-top">
+                                                <img src="images/cardimage.png" alt="Shoe image"
+                                                    class="first-image card-img-top">
+                                                <img src="images/cardimage2.png" alt="Hover image"
+                                                    class="second-image card-img-top">
                                             </a>
-                                            <span class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra 20% off</span>
+                                            <span
+                                                class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra
+                                                20% off</span>
                                         </div>
                                         <div class="card-body">
                                             <h6 class="card-title fw-bold" style="font-size: 0.8rem;">Nina Ricci</h6>
-                                            <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend jumper</p>
+                                            <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend
+                                                jumper</p>
                                             <p class="card-text " style="font-size: 0.8rem;">
-                                                <span><del>750 €</del></span> -40% <span class="text-danger">1.272 €</span>
+                                                <span><del>750 €</del></span> -40% <span class="text-danger">1.272
+                                                    €</span>
                                             </p>
                                         </div>
                                     </div>
@@ -1014,16 +661,22 @@
                                     <div class="card border-0">
                                         <div class="image-container">
                                             <a href="productdetails.html">
-                                                <img src="images/cardimage2.png" alt="Shoe image" class="first-image card-img-top">
-                                                <img src="images/cardimage.png" alt="Hover image" class="second-image card-img-top">
+                                                <img src="images/cardimage2.png" alt="Shoe image"
+                                                    class="first-image card-img-top">
+                                                <img src="images/cardimage.png" alt="Hover image"
+                                                    class="second-image card-img-top">
                                             </a>
-                                            <span class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra 20% off</span>
+                                            <span
+                                                class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra
+                                                20% off</span>
                                         </div>
                                         <div class="card-body">
                                             <h6 class="card-title fw-bold" style="font-size: 0.8rem;">Nina Ricci</h6>
-                                            <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend jumper</p>
+                                            <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend
+                                                jumper</p>
                                             <p class="card-text " style="font-size: 0.8rem;">
-                                                <span><del>750 €</del></span> -40% <span class="text-danger">1.272 €</span>
+                                                <span><del>750 €</del></span> -40% <span class="text-danger">1.272
+                                                    €</span>
                                             </p>
                                         </div>
                                     </div>
@@ -1045,15 +698,75 @@
                 </div>
             </div>
         </div>
-     </section>
+    </section>
+
+    <!-- help section -->
+    <section class="cdr-help pt-5">
+        <div class="container">
+            <div class="row d-flex align-items-stretch g-3">
+                <div class="col-12 col-md-6 col-lg-4 text-center d-flex">
+                    <div class="card w-100"> <!-- w-100 ensures the card fills the column -->
+                        <div class="pt-3">
+                            <i class="fas fa-user fa-2x"></i>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title">HOW TO SHOP</h5>
+                            <p class="card-text">Your guide to shopping and placing orders</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 text-center d-flex">
+                    <div class="card w-100">
+                        <div class="pt-3">
+                            <i class="fas fa-question-circle fa-2x"></i>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title">FAQs</h5>
+                            <p class="card-text">Your questions answered</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 text-center d-flex">
+                    <div class="card w-100">
+                        <div class="pt-3">
+                            <i class="fas fa-comment-alt fa-2x"></i>
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title">NEED HELP?</h5>
+                            <p class="card-text">Contact our global Customer Service team</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- newsletter section  -->
+    <section class="cdr-newsletter">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h5 class="text-uppercase fw-bold fs-3">Never miss a thing</h5>
+                    <p class="mb-0">Get exclusive offers and updates delivered to your inbox.</p>
+                </div>
+                <div class="col-md-4 newslater-form">
+                    <h6 class="text-uppercase">get updates by</h6>
+                    <form class="d-flex">
+                        <input type="email" class="form-control rounded-0" placeholder="Enter your email">
+                        <button type="submit" class="btn btn-dark rounded-0">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer section -->
-    <footer class="bg-dark text-light py-4 mt-5">
+    <footer class="cdr-footer bg-light text-dark py-4 mt-5">
         <div class="container mt-3">
-            <div class="row d-flex justify-content-center ">
+            <div class="row d-flex justify-content-center">
                 <!-- Company Info Section -->
-                <div class="col-6 col-md-6 col-lg-3 mb-3">
-                    <h5 class="fw-bold ">CYCAS D'OR</h5>
+                <div class="footer-widget col-6 col-md-6 col-lg-3 mb-3">
+                    <h5 class="text-uppercase footer-brand">CYCAS D'OR</h5>
                     <p class="text-secondary">121 King Street, Collins Melbourne</p>
                     <p class="text-secondary">West Victoria 8007, Australia</p>
                     <p class="text-secondary"><strong>Phone:</strong> (+01) 234-567-89</p>
@@ -1061,8 +774,8 @@
                 </div>
 
                 <!-- Custom Service Section -->
-                <div class="col-6 col-md-6 col-lg-3 mb-3">
-                    <h5 class="fw-bold">Custom Service</h5>
+                <div class="footer-widget col-6 col-md-6 col-lg-3 mb-3">
+                    <h5 class="text-uppercase">Custom Service</h5>
                     <ul class="list-unstyled">
                         <li><a class="text-decoration-none text-secondary" href="#">Shipping info</a></li>
                         <li><a class="text-decoration-none text-secondary" href="#">Refunds & returns</a></li>
@@ -1072,8 +785,8 @@
                 </div>
 
                 <!-- Information Section -->
-                <div class="col-6 col-md-6 col-lg-3 mb-3">
-                    <h5 class="fw-bold">Information</h5>
+                <div class="footer-widget col-6 col-md-6 col-lg-3 mb-3">
+                    <h5 class="text-uppercase">Information</h5>
                     <ul class="list-unstyled">
                         <li><a class="text-decoration-none text-secondary" href="#">Our blog</a></li>
                         <li><a class="text-decoration-none text-secondary" href="#">About Us</a></li>
@@ -1083,8 +796,8 @@
                 </div>
 
                 <!-- About Us Section -->
-                <div class="col-6 col-md-6 col-lg-3 mb-3">
-                    <h5 class="fw-bold">About Us</h5>
+                <div class="footer-widget col-6 col-md-6 col-lg-3 mb-3">
+                    <h5 class="text-uppercase">About Us</h5>
                     <ul class="list-unstyled">
                         <li><a class="text-decoration-none text-secondary" href="#">Who We Are?</a></li>
                         <li><a class="text-decoration-none text-secondary" href="#">Corporate Responsibility</a></li>
@@ -1097,23 +810,438 @@
             <!-- Footer Copyright -->
             <div class="row mt-3 d-flex align-items-center">
                 <div class="col-12 col-md-7 d-flex justify-content-start text-center text-md-start">
-                    © Copyright 2022 | Cycasdor By ShopiLaunch. Powered by Cycasdor Luxury Wear.
+                    <span class="footer-copyright">© Copyright 2022 | Cycasdor By ShopiLaunch. Powered by Cycasdor
+                        Luxury Wear.</span>
                 </div>
                 <div class="col-12 col-md-5 d-flex justify-content-center justify-content-md-end mt-3 mt-md-0">
-                    <img src="images/payment.png" alt="payment" class="img-fluid" style="max-width: 350px;">
+                    <img src="https://cycasdor.com/wp-content/uploads/2020/08/Group-3.png" alt="payment"
+                        class="img-fluid" style="max-width: 250px;">
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- cart offcanvas right  -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">Shopping Cart</h5>
+            <button type="button" class="btn-close text-reset shadow-none" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <hr class="mt-0">
+        <div class="offcanvas-body">
+            <div class="d-flex align-items-center">
+                <img src="images\cardimage.png" class="me-2" width="50px" alt="cart-image">
+                <div>
+                    <div><a class="text-decoration-none text-dark " style="font-size: 16px;" href="#">Wiciewiel Multi
+                            osseuse</a></div>
+                    <div style="font-size: 12px;">QTY : 1</div>
+                    <div style="font-size: 12px;">$79.00</div>
+                </div>
+                <div class="ms-auto text-danger" style="font-size: 16px;"><i class="fa-solid fa-trash"></i></div>
+            </div>
+            <hr>
+        </div>
 
+        <div class="offcanvas-footer p-3 mt-auto">
+            <hr>
+            <div class="d-flex justify-content-between align-items-center">
+                <span class="fs-5 fw-bold">Total Price:</span>
+                <span class="fs-5 text-dark">$100.00</span>
+            </div>
+            <div class="d-flex gap-1 justify-content-center align-items-center mt-4">
+                <button class="btn btn-dark w-100 " onclick="location.href='cart.html'">View
+                    Cart</button>
+                <button class="btn btn-dark w-100 " onclick="location.href='checkout.html'">Check
+                    Out</button>
+            </div>
+        </div>
+    </div>
 
+    <!-- user login/register modal -->
+    <div class="modal rounded fade" tabindex="-1" id="signInModal" aria-labelledby="signInModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="row g-3">
+                        <div class="col-12">
+                            <label for="inputEmail4" class="form-label">Email</label>
+                            <input type="email" class="form-control shadow-none" id="inputEmail4">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputPassword4" class="form-label">Password</label>
+                            <input type="password" class="form-control shadow-none" id="inputPassword4">
+                        </div>
+                        <div class="col-12">
+                            <a class="text-dark" href="#">Forgot your password?</a>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-dark text-light w-100">Sign
+                                in</button>
+                        </div>
+                        <p class="text-center">OR</p>
+                        <div class="col-12 ">
+                            <button type="submit" class="btn bg-white btn-outline-dark text-dark w-100"><span
+                                    class="me-5"><img src="images\google.png" width="30px" alt="google"></span> Continue
+                                With Google</button>
+                        </div>
+                        <div class="col-12 ">
+                            <button type="submit" class="btn bg-white btn-outline-dark text-dark w-100"><span
+                                    class="me-5"><img src="images\apple.png" width="30px" alt="google"></span> Continue
+                                With Apple</button>
+                        </div>
+                        <div class="col-12 ">
+                            <button type="submit" class="btn bg-white btn-outline-dark text-dark w-100"><span
+                                    class="me-5"><img src="images\facebook.png" width="30px" alt="google"></span>
+                                Continue With Facebook</button>
+                        </div>
+                        <div class="col-12 text-center fw-bold" style="font-size: 12px;">
+                            <a class="text-dark " href="#">New to CYCASDOR? Register.</a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- search modal  -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title mx-auto fs-2 fw-bold" id="exampleModalLabel">CYCAS D'OR
+                    </h5>
+                </div>
+                <div class="modal-body ">
+                    <form class="d-flex justify-content-center">
+                        <div class="input-group border rounded w-100">
+                            <input type="search" class="form-control border-0 shadow-none" placeholder="Search"
+                                aria-label="Search" aria-describedby="search-icon">
+                            <button class="input-group-text bg-transparent border-0" id="search-icon">
+                                <i class="bi bi-search fs-5"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="badge  bg-white text-dark border-0 position-absolute top-0 end-0 mt-2"
+                        data-bs-dismiss="modal"><i class="fa-solid fa-x fs-5"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- menu offcanvas left  -->
+    <div class="offcanvas offcanvas-start text-uppercase" style="width: 300px;" tabindex="-1" id="offcanvasMenu"
+        aria-labelledby="offcanvasMenuLabels">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasMenuLabels">Menu</h5>
+            <button type="button" class="btn-close text-reset shadow-none" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item border-bottom py-1">
+                    <a class="nav-link active d-flex justify-content-between align-items-center" aria-current="page"
+                        href="#">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item border-bottom py-1">
+                    <a class="nav-link d-flex justify-content-between align-items-center" href="#">
+                        Man
+                    </a>
+                </li>
+                <li class="nav-item border-bottom py-1">
+                    <a class="nav-link d-flex justify-content-between align-items-center" href="#womenCollapse"
+                        data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="womenCollapse">
+                        Women
+                        <i class="bi bi-chevron-down"></i>
+                    </a>
+                    <div class="collapse" id="womenCollapse">
+                        <ul class="list-unstyled ps-3 mt-2">
+                            <li><a class="nav-link" href="#">Action</a></li>
+                            <li><a class="nav-link" href="#">Another action</a></li>
+                            <li><a class="nav-link" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- country selector  -->
+    <div id="cdr-countrySelector" class="side-popup">
+        <div class="location-header">
+            <span>Choose your country &amp; Language</span>
+            <button id="closeCountrySelector" class="close-popup">×</button>
+        </div>
+        <div class="location-section">
+            <h2>Oceania</h2>
+            <ul>
+                <li data-country="Australia"><button data-country="Australia"><span data-country="Australia"
+                            class="flag-icon country_selector_page_flag flag-icon-au simple"></span> Australia</button>
+                    <ul class="datacountry Australia" style="display:none;">
+                        <li><a href="https://cycasdor.com/en-au/">ENGLISH</a></li>
+                    </ul>
+                </li>
+                <li data-country="New Zealand"><button data-country="New Zealand"><span data-country="New Zealand"
+                            class="flag-icon country_selector_page_flag flag-icon-nz simple"></span> New
+                        Zealand</button>
+                    <ul class="datacountry New Zealand" style="display:none;">
+                        <li><a href="https://cycasdor.com/en-nz/">ENGLISH</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="location-section">
+            <h2>Americas</h2>
+            <ul>
+                <li data-country="Canada"><button data-country="Canada"><span data-country="Canada"
+                            class="flag-icon country_selector_page_flag flag-icon-ca simple"></span> Canada</button>
+                    <ul class="datacountry Canada" style="display:none;">
+                        <li><a href="https://cycasdor.com/fr-ca/">FRENCH (Canada)</a></li>
+                        <li><a href="https://cycasdor.com/en-ca/">ENGLISH (Canada)</a></li>
+                    </ul>
+                </li>
+                <li data-country="United States"><button data-country="United States"><span data-country="United States"
+                            class="flag-icon country_selector_page_flag flag-icon-us simple"></span> United
+                        States</button>
+                    <ul class="datacountry United States" style="display:none;">
+                        <li><a href="https://cycasdor.com/?currency=USD">ENGLISH</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="location-section">
+            <h2>Europe</h2>
+            <ul>
+                <li data-country="Austria"><button data-country="Austria"><span data-country="Austria"
+                            class="flag-icon country_selector_page_flag flag-icon-at simple"></span> Austria</button>
+                    <ul class="datacountry Austria" style="display:none;">
+                        <li><a href="https://cycasdor.com/de-at/">German Austria</a></li>
+                        <li><a href="https://cycasdor.com/en-at/">English</a></li>
+                    </ul>
+                </li>
+                <li data-country="Belgium"><button data-country="Belgium"><span data-country="Belgium"
+                            class="flag-icon country_selector_page_flag flag-icon-be simple"></span> Belgium</button>
+                    <ul class="datacountry Belgium" style="display:none;">
+                        <li><a href="https://cycasdor.com/fr-be/">French Belgium</a></li>
+                        <li><a href="https://cycasdor.com/en-be/">English</a></li>
+                    </ul>
+                </li>
+                <li data-country="Croatia"><button data-country="Croatia"><span data-country="Croatia"
+                            class="flag-icon country_selector_page_flag flag-icon-hr simple"></span> Croatia</button>
+                    <ul class="datacountry Croatia" style="display:none;">
+                        <li><a href="https://cycasdor.com/en-hr/">ENGLISH</a></li>
+                    </ul>
+                </li>
+                <li data-country="Czech Republic"><button data-country="Czech Republic"><span
+                            data-country="Czech Republic"
+                            class="flag-icon country_selector_page_flag flag-icon-cz simple"></span> Czech
+                        Republic</button>
+                    <ul class="datacountry Czech Republic" style="display:none;">
+                        <li><a href="https://cycasdor.com/en-cz/">ENGLISH</a></li>
+                    </ul>
+                </li>
+                <li data-country="Denmark"><button data-country="Denmark"><span data-country="Denmark"
+                            class="flag-icon country_selector_page_flag flag-icon-dk simple"></span> Denmark</button>
+                    <ul class="datacountry Denmark" style="display:none;">
+                        <li><a href="https://cycasdor.com/da-dk/">Danish</a></li>
+                        <li><a href="https://cycasdor.com/en-dk/">English</a></li>
+                    </ul>
+                </li>
+                <li data-country="Finland"><button data-country="Finland"><span data-country="Finland"
+                            class="flag-icon country_selector_page_flag flag-icon-fi simple"></span> Finland</button>
+                    <ul class="datacountry Finland" style="display:none;">
+                        <li><a href="https://cycasdor.com/en-fi/">ENGLISH</a></li>
+                    </ul>
+                </li>
+                <li data-country="France"><button data-country="France"><span data-country="France"
+                            class="flag-icon country_selector_page_flag flag-icon-fr simple"></span> France</button>
+                    <ul class="datacountry France" style="display:none;">
+                        <li><a href="https://cycasdor.com/fr-fr/">French</a></li>
+                    </ul>
+                </li>
+                <li data-country="Germany"><button data-country="Germany"><span data-country="Germany"
+                            class="flag-icon country_selector_page_flag flag-icon-de simple"></span> Germany</button>
+                    <ul class="datacountry Germany" style="display:none;">
+                        <li><a href="https://cycasdor.com/de-de/">German</a></li>
+                        <li><a href="https://cycasdor.com/en-de/">English</a></li>
+                    </ul>
+                </li>
+                <li data-country="Iceland"><button data-country="Iceland"><span data-country="Iceland"
+                            class="flag-icon country_selector_page_flag flag-icon-is simple"></span> Iceland</button>
+                    <ul class="datacountry Iceland" style="display:none;">
+                        <li><a href="https://cycasdor.com/en-is/">ENGLISH</a></li>
+                    </ul>
+                </li>
+                <li data-country="Ireland"><button data-country="Ireland"><span data-country="Ireland"
+                            class="flag-icon country_selector_page_flag flag-icon-us simple"></span> Ireland</button>
+                    <ul class="datacountry Ireland" style="display:none;">
+                        <li><a href="https://cycasdor.com/en-ie/">ENGLISH</a></li>
+                    </ul>
+                </li>
+                <li data-country="Italy"><button data-country="Italy"><span data-country="Italy"
+                            class="flag-icon country_selector_page_flag flag-icon-it simple"></span> Italy</button>
+                    <ul class="datacountry Italy" style="display:none;">
+                        <li><a href="https://cycasdor.com/it-it/">Italian</a></li>
+                        <li><a href="https://cycasdor.com/en-it/">English</a></li>
+                    </ul>
+                </li>
+                <li data-country="Lithuania"><button data-country="Lithuania"><span data-country="Lithuania"
+                            class="flag-icon country_selector_page_flag flag-icon-lt simple"></span> Lithuania</button>
+                    <ul class="datacountry Lithuania" style="display:none;">
+                        <li><a href="https://cycasdor.com/en-lt/">ENGLISH</a></li>
+                    </ul>
+                </li>
+                <li data-country="Luxembourg"><button data-country="Luxembourg"><span data-country="Luxembourg"
+                            class="flag-icon country_selector_page_flag flag-icon-lu simple"></span> Luxembourg</button>
+                    <ul class="datacountry Luxembourg" style="display:none;">
+                        <li><a href="https://cycasdor.com/en-lu/">ENGLISH</a></li>
+                    </ul>
+                </li>
+                <li data-country="Malta"><button data-country="Malta"><span data-country="Malta"
+                            class="flag-icon country_selector_page_flag flag-icon-mt simple"></span> Malta</button>
+                    <ul class="datacountry Malta" style="display:none;">
+                        <li><a href="https://cycasdor.com/en-mt/">ENGLISH</a></li>
+                    </ul>
+                </li>
+                <li data-country="Monaco"><button data-country="Monaco"><span data-country="Monaco"
+                            class="flag-icon country_selector_page_flag flag-icon-mc simple"></span> Monaco</button>
+                    <ul class="datacountry Monaco" style="display:none;">
+                        <li><a href="https://cycasdor.com/en-mc/">ENGLISH</a></li>
+                    </ul>
+                </li>
+                <li data-country="Netherlands"><button data-country="Netherlands"><span data-country="Netherlands"
+                            class="flag-icon country_selector_page_flag flag-icon-nl simple"></span>
+                        Netherlands</button>
+                    <ul class="datacountry Netherlands" style="display:none;">
+                        <li><a href="https://cycasdor.com/nl-nl/">Dutch</a></li>
+                        <li><a href="https://cycasdor.com/en-nl/">English</a></li>
+                    </ul>
+                </li>
+                <li data-country="Norway"><button data-country="Norway"><span data-country="Norway"
+                            class="flag-icon country_selector_page_flag flag-icon-no simple"></span> Norway</button>
+                    <ul class="datacountry Norway" style="display:none;">
+                        <li><a href="https://cycasdor.com/nb-no/">Norwegian (Bokmål)</a></li>
+                        <li><a href="https://cycasdor.com/en-no/">English</a></li>
+                    </ul>
+                </li>
+                <li data-country="Poland"><button data-country="Poland"><span data-country="Poland"
+                            class="flag-icon country_selector_page_flag flag-icon-pl simple"></span> Poland</button>
+                </li>
+                <li data-country="Portugal"><button data-country="Portugal"><span data-country="Portugal"
+                            class="flag-icon country_selector_page_flag flag-icon-pt simple"></span> Portugal</button>
+                    <ul class="datacountry Portugal" style="display:none;">
+                        <li><a href="https://cycasdor.com/en-pt/">ENGLISH</a></li>
+                    </ul>
+                </li>
+                <li data-country="Romania"><button data-country="Romania"><span data-country="Romania"
+                            class="flag-icon country_selector_page_flag flag-icon-ro simple"></span> Romania</button>
+                    <ul class="datacountry Romania" style="display:none;">
+                        <li><a href="https://cycasdor.com/en-ro/">ENGLISH</a></li>
+                    </ul>
+                </li>
+                <li data-country="Russia"><button data-country="Russia"><span data-country="Russia"
+                            class="flag-icon country_selector_page_flag flag-icon-ru simple"></span> Russia</button>
+                    <ul class="datacountry Russia" style="display:none;">
+                        <li><a href="https://cycasdor.com/en-ru/">ENGLISH</a></li>
+                    </ul>
+                </li>
+                <li data-country="Slovakia"><button data-country="Slovakia"><span data-country="Slovakia"
+                            class="flag-icon country_selector_page_flag flag-icon-sk simple"></span> Slovakia</button>
+                    <ul class="datacountry Slovakia" style="display:none;">
+                        <li><a href="https://cycasdor.com/en-sk/">ENGLISH</a></li>
+                    </ul>
+                </li>
+                <li data-country="Spain"><button data-country="Spain"><span data-country="Spain"
+                            class="flag-icon country_selector_page_flag flag-icon-es simple"></span> Spain</button>
+                    <ul class="datacountry Spain" style="display:none;">
+                        <li><a href="https://cycasdor.com/es-es/">Spanish</a></li>
+                        <li><a href="https://cycasdor.com/en-es/">English</a></li>
+                    </ul>
+                </li>
+                <li data-country="Sweden"><button data-country="Sweden"><span data-country="Sweden"
+                            class="flag-icon country_selector_page_flag flag-icon-se simple"></span> Sweden</button>
+                    <ul class="datacountry Sweden" style="display:none;">
+                        <li><a href="https://cycasdor.com/sv-se/">Swedish</a></li>
+                        <li><a href="https://cycasdor.com/en-se/">English</a></li>
+                    </ul>
+                </li>
+                <li data-country="Switzerland"><button data-country="Switzerland"><span data-country="Switzerland"
+                            class="flag-icon country_selector_page_flag flag-icon-ch simple"></span>
+                        Switzerland</button>
+                    <ul class="datacountry Switzerland" style="display:none;">
+                        <li><a href="https://cycasdor.com/de-ch/">German</a></li>
+                    </ul>
+                </li>
+                <li data-country="United Kingdom"><button data-country="United Kingdom"><span
+                            data-country="United Kingdom"
+                            class="flag-icon country_selector_page_flag flag-icon-gb simple"></span> United
+                        Kingdom</button>
+                    <ul class="datacountry United Kingdom" style="display:none;">
+                        <li><a href="https://cycasdor.com/en-gb/">ENGLISH</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="location-section">
+            <h2>Middle East</h2>
+            <ul>
+                <li data-country="Qatar"><button data-country="Qatar"><span data-country="Qatar"
+                            class="flag-icon country_selector_page_flag flag-icon-qa simple"></span> Qatar</button>
+                    <ul class="datacountry Qatar" style="display:none;">
+                        <li><a href="https://cycasdor.com/en-qa/">ENGLISH</a></li>
+                    </ul>
+                </li>
+                <li data-country="Saudi Arabia"><button data-country="Saudi Arabia"><span data-country="Saudi Arabia"
+                            class="flag-icon country_selector_page_flag flag-icon-sa simple"></span> Saudi
+                        Arabia</button>
+                    <ul class="datacountry Saudi Arabia" style="display:none;">
+                        <li><a href="https://cycasdor.com/en-sa/">ENGLISH</a></li>
+                    </ul>
+                </li>
+                <li data-country="United Arab Emirates"><button data-country="United Arab Emirates"><span
+                            data-country="United Arab Emirates"
+                            class="flag-icon country_selector_page_flag flag-icon-ae simple"></span> United Arab
+                        Emirates</button>
+                    <ul class="datacountry United Arab Emirates" style="display:none;">
+                        <li><a href="https://cycasdor.com/en-ae/">ENGLISH</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="subCountrySelector" class="sub-side-popup">
+        <div class="location-header">
+            <span>CHOOSE YOUR LOCATION</span>
+            <button class="close-popup-1" onclick="closeSubPopup()">&times;</button>
+        </div>
+        <ul class="location-back">
+            <li><button id="backMianSelector" class="close-popup">Back</button></li>
+        </ul>
+        <ul class="location-lang" id="subSelectorContent">
+
+        </ul>
+    </div>
+
+    <!-- Include jQuery first -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-     <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!-- Bootstrap 5 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-      <!-- Custom js -->
-      <script src="js\script.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom js -->
+    <script src="js\script.js"></script>
 </body>
+
 </html>

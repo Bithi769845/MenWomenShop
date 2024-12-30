@@ -18,25 +18,25 @@ scrollToTopBtn.onclick = function () {
 
 // Top Header 
 const texts = [
-    () => `Get an extra 20% off | Ends in ${getCountdown()} | <a href="https://www.example.com/holiday-gifts" target="_blank">Shop holiday gifts and more</a>`,
-    () => `<a href="https://www.example.com/shipping" target="_blank">Free shipping</a> on selected full-price and promotional items | Limited time only | T&Cs`,
-    () => `<a href="https://www.example.com/sale" target="_blank">Enjoy up to 60% off</a>. Shop now`
+  () => `Get an extra 20% off | Ends in ${getCountdown()} | <a href="https://www.example.com/holiday-gifts" target="_blank">Shop holiday gifts and more</a>`,
+  () => `<a href="https://www.example.com/shipping" target="_blank">Free shipping</a> on selected full-price and promotional items | Limited time only | T&Cs`,
+  () => `<a href="https://www.example.com/sale" target="_blank">Enjoy up to 60% off</a>. Shop now`
 ];
 
 // Function to calculate the countdown
 function getCountdown() {
-    const endDate = new Date("2024-12-25T12:00:00"); // Replace with your desired end date
-    const now = new Date();
-    const diff = endDate - now;
+  const endDate = new Date("2024-12-25T12:00:00"); // Replace with your desired end date
+  const now = new Date();
+  const diff = endDate - now;
 
-    if (diff <= 0) return "0d 0h 0m 0s"; // Timer ends when the date is reached
+  if (diff <= 0) return "0d 0h 0m 0s"; // Timer ends when the date is reached
 
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-    return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  return `${days}d ${hours}h ${minutes}m ${seconds}s`;
 }
 
 // Get the text container
@@ -47,16 +47,16 @@ let index = 0;
 
 // Function to update the text
 function updateText() {
-    textElement.innerHTML = texts[index](); // Use innerHTML to render links
-    index = (index + 1) % texts.length; // Loop through the texts
+  textElement.innerHTML = texts[index](); // Use innerHTML to render links
+  index = (index + 1) % texts.length; // Loop through the texts
 }
 
 // Function to continuously update the timer text
 function updateCountdown() {
-    if (index === 0) {
-        // Update the timer text only if the current text is the first one
-        textElement.innerHTML = texts[0]();
-    }
+  if (index === 0) {
+    // Update the timer text only if the current text is the first one
+    textElement.innerHTML = texts[0]();
+  }
 }
 
 // Update text every 5 seconds
@@ -72,30 +72,30 @@ updateText();
 // JavaScript for handling language selection
 //middle header and main header global icon
 document.querySelectorAll('.global .dropdown-item').forEach((item) => {
-    item.addEventListener('click', function () {
-        // Remove active state from all items
-        document.querySelectorAll('.global .dropdown-item').forEach((el) => {
-            el.classList.remove('active');
-        });
-
-        // Add active state to the clicked item
-        this.classList.add('active');
+  item.addEventListener('click', function () {
+    // Remove active state from all items
+    document.querySelectorAll('.global .dropdown-item').forEach((el) => {
+      el.classList.remove('active');
     });
+
+    // Add active state to the clicked item
+    this.classList.add('active');
+  });
 });
 
 
 
 // <!-- Initialize Swiper -->
-    var swiper = new Swiper(".mySwiper", {
-        speed:500,
-        effect: 'fade',
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      autoplay: false,
-      loop: true,
-    });
+var swiper = new Swiper(".mySwiper", {
+  speed: 500,
+  effect: 'fade',
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  autoplay: false,
+  loop: true,
+});
 
 
 
@@ -103,9 +103,9 @@ document.querySelectorAll('.global .dropdown-item').forEach((item) => {
 
 //checkout script 
 function selectPayment(element) {
-    const options = document.querySelectorAll('.payment-option');
-    options.forEach(option => option.classList.remove('selected'));
-    element.classList.add('selected');
+  const options = document.querySelectorAll('.payment-option');
+  options.forEach(option => option.classList.remove('selected'));
+  element.classList.add('selected');
 }
 
 
@@ -142,25 +142,25 @@ const carouselItems = document.querySelectorAll(".zoomimage .carousel-item img")
 
 // Add zoom functionality to each image
 carouselItems.forEach((image) => {
-image.addEventListener("mousemove", (e) => {
-  const containerWidth = image.offsetWidth;
-  const containerHeight = image.offsetHeight;
+  image.addEventListener("mousemove", (e) => {
+    const containerWidth = image.offsetWidth;
+    const containerHeight = image.offsetHeight;
 
-  const x = e.pageX - image.offsetLeft;
-  const y = e.pageY - image.offsetTop;
+    const x = e.pageX - image.offsetLeft;
+    const y = e.pageY - image.offsetTop;
 
-  const translateX = (containerWidth / 2 - x) * 2;
-  const translateY = (containerHeight / 2 - y) * 2;
+    const translateX = (containerWidth / 2 - x) * 2;
+    const translateY = (containerHeight / 2 - y) * 2;
 
-  const scale = 3; // Adjust scale for zoom level
+    const scale = 3; // Adjust scale for zoom level
 
-  image.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
-  image.style.transition = "transform 0.3s ease-out"; // Smooth transition
-});
+    image.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+    image.style.transition = "transform 0.3s ease-out"; // Smooth transition
+  });
 
-image.addEventListener("mouseleave", () => {
-  image.style.transform = "translate(0%, 0%) scale(1)"; // Reset zoom on mouse leave
-});
+  image.addEventListener("mouseleave", () => {
+    image.style.transform = "translate(0%, 0%) scale(1)"; // Reset zoom on mouse leave
+  });
 });
 
 // Thumbnail click functionality
@@ -171,7 +171,7 @@ $(document).ready(function () {
     $('.thumbnail').on('click', function () {
       // Get the slide index from the data-bs-slide-to attribute
       const slideIndex = $(this).data('bs-slide-to');
-      
+
       // Use the carousel method to go to the specific slide
       $('#carouselExampleIndicators').carousel(slideIndex);
     });
@@ -180,23 +180,109 @@ $(document).ready(function () {
 
 
 
-  // checkout
-  function toggleAccountFields() {
-    const accountFields = document.getElementById('accountFields');
-    accountFields.classList.toggle('d-none');
+// checkout
+function toggleAccountFields() {
+  const accountFields = document.getElementById('accountFields');
+  accountFields.classList.toggle('d-none');
 }
 
 function toggleShippingAddress() {
-    const shippingAddress = document.getElementById('shippingAddress');
-    shippingAddress.classList.toggle('d-none');
+  const shippingAddress = document.getElementById('shippingAddress');
+  shippingAddress.classList.toggle('d-none');
 }
 
 
+jQuery(document).ready(
+  (function ($) {
+    let showPopupId = 'showCountrySelector'
+    let closePopupId = 'closeCountrySelector'
+    let backPopupId = 'backMianSelector'
+    let subPopupId = 'subCountrySelector'
+    let locationPopupId = 'cdr-countrySelector'
+    let overlayPopupId = 'cdr-overly'
+    let subPopupContentId = 'subSelectorContent'
+    let locationPopUpLi = '#' + locationPopupId + ' .location-section ul li'
 
+    // Function to show the main popup
+    function showPopup() {
+      document.getElementById(overlayPopupId).style.display = 'block'; // Show overlay
+      document.getElementById(locationPopupId).style.left = '0';
+    }
 
+    // Function to hide the main popup
+    function hidePopup() {
+      document.getElementById(overlayPopupId).style.display = 'none'; // Hide overlay
+      document.getElementById(locationPopupId).style.left = '-560px';
+      // If subPopup is open, close it
+      if (document.getElementById(subPopupId).style.left === '0') {
+        hideSubPopup();
+      }
+    }
 
+    function showSubPopup(event) {
+      let target = $(event.target);
+      let subPopupContent = $('#' + subPopupContentId);
+      subPopupContent.empty();
 
+      // Check if the target is a button or within a li, and get the appropriate data
+      let listLang;
+      if (target.is('button')) {
+        listLang = target.siblings('.datacountry').html();
+      } else {
+        listLang = target.closest('li').find('.datacountry').html();
+      }
+      subPopupContent.html(listLang);
 
+      // Show subPopup by setting left style to '0'
+      $('#' + subPopupId).css('left', '0');
+    }
 
+    // Function to hide the sub popup
+    function hideSubPopup() {
+      document.getElementById(subPopupId).style.left = '-560px';
+      // Check if the main popup is also closed; if so, hide the overlay
+      if (document.getElementById(locationPopupId).style.left === '-560px') {
+        document.getElementById(overlayPopupId).style.display = 'none';
+      }
+    }
 
-        
+    // Close button on subPopup
+    function closeSubPopup() {
+      hideSubPopup();
+    }
+
+    // Event listeners
+    document.getElementById(showPopupId).addEventListener('click', showPopup);
+
+    // Add event listeners to list items
+    document.querySelectorAll(locationPopUpLi).forEach((element) => {
+      element.addEventListener('click', showSubPopup);
+    });
+
+    // Add event listeners to buttons within list items
+    document.querySelectorAll(locationPopUpLi + ' button').forEach((element) => {
+      element.addEventListener('click', showSubPopup);
+    });
+
+    document.getElementById(closePopupId).addEventListener('click', hidePopup);
+    document.getElementById(overlayPopupId).addEventListener('click', hidePopup);
+
+    var popupContent = document.getElementById(showPopupId).innerHTML;
+
+    // Select the element with class 'country_selector_dropdown'
+    var countrySelector = document.querySelector('.country_selector_dropdown a.country_selector_dropbtn');
+
+    // Change the text of the 'country_selector_dropdown' element
+    if (countrySelector) {
+      countrySelector.innerHTML = popupContent;
+    }
+
+    document.getElementById(overlayPopupId).addEventListener('click', hidePopup);
+
+    // Back button on subPopup
+    document.getElementById(backPopupId).addEventListener('click', function () {
+      hideSubPopup();
+      setTimeout(showPopup, 500);
+    });
+  })
+);
