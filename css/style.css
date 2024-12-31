@@ -361,77 +361,342 @@ form.cdr-search-box {
 }
 
 /* Checkout page */
-.payment-option {
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  padding: 10px;
-  text-align: center;
+ /* Scoped CSS for shipping form */
+ .shipping-form-container {
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 16px;
+  font-family: 'Segoe UI', sans-serif;
+  border-radius: 20px;
+}
+
+.shipping-form-container h4 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.shipping-form-container h3 {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.shipping-form-container .form-control,
+.shipping-form-container .form-select {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 12px;
+  color: #333;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+}
+
+.shipping-form-container .form-control:focus,
+.shipping-form-container .form-select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.shipping-form-container .manual-address {
+  font-size: 10px;
+  color: #666;
+  margin-top: 4px;
   cursor: pointer;
-  transition: all 0.3s ease;
+}
+
+.shipping-form-container .shipping-method-section {
+  margin-top: 24px;
+}
+
+.shipping-form-container .shipping-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.shipping-form-container .shipping-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.shipping-form-container .shipping-option:hover {
+  border-color: #999;
+}
+
+.shipping-form-container .shipping-option input[type="radio"] {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #999;
+  border-radius: 50%;
+  appearance: none;
+  cursor: pointer;
+}
+
+.shipping-form-container .shipping-option input[type="radio"]:checked {
+  border: 4px solid #000;
+}
+
+.shipping-form-container .shipping-option-content {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shipping-form-container .shipping-name,
+.shipping-form-container .shipping-price {
+  font-size: 12px;
+  font-weight: 500;
+  color: #333;
+}
+
+.shipping-form-container .shipping-time {
+  font-size: 10px;
+  color: #666;
+}
+
+.shipping-form-container .total-cost {
+  margin-top: 12px;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #333;
+  text-align: right;
+}
+
+.shipping-form-container .form-row {
+  display: flex;
+  gap: 0;
+}
+
+.shipping-form-container .form-row .col-md-6 {
+  flex: 1;
+}
+
+.shipping-form-container .form-row .col-md-6 input {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+.checkout-card {
+max-width: 600px;
+margin: 0 auto;
+}
+
+.placeholder-image img{
+width: 60px;
+height: 60px;
+background-color: #e9ecef;
+border-radius: 5px;
+}
+
+.total-amount {
+font-weight: bold;
+}
+
+.total-due span:last-child {
+font-weight: bold;
+font-size: 1.2rem;
+}
+
+.product-name {
+font-size: 0.85rem;
+}
+
+.quantity, .price, .summary span {
+font-size: 0.8rem;
+}
+
+.delete-product {
+cursor: pointer;
+font-size: 1rem;
+color: red;
+text-align: right;
+margin-top: -60px;
+}
+
+
+
+/* Checkout page */
+.payment-option {
+border: 2px solid #ddd;
+border-radius: 8px;
+text-align: center;
+cursor: pointer;
+transition: all 0.3s ease;
 }
 
 .payment-option img {
-  width: 60px;
-  height: 30px;
+width: 40px;
+height: 30px;
 }
 
 .payment-option.selected {
-  border-color: #28a745;
-  background-color: #f9f9f9;
+border-color: #000000;
+background-color: #f9f9f9;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .payment-option img {
-    width: 50px;
-  }
+.payment-option img {
+width: 50px;
+}
 }
 
+.payment-option.form-check-input:checked{
+background-color: black;
+}
+
+
+.payment-option.dropdown-menu {
+position: absolute;
+top: 100%;
+left: 0;
+background-color: white;
+border: 1px solid #ccc;
+width: 100%;
+z-index: 10;
+border-radius: 5px;
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.payment-option.dropdown-item {
+padding: 5px 10px;
+cursor: pointer;
+}
+.payment-option.dropdown-item:hover {
+background-color: #f8f8f8;
+}
 
 /* product details */
-.DetailsProduct .zoomimage .carousel-item img {
-  transition: transform 0.3s ease-out;
-  cursor: zoom-in;
-  overflow: hidden;
-}
-
-.DetailsProduct .thumbnail-carousel img {
-  height: 200px;
-  object-fit: contain;
-  cursor: pointer;
-}
-
-/* Style for black carousel control icons */
-.DetailsProduct .carousel-control-prev-icon,
-.DetailsProduct .carousel-control-next-icon {
-  background-color: black;
-  width: 35px;
-  height: 35px;
-  border-radius: 20px;
-}
-
-.DetailsProduct .carousel-indicators [data-bs-target] {
-  background-color: rgb(255, 255, 255);
-  width: 10px;
-  height: 10px;
-  border: 1px solid black;
-  border-radius: 40px;
-}
-
-.DetailsProduct .suggested-section h4 {
-  font-weight: bold;
-  color: #343a40;
-  margin-bottom: 20px;
-}
-
-.DetailsProduct .suggested-section img {
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
-
-.DetailsProduct .suggested-section img:hover {
-  transform: scale(1.05);
-}
+#sizeSelector .nav-link{
+  color: #000;
+ }
+ 
+ .accordion-button:not(.collapsed) {
+   color: black;
+   background-color: rgb(235, 235, 235);
+   box-shadow: none;
+ }
+ 
+ .accordion-button:focus {
+   border-color: black;
+ }
+ 
+ .wrapper {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background: #ffffff;
+   border-radius: 10px;
+ }
+ 
+ .mainImage {
+   width: 100%;
+   overflow: hidden;
+   border-radius: 10px;
+   cursor: crosshair;
+   max-width: 600px;
+ }
+ 
+ .mainImage img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: transform 0.05s ease-out;
+   /* Smooth transition for zoom */
+ }
+ 
+ .thumbnail {
+   width: 100%;
+   position: relative;
+   margin-top: 20px;
+ }
+ 
+ .swiper-container {
+   width: 100%;
+   overflow: hidden;
+ }
+ 
+ .swiper-wrapper {
+   display: flex;
+ }
+ 
+ .swiper-slide {
+   width: 25%;
+   padding: 5px;
+ }
+ 
+ .thumbnailBox {
+   border-radius: 4px;
+   overflow: hidden;
+   cursor: pointer;
+   border: 2px solid transparent;
+   transition: all 0.3s ease;
+ }
+ 
+ .thumbnailBox.active {
+   border: 2px solid #202020;
+ }
+ 
+ .thumbnailBox img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+ }
+ 
+ /* Swiper Next and Prev buttons style */
+ .swiper-button-next,
+ .swiper-button-prev {
+ cursor:pointer;
+ }
+ 
+ .swiper-button-next::after,
+ .swiper-button-prev::after {
+   font-size: 20px;
+   color: black;
+ }
+ 
+ /* Responsive design for smaller screens */
+ @media (max-width: 768px) {
+   .swiper-slide {
+       width: 33.33%;
+   }
+ 
+   .mainImage {
+       max-width: 100%;
+   }
+ }
+ 
+ @media (max-width: 576px) {
+   .swiper-slide {
+       width: 50%;
+   }
+ 
+   .mainImage {
+       max-width: 100%;
+   }
+ }
+ 
 
 /* product page */
 

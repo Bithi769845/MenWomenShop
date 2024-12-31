@@ -17,57 +17,61 @@ scrollToTopBtn.onclick = function () {
 };
 
 // Top Header 
-const texts = [
-  () => `Get an extra 20% off | Ends in ${getCountdown()} | <a href="https://www.example.com/holiday-gifts" target="_blank">Shop holiday gifts and more</a>`,
-  () => `<a href="https://www.example.com/shipping" target="_blank">Free shipping</a> on selected full-price and promotional items | Limited time only | T&Cs`,
-  () => `<a href="https://www.example.com/sale" target="_blank">Enjoy up to 60% off</a>. Shop now`
-];
+document.addEventListener('DOMContentLoaded', () => {
+  // Your existing texts array and functions
+  const texts = [
+    () => `Get an extra 20% off | Ends in ${getCountdown()} | <a href="https://www.example.com/holiday-gifts" target="_blank">Shop holiday gifts and more</a>`,
+    () => `<a href="https://www.example.com/shipping" target="_blank">Free shipping</a> on selected full-price and promotional items | Limited time only | T&Cs`,
+    () => `<a href="https://www.example.com/sale" target="_blank">Enjoy up to 60% off</a>. Shop now`
+  ];
 
-// Function to calculate the countdown
-function getCountdown() {
-  const endDate = new Date("2024-12-25T12:00:00"); // Replace with your desired end date
-  const now = new Date();
-  const diff = endDate - now;
+  // Function to calculate the countdown
+  function getCountdown() {
+    const endDate = new Date("2024-12-25T12:00:00");
+    const now = new Date();
+    const diff = endDate - now;
 
-  if (diff <= 0) return "0d 0h 0m 0s"; // Timer ends when the date is reached
+    if (diff <= 0) return "0d 0h 0m 0s"; 
 
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-  return `${days}d ${hours}h ${minutes}m ${seconds}s`;
-}
-
-// Get the text container
-const textElement = document.getElementById("changingText");
-
-// Counter to track the current text
-let index = 0;
-
-// Function to update the text
-function updateText() {
-  textElement.innerHTML = texts[index](); // Use innerHTML to render links
-  index = (index + 1) % texts.length; // Loop through the texts
-}
-
-// Function to continuously update the timer text
-function updateCountdown() {
-  if (index === 0) {
-    // Update the timer text only if the current text is the first one
-    textElement.innerHTML = texts[0]();
+    return `${days}d ${hours}h ${minutes}m ${seconds}s`;
   }
-}
 
-// Update text every 5 seconds
-setInterval(updateText, 5000);
+  // Get the text container
+  const textElement = document.getElementById("changingText");
 
-// Update the countdown every second
-setInterval(updateCountdown, 1000);
+  // If the element exists, initialize the text and countdown updates
+  if (textElement) {
+    let index = 0;
 
-// Initialize the first text
-updateText();
+    // Function to update the text
+    function updateText() {
+      textElement.innerHTML = texts[index](); 
+      index = (index + 1) % texts.length; 
+    }
 
+    // Function to continuously update the timer text
+    function updateCountdown() {
+      if (index === 0) {
+        // Update the timer text only if the current text is the first one
+        textElement.innerHTML = texts[0]();
+      }
+    }
+
+    // Update text every 5 seconds
+    setInterval(updateText, 5000);
+
+    // Update the countdown every second
+    setInterval(updateCountdown, 1000);
+
+    // Initialize the first text
+    updateText();
+  }
+});
 
 // JavaScript for handling language selection
 //middle header and main header global icon
@@ -136,61 +140,205 @@ if (plusButton && quantity) {
   });
 }
 
-
-//  zoom functionality  
-const carouselItems = document.querySelectorAll(".zoomimage .carousel-item img");
-
-// Add zoom functionality to each image
-carouselItems.forEach((image) => {
-  image.addEventListener("mousemove", (e) => {
-    const containerWidth = image.offsetWidth;
-    const containerHeight = image.offsetHeight;
-
-    const x = e.pageX - image.offsetLeft;
-    const y = e.pageY - image.offsetTop;
-
-    const translateX = (containerWidth / 2 - x) * 2;
-    const translateY = (containerHeight / 2 - y) * 2;
-
-    const scale = 3; // Adjust scale for zoom level
-
-    image.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
-    image.style.transition = "transform 0.3s ease-out"; // Smooth transition
+//Choose your size selector
+    // Event listener for selecting size from EU Size list
+    document.querySelectorAll('#euSizeList .list-group-item').forEach(function(item) {
+      item.addEventListener('click', function() {
+          var selectedSize = item.getAttribute('data-size');
+          document.getElementById('selectedSizeText').textContent = selectedSize;
+          document.getElementById('collapseSize').classList.remove('show'); // Collapse the accordion
+      });
   });
 
-  image.addEventListener("mouseleave", () => {
-    image.style.transform = "translate(0%, 0%) scale(1)"; // Reset zoom on mouse leave
+  // Event listener for selecting size from Manufacturer Size list
+  document.querySelectorAll('#manufacturerSizeList .list-group-item').forEach(function(item) {
+      item.addEventListener('click', function() {
+          var selectedSize = item.getAttribute('data-size');
+          document.getElementById('selectedSizeText').textContent = selectedSize;
+          document.getElementById('collapseSize').classList.remove('show'); // Collapse the accordion
+      });
   });
-});
 
-// Thumbnail click functionality
-$(document).ready(function () {
-  // Check if .thumbnail exists on the page
-  if ($('.thumbnail').length > 0 && $('#carouselExampleIndicators').length > 0) {
-    // Add click event listener to thumbnails
-    $('.thumbnail').on('click', function () {
-      // Get the slide index from the data-bs-slide-to attribute
-      const slideIndex = $(this).data('bs-slide-to');
+// product image zoom effect
+document.addEventListener("DOMContentLoaded", function() {
+  if (document.querySelector(".product-details")) {
+      // Document selectors
+  const thumbnailWrapper = document.querySelector(".swiper-wrapper");
+  const mainImage = document.querySelector(".mainImage");
 
-      // Use the carousel method to go to the specific slide
-      $('#carouselExampleIndicators').carousel(slideIndex);
-    });
+  // Check if the necessary elements exist on the page
+  if (mainImage && thumbnailWrapper) {
+      // List of images
+      const imageList = [
+          "images/cardimage.png",
+          "images/cardimage2.png",
+          "images/cardimage.png",
+          "images/cardimage2.png",
+          "images/cardimage.png",
+          "images/cardimage2.png",
+          "images/cardimage.png",
+          "images/cardimage2.png"
+      ];
+
+      // Set the first image to be shown initially
+      mainImage.innerHTML = `<img src="${imageList[0]}" alt="Main Image">`;
+
+      // Generate thumbnail boxes and add them to the carousel
+      imageList.forEach((image, index) => {
+          const child = `<div class="swiper-slide">
+              <div class="thumbnailBox">
+                  <img src="${image}" alt="Thumbnail ${index + 1}">
+              </div>
+          </div>`;
+          thumbnailWrapper.innerHTML += child;
+      });
+
+      // Add click event listener for thumbnails (swiper slides)
+      thumbnailWrapper.querySelectorAll(".swiper-slide").forEach((swiperSlide) => {
+          swiperSlide.addEventListener("click", (e) => {
+              const activeThumbnail = document.querySelector(".thumbnailBox.active");
+              if (activeThumbnail) {
+                  activeThumbnail.classList.remove("active");
+              }
+              swiperSlide.querySelector(".thumbnailBox").classList.add("active");
+              const imageSrc = swiperSlide.querySelector("img").getAttribute("src");
+              mainImage.innerHTML = `<img src="${imageSrc}" alt="Main Image">`;
+          });
+      });
+
+      // Initialize Swiper for horizontal scrolling and 4 images per slide
+      const swiper = new Swiper('.swiper-container', {
+          slidesPerView: 4,       
+          spaceBetween: 5,       
+          centeredSlides: true,   
+          loop: true,             
+          navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev'
+          },
+          touchEventsTarget: 'container',
+      });
+
+      // Zoom effect on main image
+      mainImage.addEventListener("mousemove", (e) => {
+          const containerWidth = mainImage.offsetWidth;
+          const containerHeight = mainImage.offsetHeight;
+
+          const image = mainImage.querySelector("img");
+          const imageWidth = image.offsetWidth;
+          const imageHeight = image.offsetHeight;
+
+          const x = e.pageX - mainImage.offsetLeft;
+          const y = e.pageY - mainImage.offsetTop;
+
+          const translateX = (containerWidth / 2 - x) * 2;
+          const translateY = (containerHeight / 2 - y) * 2;
+
+          const scale = 3;
+
+          image.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+      });
+
+      // Reset zoom effect when mouse leaves
+      mainImage.addEventListener("mouseleave", () => {
+          const image = mainImage.querySelector("img");
+          image.style.transform = "translate(0%, 0%) scale(1)";
+      });
+  }
   }
 });
 
 
 
+
 // checkout
-function toggleAccountFields() {
-  const accountFields = document.getElementById('accountFields');
-  accountFields.classList.toggle('d-none');
+// Scoped JavaScript for shipping form
+(function () {
+  // Function to show manual address fields
+  function manualAddress() {
+    const formContainer = document.querySelector('.shipping-form-container');
+    const addressContainer = formContainer.querySelector('#addressContainer');
+    const manualAddressLink = formContainer.querySelector('#manualAddressLink');
+    const manualAddressFields = formContainer.querySelector('#manualAddressFields');
+    manualAddressLink.style.display = 'none';
+    manualAddressFields.style.display = 'block';
+    addressContainer.style.display = 'none';
+  }
+
+  // Function to go back to the address view
+  function goBackToAddress() {
+    const formContainer = document.querySelector('.shipping-form-container');
+    const addressContainer = formContainer.querySelector('#addressContainer');
+    const manualAddressLink = formContainer.querySelector('#manualAddressLink');
+    const manualAddressFields = formContainer.querySelector('#manualAddressFields');
+    manualAddressLink.style.display = 'block';
+    manualAddressFields.style.display = 'none';
+    addressContainer.style.display = 'block';
+  }
+
+  // Function to handle quantity and product deletion
+  function initializeCartActions() {
+    const quantityValue = document.getElementById('quantityValue');
+    const decreaseButton = document.getElementById('decreaseQuantity');
+    const increaseButton = document.getElementById('increaseQuantity');
+    const deleteButtons = document.querySelectorAll('.delete-product');
+
+    if (decreaseButton && increaseButton && quantityValue) {
+      decreaseButton.addEventListener('click', () => {
+        const currentValue = parseInt(quantityValue.textContent, 10);
+        if (currentValue > 1) {
+          quantityValue.textContent = currentValue - 1;
+        }
+      });
+
+      increaseButton.addEventListener('click', () => {
+        const currentValue = parseInt(quantityValue.textContent, 10);
+        quantityValue.textContent = currentValue + 1;
+      });
+    }
+
+    deleteButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.target.closest('.product-item').remove();
+      });
+    });
+  }
+
+  // Initialize actions on DOM content loaded
+  document.addEventListener('DOMContentLoaded', () => {
+    initializeCartActions();
+  });
+
+  // Expose specific functions if needed for external use
+  window.manualAddress = manualAddress;
+  window.goBackToAddress = goBackToAddress;
+})();
+
+
+
+
+
+function selectPayment(paymentMethod) {
+// Remove the "selected" class from all payment options
+const options = document.querySelectorAll('.payment-option');
+options.forEach(option => option.classList.remove('selected'));
+
+// Add the "selected" class to the clicked option
+event.target.closest('.payment-option').classList.add('selected');
+
+// Hide all payment forms
+const paymentForms = document.querySelectorAll('.payment-form');
+paymentForms.forEach(form => form.classList.add('d-none'));
+
+// Show the selected payment form
+const selectedForm = document.getElementById(`${paymentMethod}-form`);
+if (selectedForm) {
+selectedForm.classList.remove('d-none');
 }
 
-function toggleShippingAddress() {
-  const shippingAddress = document.getElementById('shippingAddress');
-  shippingAddress.classList.toggle('d-none');
+// Show the coupon section
+document.getElementById('coupon-section').classList.remove('d-none');
 }
-
 
 jQuery(document).ready(
   (function ($) {

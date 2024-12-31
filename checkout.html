@@ -2,471 +2,343 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Header</title>
-    <!-- Font Awesome (optional, for icons) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cycasdor Home</title>
+  <!-- Font Awesome (optional, for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <!-- Custom css -->
-    <link rel="stylesheet" href="css\style.css">
+  <!-- Custom css -->
+  <link rel="stylesheet" href="css\style.css">
 </head>
-
 <body>
     <!--scrolltop  -->
     <button id="scrollToTopBtn">↑</button>
 
-    <!-- TopHeader -->
-    <div id="changingText"></div>
-
-    <!-- Header Section -->
-    <header class="cdr-header">
-        <!-- main header -->
-        <div class="main-header py-2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-4 col-lg-3 main-menu-left">
-                        <div class="cdr-country-selector">
-                            <i class="nav-item bi bi-globe fs-5 me-3" type="button" id="cpuntry-selector"
-                                style="cursor: pointer;"></i><span>Choose Language</span>
-                        </div>
-                    </div>
-                    <div class="col-8 col-md-5 col-lg-6 main-menu-middle">
-                        <div class="cdr-logo">
-                            <a href="/" class="text-decoration-none text-dark">
-                                <h4>CYCAS D'OR</h4>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-4 col-md-3 col-lg-3 main-menu-right">
-                        <div class="d-flex justify-content-end align-items-center">
-                            <div class="Sign-In">
-                                <i class="nav-item bi bi-person fs-4 me-3" data-bs-toggle="modal"
-                                    data-bs-target="#signInModal" title="Sign In" style="cursor: pointer;"></i>
-                            </div>
-
-                            <div class="Cart-Bag ">
-                                <i class="nav-item bi bi-bag fs-5" data-bs-toggle="offcanvas"
-                                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" title="Bag"
-                                    style="cursor: pointer;"></i>
-                            </div>
-                        </div>
-                    </div>
+    <section class="cdr-checkout-header">
+        <div class="container ">
+            <div class="row d-flex  align-items-center align-items-center mt-3">
+                <div class="col-12 d-flex  align-items-center justify-content-center">
+                    <h6><span class="text-uppercase">Cycas d'or Secure Checkout</span></h6>
                 </div>
+                <div class="col-6 d-flex  align-items-center mb-4"> 
+                    <span class=" me-2" style="font-size: 14px;"><i class="fa-solid fa-arrow-left me-2"></i><a href="index.html" class="text-decoration-none text-dark">Continue Shipping</a></span>
             </div>
-        </div>
-
-        <!-- sub header -->
-        <div class="sub-header py-2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-8">
-                        <!-- nav menu  -->
-                        <nav class="navbar navbar-expand-lg navbar-light">
-                            <!-- Hamburger Button -->
-                            <button class="navbar-toggler shadow-none " type="button" data-bs-toggle="offcanvas"
-                                data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
-                                <span class="navbar-toggler-icon " style="font-size: 15px;"></span>
-                            </button>
-                            <!-- Normal Navbar (Visible for large screens) -->
-                            <div class="collapse navbar-collapse" id="navbarMenu">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="#">HOME</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">MAN</a>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                            WOMEN
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <li><a class="dropdown-item" href="#">Action</a></li>
-                                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                                            <li>
-                                                <hr class="dropdown-divider">
-                                            </li>
-                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                    <div class="col-4 d-flex align-items-center">
-                        <form class="cdr-search-box">
-                            <div class="input-group border  rounded w-100">
-                                <input type="search" class="form-control border-0 shadow-none" placeholder="Search"
-                                    aria-label="Search" aria-describedby="search-icon" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal">
-                                <button class="input-group-text bg-transparent border-0" id="search-icon">
-                                    <i class="bi bi-search fs-5"></i>
-                                </button>
-                            </div>
-                        </form>
-                        <div class="cdr-mobile-search">
-                            <span aria-describedby="search-icon" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                <i class="bi bi-search fs-5 text-right"></i>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- checkout section -->
-    <section class="cdr-checkout">
-        <div class="container my-5">
-            <div class="row d-flex justify-content-center ">
-                <!-- Left Side - Checkout Form -->
-                <div class="col-md-7">
-                    <div class="container">
-                        <h2 class="mb-4">CYCAS D'OR</h2>
-                        <form id="mainForm">
-                            <h4>Your Information</h4>
-
-                            <!-- First name and Last name in col-6 -->
-                            <div class="row ">
-                                <div class="col-6 mb-3">
-                                    <label for="firstName" class="form-label">First name <span
-                                            class="text-danger">*</span></label>
-                                    <input type="text" id="firstName" class="form-control" placeholder="First name"
-                                        required>
-                                </div>
-                                <div class="col-6 mb-3">
-                                    <label for="lastName" class="form-label">Last name <span
-                                            class="text-danger">*</span></label>
-                                    <input type="text" id="lastName" class="form-control" placeholder="Last name"
-                                        required>
-                                </div>
-
-                                <!-- Other fields in col-12 -->
-                                <div class="col-12 mb-3">
-                                    <label for="country" class="form-label">Country/Region <span
-                                            class="text-danger">*</span></label>
-                                    <select id="country" class="form-select" required>
-                                        <option>Bangladesh</option>
-                                        <option>United States</option>
-                                        <option>Canada</option>
-                                        <option>United Kingdom</option>
-                                    </select>
-                                </div>
-
-
-
-                                <div class="col-12 mb-3">
-                                    <label for="streetAddress" class="form-label">Street address <span
-                                            class="text-danger">*</span></label>
-                                    <input type="text" id="streetAddress" class="form-control"
-                                        placeholder="House number and street name" required>
-                                </div>
-
-
-
-                                <div class="col-12 mb-3">
-                                    <label for="city" class="form-label">Town/City <span
-                                            class="text-danger">*</span></label>
-                                    <input type="text" id="city" class="form-control" placeholder="Town/City" required>
-                                </div>
-
-
-
-                                <div class="col-12 mb-3">
-                                    <label for="district" class="form-label">District <span
-                                            class="text-danger">*</span></label>
-                                    <select id="district" class="form-select" required>
-                                        <option>Select an option...</option>
-                                        <option>Dhaka</option>
-                                        <option>Chittagong</option>
-                                        <option>Khulna</option>
-                                    </select>
-                                </div>
-
-
-
-                                <div class="col-12 mb-3">
-                                    <label for="postcode" class="form-label">Postcode / ZIP (optional)</label>
-                                    <input type="text" id="postcode" class="form-control"
-                                        placeholder="Postcode / ZIP (optional)">
-                                </div>
-
-
-
-                                <div class="col-12 mb-3">
-                                    <label for="phone" class="form-label">Phone number <span
-                                            class="text-danger">*</span></label>
-                                    <input type="tel" id="phone" class="form-control" placeholder="Phone number"
-                                        required>
-                                </div>
-
-
-
-                                <div class="col-12 mb-3">
-                                    <label for="email" class="form-label">Email address <span
-                                            class="text-danger">*</span></label>
-                                    <input type="email" id="email" class="form-control" placeholder="Email address"
-                                        required>
-                                </div>
-
-
-
-                                <div class="col-12 form-check mb-3">
-                                    <input type="checkbox" id="newsletter" class="form-check-input">
-                                    <label for="newsletter" class="form-check-label">Subscribe to our newsletter</label>
-                                </div>
-
-
-
-                                <div class="col-12 form-check mb-3">
-                                    <input type="checkbox" id="createAccount" class="form-check-input"
-                                        onclick="toggleAccountFields()">
-                                    <label for="createAccount" class="form-check-label">Create an account?</label>
-                                </div>
-                            </div>
-
-                            <div id="accountFields" class="mb-3 d-none">
-                                <div class="row mb-3">
-                                    <div class="col-12">
-                                        <label for="username" class="form-label">Account username*</label>
-                                        <input type="text" id="username" class="form-control" placeholder="Username"
-                                            required>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-12">
-                                        <label for="password" class="form-label">Create account password*</label>
-                                        <input type="password" id="password" class="form-control" placeholder="Password"
-                                            required>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row mb-3">
-                                <div class="col-12 form-check">
-                                    <input type="checkbox" id="differentShipping" class="form-check-input"
-                                        onclick="toggleShippingAddress()">
-                                    <label for="differentShipping" class="form-check-label">My shipping address is
-                                        different</label>
-                                </div>
-                            </div>
-
-                            <div id="shippingAddress" class="d-none">
-                                <h4>Shipping Address</h4>
-                                <div class="row ">
-                                    <div class="col-6 mb-3">
-                                        <label for="shippingFirstName" class="form-label">First name <span
-                                                class="text-danger">*</span></label>
-                                        <input type="text" id="shippingFirstName" class="form-control"
-                                            placeholder="First name">
-                                    </div>
-
-
-                                    <div class="col-6 mb-3">
-                                        <label for="shippingLastName" class="form-label">Last name <span
-                                                class="text-danger">*</span></label>
-                                        <input type="text" id="shippingLastName" class="form-control"
-                                            placeholder="Last name">
-                                    </div>
-
-
-                                    <div class="col-12 mb-3">
-                                        <label for="shippingCountry" class="form-label">Country/Region<span
-                                                class="text-danger">*</span></label>
-                                        <select id="shippingCountry" class="form-select">
-                                            <option>Bangladesh</option>
-                                            <option>United States</option>
-                                            <option>Canada</option>
-                                            <option>United Kingdom</option>
-                                        </select>
-                                    </div>
-
-
-                                    <div class="col-12 mb-3">
-                                        <label for="shippingStreet" class="form-label">Street address<span
-                                                class="text-danger">*</span></label>
-                                        <input type="text" id="shippingStreet" class="form-control"
-                                            placeholder="Street address">
-                                    </div>
-
-
-                                    <div class="col-12 mb-3">
-                                        <label for="shippingCity" class="form-label">Town/City<span
-                                                class="text-danger">*</span></label>
-                                        <input type="text" id="shippingCity" class="form-control"
-                                            placeholder="Town/City">
-                                    </div>
-
-
-                                    <div class="col-12 mb-3">
-                                        <label for="shippingDistrict" class="form-label">District<span
-                                                class="text-danger">*</span></label>
-                                        <select id="shippingDistrict" class="form-select">
-                                            <option>Dhaka</option>
-                                            <option>Chittagong</option>
-                                            <option>Khulna</option>
-                                        </select>
-                                    </div>
-
-
-                                    <div class="col-12 mb-3">
-                                        <label for="shippingPostcode" class="form-label">Postcode / ZIP
-                                            (optional)</label>
-                                        <input type="text" id="shippingPostcode" class="form-control"
-                                            placeholder="Postcode / ZIP">
-                                    </div>
-                                    <div class="col-12 mb-3">
-                                        <label for="phone" class="form-label">Phone number (optional)</label>
-                                        <input type="tel" id="phone" class="form-control" placeholder="Phone number"
-                                            required>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <button type="submit" class="btn btn-dark btn-lg ps-5 pe-5">Place Order</button>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Right Side - Order Summary and Payment -->
-                <div class="col-md-5 ">
-                    <div class="card p-3 shadow-sm mb-3">
-                        <h5>Order Summary</h5>
-                        <div class="d-flex justify-content-between">
-                            <span><img src="images\cardimage.png" width="50px" class="me-3" alt="">Wiciewiel Multi
-                                osseuse</span>
-                            <span class="mt-3">$79.00</span>
-                        </div>
-                        <hr>
-                        <div class="d-flex justify-content-between">
-                            <span>Subtotal</span>
-                            <span>$79.00</span>
-                        </div>
-                        <div class="d-flex justify-content-between mb-3">
-                            <span>Shipping</span>
-                            <span class="text-muted">Enter shipping address</span>
-                        </div>
-                        <hr>
-                        <div class="d-flex justify-content-between">
-                            <h6>Total</h6>
-                            <h6>USD $79.00</h6>
-                        </div>
-                    </div>
-
-                    <!-- Payment Methods -->
-                    <div class="card p-3 shadow-sm">
-                        <h5>Select Payment Method</h5>
-                        <div class="row g-2 mt-2">
-                            <div class="col-6 col-sm-4">
-                                <div class="payment-option" onclick="selectPayment(this)">
-                                    <img src="images\BKash_Logo_icon.png" alt="bKash">
-                                    <p class="mt-2">bKash</p>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-4">
-                                <div class="payment-option" onclick="selectPayment(this)">
-                                    <img src="images\visa.jpeg" alt="Visa">
-                                    <p class="mt-2">Visa</p>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-4">
-                                <div class="payment-option" onclick="selectPayment(this)">
-                                    <img src="images\rocket.jpeg" alt="Rocket">
-                                    <p class="mt-2">Rocket</p>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-4">
-                                <div class="payment-option" onclick="selectPayment(this)">
-                                    <img src="images\mastercard-logo.png" alt="MasterCard">
-                                    <p class="mt-2">MasterCard</p>
-                                </div>
-                            </div>
-                            <div class="col-6 col-sm-4">
-                                <div class="payment-option" onclick="selectPayment(this)">
-                                    <img src="images\PayPal_horizontally_Logo_2014.png" alt="PayPal">
-                                    <p class="mt-2">PayPal</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button class="btn btn-dark w-100 mt-3">Pay Now</button>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer section -->
-    <footer class="bg-dark text-light py-4 mt-5">
-        <div class="container mt-3">
-            <div class="row d-flex justify-content-center ">
-                <!-- Company Info Section -->
-                <div class="col-6 col-md-6 col-lg-3 mb-3">
-                    <h5 class="fw-bold ">CYCAS D'OR</h5>
-                    <p class="text-secondary">121 King Street, Collins Melbourne</p>
-                    <p class="text-secondary">West Victoria 8007, Australia</p>
-                    <p class="text-secondary"><strong>Phone:</strong> (+01) 234-567-89</p>
-                    <p class="text-secondary"><strong>Email:</strong> support@mycompany.com</p>
-                </div>
 
-                <!-- Custom Service Section -->
-                <div class="col-6 col-md-6 col-lg-3 mb-3">
-                    <h5 class="fw-bold">Custom Service</h5>
-                    <ul class="list-unstyled">
-                        <li><a class="text-decoration-none text-secondary" href="#">Shipping info</a></li>
-                        <li><a class="text-decoration-none text-secondary" href="#">Refunds & returns</a></li>
-                        <li><a class="text-decoration-none text-secondary" href="#">Terms & conditions</a></li>
-                        <li><a class="text-decoration-none text-secondary" href="#">My account</a></li>
-                    </ul>
+    <section class="cdr-checkout">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card checkout-card border-0">
+                        <div class="card-body">
+                          <h4 class="card-title mb-2">Pay Powdur</h4>
+                          <h6 class="total-amount mb-4">$129.00</h6>
+                  
+                        <!-- Product List -->
+                  <div class="product-list">
+                      <div class="product-item d-flex flex-column mb-3">
+                        <div class="d-flex align-items-center">
+                          <div class="product-image me-3">
+                            <div class="placeholder-image"><img src="images/cardimage.png" alt=""></div>
+                          </div>
+                          <div class="product-details flex-grow-1">
+                            <h4 class="product-name">The Pure Set</h4>
+                            <div class="d-flex justify-content-between">
+                              <span class="quantity" data-bs-toggle="modal" data-bs-target="#quantityModal">Qty 1</span>
+                              <span class="price">$65.00</span>
+                            </div>
+                            <small class="text-muted">$32.00 each</small>
+                          </div>
+                          <span class="delete-product">&times;</span>
+                        </div>
+                        <hr class="mt-2">
+                      </div>
+                      
+                      <div class="product-item d-flex flex-column mb-3">
+                        <div class="d-flex align-items-center">
+                          <div class="product-image me-3">
+                            <div class="placeholder-image"><img src="images/cardimage2.png" alt=""></div>
+                          </div>
+                          <div class="product-details flex-grow-1">
+                            <h4 class="product-name">The Pure Set</h4>
+                            <div class="d-flex justify-content-between">
+                              <span class="quantity" data-bs-toggle="modal" data-bs-target="#quantityModal">Qty 1</span>
+                              <span class="price">$65.00</span>
+                            </div>
+                            <small class="text-muted">$32.00 each</small>
+                          </div>
+                          <span class="delete-product">&times;</span>
+                        </div>
+                        <hr class="mt-2">
+                      </div>
+                    </div>
+                    
+                  
+                          <!-- Summary -->
+                          <div class="summary">
+                            <div class="d-flex justify-content-between mb-2">
+                              <span>Subtotal</span>
+                              <span>$129.00</span>
+                            </div>
+                  
+                                      <!-- Collapsible Coupon Section -->
+                                      <div id="coupon-section" class="mt-3">
+                                          <p>
+                                              
+                                              <a class="text-dark text-decoration-none" style="font-size: 14px;" data-bs-toggle="collapse" href="#coupon-collapse" role="button"
+                                                  aria-expanded="false" aria-controls="coupon-collapse">
+                                                  Have a coupon? Click here to enter your code.
+                                              </a> 
+                                          </p>
+                                          <div class="collapse" id="coupon-collapse">
+                                              <div class="card card-body mb-5">
+                                                  <input type="text" class="form-control mb-2" placeholder="Enter Coupon Code">
+                                                  <button class="btn btn-secondary">Apply</button>
+                                              </div>
+                                          </div>
+                                      </div>
+                  
+                            <!-- Shipping -->
+                            <div class="d-flex justify-content-between mb-2">
+                              <span>Shipping</span>
+                              <span class="text-success">Free</span>
+                            </div>
+                            <small class="text-muted d-block mb-3">Free shipping (5-7 business days)</small>
+                  
+                            <!-- Total -->
+                            <div class="d-flex justify-content-between total-due">
+                              <span>Total due</span>
+                              <span>$129.00</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                 </div>
-
-                <!-- Information Section -->
-                <div class="col-6 col-md-6 col-lg-3 mb-3">
-                    <h5 class="fw-bold">Information</h5>
-                    <ul class="list-unstyled">
-                        <li><a class="text-decoration-none text-secondary" href="#">Our blog</a></li>
-                        <li><a class="text-decoration-none text-secondary" href="#">About Us</a></li>
-                        <li><a class="text-decoration-none text-secondary" href="#">Contact Us</a></li>
-                        <li><a class="text-decoration-none text-secondary" href="#">FAQs</a></li>
-                    </ul>
+                <div class="col-md-6">
+                    <div class="shipping-form-container">
+                        <form id="shipping-form">
+                            <h4>Shipping information</h4>
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Email</label>
+                                <input type="email" class="form-control border p-4 " id="formGroupExampleInput" placeholder="Email">
+                            </div>
+                            <div class="shipping-section">
+                                <h3>Shipping address</h3>
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <input type="text" id="fullName" name="fullName" class="form-control" placeholder="Full name" oninput="validateShippingForm(event)" />
+                                    </li>
+                                    <li class="list-group-item">
+                                        <select id="country" name="country" class="form-select">
+                                            <option value="United States">United States</option>
+                                            <option value="Canada">Canada</option>
+                                            <option value="Mexico">Mexico</option>
+                                        </select>
+                                    </li>
+                                    <li class="list-group-item rounded-bottom" id="addressContainer">
+                                        <input type="text" id="address" name="address" class="form-control" placeholder="Address" oninput="handleAddressInput(event)" />
+                                    </li>
+                                    <div id="manualAddressLink" class="manual-address" onclick="manualAddress()">Enter address manually</div>
+                                    <div id="manualAddressFields" style="display: none;">
+                                        <li class="list-group-item">
+                                            <input type="text" id="addressLine1" name="addressLine1" class="form-control" placeholder="Address Line 1" />
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input type="text" id="addressLine2" name="addressLine2" class="form-control" placeholder="Address Line 2 (optional)" />
+                                        </li>
+                                        <div class="form-row">
+                                            <div class="col-md-6">
+                                                <input type="text" id="city" name="city" class="form-control border rounded-0" placeholder="City" />
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" id="zipCode" name="zipCode" class="form-control border rounded-0" placeholder="Zip Code" /> 
+                                            </div>
+                                        </div>
+                                        <li class="list-group-item rounded-bottom">
+                                            <select id="state" name="state" class="form-select">
+                                                <option value="United States">United States</option>
+                                                <option value="Canada">Canada</option>
+                                                <option value="Mexico">Mexico</option>
+                                            </select>
+                                        </li>
+                                        <div onclick="goBackToAddress()" style="cursor: pointer; font-size: 10px;">Back to Address</div>
+                                    </div>
+                                </ul>
+                            </div>
+                
+                            <div class="shipping-method-section">
+                                <h3>Shipping method</h3>
+                                <div class="shipping-options">
+                                    <label class="shipping-option">
+                                        <input type="radio" name="shippingMethod" value="free" onclick="updateShippingFormData()" />
+                                        <div class="shipping-option-content">
+                                            <div class="shipping-name">Free shipping</div>
+                                            <div class="shipping-time">2-7 business days</div>
+                                            <div class="shipping-price">Free</div>
+                                        </div>
+                                    </label>
+                                    <label class="shipping-option">
+                                        <input type="radio" name="shippingMethod" value="nextday"/>
+                                        <div class="shipping-option-content">
+                                            <div class="shipping-name">Next day air</div>
+                                            <div class="shipping-time">All orders tomorrow</div>
+                                            <div class="shipping-price">$15.00</div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                            <!-- Payment Methods -->
+                            <div class="card p-3 shadow-sm mt-3">
+                                <h6>Select Payment Method</h6>
+                                <div class="row g-2 mt-2">
+                                    <div class="col-6 col-md-3">
+                                        <div class="payment-option p-1" onclick="selectPayment('card')">
+                                            <img src="images\mastercard-logo.png" alt="Card">
+                                            <p class="mb-0">Card</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="payment-option p-1" onclick="selectPayment('paypal')">
+                                            <img src="images\PayPal_horizontally_Logo_2014.png" alt="PayPal">
+                                            <p class="mb-0">PayPal</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="payment-option p-1" onclick="selectPayment('visa')">
+                                            <img src="images\visa.jpeg" alt="Visa">
+                                            <p class="mb-0">Visa</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-3">
+                                        <div class="payment-option p-1" onclick="selectPayment('More')">
+                                          <i class="fas fa-ellipsis-h"></i>
+                                            <p class="mb-1">More</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Payment Forms for Card, PayPal, and Visa -->
+                            <div id="payment-forms" class="mt-3">
+                                <!-- Card Form -->
+                                <div id="card-form" class="payment-form d-none mt-5 mb-4">
+                                    <h6>Enter Card Information</h6>
+                                  <div class=" shadow">
+                                    <span class="d-flex border rounded-top">
+                                        <input type="text" class="form-control" placeholder="Card Number">
+                                        <img src="images\payment.png" width="150px"  alt="">
+                                    </span>
+                                    <span class="d-flex gap-1 border rounded-bottom">
+                                        <input type="text" class="form-control border-end" placeholder="MM/YY">
+                                        <input type="text" class="form-control " placeholder="CVC">
+                                    </span>
+                                  </div>
+                                </div>
+            
+                                <!-- PayPal Form -->
+                                <div id="paypal-form" class="payment-form d-none mt-5 mb-4">
+                                    <h6>Enter PayPal Information</h6>
+                                    <div class="shadow">
+                                    <input type="email" class="form-control mb-2 border" placeholder="PayPal Email">
+                                   </div>
+                                </div>
+            
+                                <!-- Visa Form -->
+                                <div id="visa-form" class="payment-form d-none mt-5 mb-4">
+                                    <h6>Enter Visa Card Information</h6>
+                                    <div class=" shadow">
+                                        <span class="d-flex border rounded-top">
+                                            <input type="text" class="form-control" placeholder="Card Number">
+                                            <img src="images\payment.png" width="150px"  alt="">
+                                        </span>
+                                        <span class="d-flex gap-1 border rounded-bottom">
+                                            <input type="text" class="form-control border-end" placeholder="MM/YY">
+                                            <input type="text" class="form-control " placeholder="CVC">
+                                        </span>
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input shadow-none " type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                  Billing address is same as shipping
+                                </label>
+                              </div>
+            
+                            <button class="btn btn-dark w-100 mt-3"><i class="fa-solid fa-lock me-2"></i>Pay Now</button>
+    
+                            <span style="font-size: 12px;">By clicking Pay, you agree to the Link <a href="" class="text-dark text-decoration-none">Terms</a> and <a href="" class="text-dark text-decoration-none">Privacy Policy</a>.</span>
+    
+                            <div class="text-center position-relative mt-5">
+                                <hr>
+                                <p class="position-absolute bg-white px-2 text-muted" style="top: -12px; left: 50%; transform: translateX(-50%);">Or pay another way</p>
+                            </div>
+                            
+    
+    
+                            <button class="btn btn-dark w-100 mt-5"><i class="fa-brands fa-apple me-2"></i></i>Pay</button>
+                    </div>
+       
                 </div>
-
-                <!-- About Us Section -->
-                <div class="col-6 col-md-6 col-lg-3 mb-3">
-                    <h5 class="fw-bold">About Us</h5>
-                    <ul class="list-unstyled">
-                        <li><a class="text-decoration-none text-secondary" href="#">Who We Are?</a></li>
-                        <li><a class="text-decoration-none text-secondary" href="#">Corporate Responsibility</a></li>
-                        <li><a class="text-decoration-none text-secondary" href="#">California Laws</a></li>
-                        <li><a class="text-decoration-none text-secondary" href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Footer Copyright -->
-            <div class="row mt-3 d-flex align-items-center">
-                <div class="col-12 col-md-7 d-flex justify-content-start text-center text-md-start">
-                    © Copyright 2022 | Cycasdor By ShopiLaunch. Powered by Cycasdor Luxury Wear.
-                </div>
-                <div class="col-12 col-md-5 d-flex justify-content-center justify-content-md-end mt-3 mt-md-0">
-                    <img src="images/payment.png" alt="payment" class="img-fluid" style="max-width: 350px;">
-                </div>
+            
             </div>
         </div>
-    </footer>
+    </section>
 
-    <!-- Custom js -->
-    <script src="js\script.js"></script>
-    <!-- Bootstrap 5 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Quantity Modal -->
+  <div class="modal fade" id="quantityModal" tabindex="-1" aria-labelledby="quantityModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header ">
+          <div class="d-flex align-items-center w-100">
+            <div class="me-2">
+              <img src="images/cardimage.png" width="50px" height="50px" alt="Product Image">
+            </div>
+            <div>
+              <h5 class="modal-title mb-1" id="quantityModalLabel" style="font-size: 16px;">Update Quantity</h5>
+              <p class="text-muted mb-0" style="font-size: 12px;">Adjust the quantity of the product</p>
+            </div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+  
+        <!-- Modal Body -->
+        <div class="modal-body text-center">
+          <button id="decreaseQuantity" class="btn btn-outline-secondary btn-sm" style="width: 40px; height: 40px;">-</button>
+          <span id="quantityValue" class="mx-3" style="font-size: 16px; font-weight: bold;">1</span>
+          <button id="increaseQuantity" class="btn btn-outline-secondary btn-sm" style="width: 40px; height: 40px;">+</button>
+        </div>
+  
+        <!-- Modal Footer -->
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-dark w-100 py-2" data-bs-dismiss="modal" style="font-size: 14px;">Update Quantity</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Include jQuery first -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <!-- Bootstrap 5 JS and Popper.js -->
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <!-- Custom js -->
+  <script src="js\script.js"></script>
+
 </body>
-
 </html>
