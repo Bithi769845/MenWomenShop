@@ -550,59 +550,42 @@ form.cdr-search-box {
 }
 
 /* Checkout page */
-.payment-option {
-  height: 60px;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  text-align: left;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.payment-methods {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
 }
-
-.payment-option img {
-  width: 30px;
-  height: 30px;
-}
-
-.payment-option.selected {
-  border-color: #000000;
-  background-color: #f9f9f9;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .payment-option img {
-    width: 50px;
-  }
-}
-
-.payment-option.form-check-input:checked {
-  background-color: black;
-}
-
-.payment-option.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: white;
-  border: 1px solid #ccc;
+.payment-methods button {
   width: 100%;
-  z-index: 10;
-  border-radius: 5px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  border: 1px solid #ddd;
 }
-
-.card-pay input {
-  padding: 18px 14px !important;
+.payment-methods .dropdown {
+  width: 100%;
 }
-
-.payment-option.dropdown-item {
-  padding: 5px 10px;
-  cursor: pointer;
+.payment-methods .dropdown-toggle {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  border: 1px solid #ddd;
 }
-
-.payment-option.dropdown-item:hover {
-  background-color: #f8f8f8;
+.payment-methods .dropdown-menu {
+  min-width: 100%;
+}
+.payment-fields {
+  margin-top: 20px;
+  display: none;
+}
+.payment-fields input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+.payment-methods i {
+  margin-right: 10px;
 }
 
 #coupon-section {

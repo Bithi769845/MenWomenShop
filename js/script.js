@@ -316,23 +316,45 @@ document.addEventListener("DOMContentLoaded", function () {
 })();
 
 function selectPayment(paymentMethod) {
-  // Remove the "selected" class from all payment options
-  const options = document.querySelectorAll('.payment-option');
-  options.forEach(option => option.classList.remove('selected'));
+  // Hide all payment fields first
+  document.querySelectorAll('.payment-fields').forEach(function(field) {
+    field.style.display = 'none';
+  });
 
-  // Add the "selected" class to the clicked option
-  event.target.closest('.payment-option').classList.add('selected');
+  // Show the appropriate payment method's fields
+  switch (paymentMethod) {
+    case 'card':
+      document.getElementById('creditCardFields').style.display = 'block';
+      break;
+    case 'bank':
+      document.getElementById('bankFields').style.display = 'block';
+      break;
+    case 'ideal':
+      document.getElementById('idealFields').style.display = 'block';
+      break;
+    case 'giftCard':
+      document.getElementById('giftCardFields').style.display = 'block';
+      break;
+    case 'crypto':
+      document.getElementById('cryptoFields').style.display = 'block';
+      break;
+  }
 
-  // Hide all payment forms
-  const paymentForms = document.querySelectorAll('.payment-form');
-  paymentForms.forEach(form => form.classList.add('d-none'));
-
-  // Show the selected payment form
-  const selectedForm = document.getElementById(`${paymentMethod}-form`);
-  if (selectedForm) {
-    selectedForm.classList.remove('d-none');
+  // Update "More" button text for gift card or cryptocurrency
+  if (paymentMethod === 'giftCard') {
+    document.getElementById('dropdownMore').innerHTML = '<i class="fas fa-gift"></i> Gift';
+  } else if (paymentMethod === 'crypto') {
+    document.getElementById('dropdownMore').innerHTML = '<i class="fab fa-bitcoin"></i> Crypto';
+  } else {
+    // Reset "More" button text to default for other payment methods
+    document.getElementById('dropdownMore').innerHTML = '<i class="fas fa-ellipsis-h"></i> More';
   }
 }
+
+
+
+
+
 function showCouponInput() {
   const title = document.getElementById('coupon-title');
   const collapse = document.getElementById('coupon-collapse');

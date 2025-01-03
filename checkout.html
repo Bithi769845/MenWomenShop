@@ -280,58 +280,64 @@
             <!-- Payment Methods -->
             <div class="card p-3 shadow-sm mt-3">
               <h6>Select Payment Method</h6>
-              <div class="row g-2 mt-2">
-                <div class="col-6 col-md-3">
-                  <div class="payment-option p-1" onclick="selectPayment('card')">
-                    <span><i class="fa-regular fa-credit-card"></i></span>
-                    <p class="mb-0">Cart</p>
-                  </div>
-                </div>
-                <div class="col-6 col-md-3">
-                  <div class="payment-option p-1" onclick="selectPayment('paypal')">
-                    <span><i class="fa-solid fa-landmark"></i></span>
-                    <p class="mb-0">Bank</p>
-                  </div>
-                </div>
-                <div class="col-6 col-md-3">
-                  <div class="payment-option p-1" onclick="selectPayment('visa')">
-                    <img src="images\ideal.png" alt="Visa">
-                    <p class="mb-0">Ideal</p>
-                  </div>
-                </div>
-                <div class="col-6 col-md-3">
-                  <div class="payment-option p-1" onclick="selectPayment('More')">
-                    <i class="fas fa-ellipsis-h"></i>
-                    <p class="mb-1">More</p>
-                  </div>
-                </div>
-              </div>
-              <div id="payment-forms" class="mt-3">
-                <!-- Card Form -->
-                <div id="card-form" class="payment-form d-none mt-1 mb-3">
-                  <h6>Card Information</h6>
-                  <div class="card-pay">
-                    <span class="d-flex border rounded-top">
-                      <input type="text" class="form-control" placeholder="Card Number" autocomplete="cc-number">
-                      <img src="images/payment.png" width="150px" alt="">
-                    </span>
-                    <span class="d-flex gap-1 border-end border-start border-bottom rounded-bottom">
-                      <input type="text" class="form-control border-end" placeholder="MM/YY" autocomplete="cc-exp">
-                      <input type="text" class="form-control" placeholder="CVC" autocomplete="cc-csc">
-                    </span>
-                  </div>
-                </div>
+            <!-- Payment Methods Selection with Icons -->
+            <div class="payment-methods">
+              <button class="btn " type="button" onclick="selectPayment('card')">
+                <i class="fas fa-credit-card"></i> Card
+              </button>
+              <button class="btn " type="button" onclick="selectPayment('bank')">
+                <i class="fas fa-university"></i> Bank
+              </button>
+              <button class="btn " type="button" onclick="selectPayment('ideal')">
+                <i class="fas fa-wallet"></i> IDEAL
+              </button>
 
-                <!-- PayPal Form -->
-                <div id="paypal-form" class="payment-form d-none">
-                  <h6>Bank Payment</h6>
-                </div>
-
-                <!-- Visa Form -->
-                <div id="visa-form" class="payment-form d-none mb-4">
-                  <h6>Payment Function Coming</h6>
-                </div>
+              <!-- More dropdown with additional payment options -->
+              <div class="dropdown" id="moreDropdown">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMore" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fas fa-ellipsis-h"></i> More
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMore">
+                  <li><a class="dropdown-item"  onclick="selectPayment('giftCard')"><i class="fas fa-gift"></i> Gift Card</a></li>
+                  <li><a class="dropdown-item" onclick="selectPayment('crypto')"><i class="fab fa-bitcoin"></i> Cryptocurrency</a></li>
+                </ul>
               </div>
+            </div>
+
+            <!-- Payment Details Section -->
+            <div id="paymentFields">
+              <!-- Card Payment -->
+              <div id="creditCardFields" class="payment-fields">
+                    <h6>Card Information</h6>
+                    <div class="card-pay  p-2">
+                      <span class="d-flex border rounded-top">
+                        <input type="text" class="form-control border-0" placeholder="Card Number" autocomplete="cc-number">
+                        <img src="images/payment.png" width="150px" alt="">
+                      </span>
+                      <span class="d-flex gap-1 border rounded-bottom">
+                        <input type="text" class="form-control border-0 border-end" placeholder="MM/YY" autocomplete="cc-exp">
+                        <input type="text" class="form-control border-0" placeholder="CVC" autocomplete="cc-csc">
+                      </span>
+                    </div>
+              </div>
+              <!-- Bank Payment -->
+              <div id="bankFields" class="payment-fields">
+                <h6>Bank Payment</h6>
+              </div>
+              <!-- IDEAL Payment -->
+              <div id="idealFields" class="payment-fields">
+                <h6>Payment Function Coming</h6>
+              </div>
+              <!-- Gift Card -->
+              <div id="giftCardFields" class="payment-fields">
+                <input type="text" class="rounded" placeholder="Enter gift card number" />
+              </div>
+              <!-- Cryptocurrency -->
+              <div id="cryptoFields" class="payment-fields">
+                <input type="text" class="rounded" placeholder="Enter wallet address" />
+              </div>
+            </div>
+
               <div class="form-check">
                 <input class="form-check-input shadow-none " type="checkbox" value="" id="flexCheckChecked" checked>
                 <label class="form-check-label" for="flexCheckChecked">
