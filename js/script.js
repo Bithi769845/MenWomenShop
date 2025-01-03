@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const now = new Date();
     const diff = endDate - now;
 
-    if (diff <= 0) return "0d 0h 0m 0s"; 
+    if (diff <= 0) return "0d 0h 0m 0s";
 
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to update the text
     function updateText() {
-      textElement.innerHTML = texts[index](); 
-      index = (index + 1) % texts.length; 
+      textElement.innerHTML = texts[index]();
+      index = (index + 1) % texts.length;
     }
 
     // Function to continuously update the timer text
@@ -141,43 +141,43 @@ if (plusButton && quantity) {
 }
 
 //Choose your size selector
-    // Event listener for selecting size from EU Size list
-    document.querySelectorAll('#euSizeList .list-group-item').forEach(function(item) {
-      item.addEventListener('click', function() {
-          var selectedSize = item.getAttribute('data-size');
-          document.getElementById('selectedSizeText').textContent = selectedSize;
-          document.getElementById('collapseSize').classList.remove('show'); // Collapse the accordion
-      });
+// Event listener for selecting size from EU Size list
+document.querySelectorAll('#euSizeList .list-group-item').forEach(function (item) {
+  item.addEventListener('click', function () {
+    var selectedSize = item.getAttribute('data-size');
+    document.getElementById('selectedSizeText').textContent = selectedSize;
+    document.getElementById('collapseSize').classList.remove('show'); // Collapse the accordion
   });
+});
 
-  // Event listener for selecting size from Manufacturer Size list
-  document.querySelectorAll('#manufacturerSizeList .list-group-item').forEach(function(item) {
-      item.addEventListener('click', function() {
-          var selectedSize = item.getAttribute('data-size');
-          document.getElementById('selectedSizeText').textContent = selectedSize;
-          document.getElementById('collapseSize').classList.remove('show'); // Collapse the accordion
-      });
+// Event listener for selecting size from Manufacturer Size list
+document.querySelectorAll('#manufacturerSizeList .list-group-item').forEach(function (item) {
+  item.addEventListener('click', function () {
+    var selectedSize = item.getAttribute('data-size');
+    document.getElementById('selectedSizeText').textContent = selectedSize;
+    document.getElementById('collapseSize').classList.remove('show'); // Collapse the accordion
   });
+});
 
 // product image zoom effect
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   if (document.querySelector(".product-details")) {
-      // Document selectors
-  const thumbnailWrapper = document.querySelector(".swiper-wrapper");
-  const mainImage = document.querySelector(".mainImage");
+    // Document selectors
+    const thumbnailWrapper = document.querySelector(".swiper-wrapper");
+    const mainImage = document.querySelector(".mainImage");
 
-  // Check if the necessary elements exist on the page
-  if (mainImage && thumbnailWrapper) {
+    // Check if the necessary elements exist on the page
+    if (mainImage && thumbnailWrapper) {
       // List of images
       const imageList = [
-          "images/cardimage.png",
-          "images/cardimage2.png",
-          "images/cardimage.png",
-          "images/cardimage2.png",
-          "images/cardimage.png",
-          "images/cardimage2.png",
-          "images/cardimage.png",
-          "images/cardimage2.png"
+        "images/cardimage.png",
+        "images/cardimage2.png",
+        "images/cardimage.png",
+        "images/cardimage2.png",
+        "images/cardimage.png",
+        "images/cardimage2.png",
+        "images/cardimage.png",
+        "images/cardimage2.png"
       ];
 
       // Set the first image to be shown initially
@@ -185,85 +185,86 @@ document.addEventListener("DOMContentLoaded", function() {
 
       // Generate thumbnail boxes and add them to the carousel
       imageList.forEach((image, index) => {
-          const child = `<div class="swiper-slide">
+        const child = `<div class="swiper-slide">
               <div class="thumbnailBox">
                   <img src="${image}" alt="Thumbnail ${index + 1}">
               </div>
           </div>`;
-          thumbnailWrapper.innerHTML += child;
+        thumbnailWrapper.innerHTML += child;
       });
 
       // Add click event listener for thumbnails (swiper slides)
       thumbnailWrapper.querySelectorAll(".swiper-slide").forEach((swiperSlide) => {
-          swiperSlide.addEventListener("click", (e) => {
-              const activeThumbnail = document.querySelector(".thumbnailBox.active");
-              if (activeThumbnail) {
-                  activeThumbnail.classList.remove("active");
-              }
-              swiperSlide.querySelector(".thumbnailBox").classList.add("active");
-              const imageSrc = swiperSlide.querySelector("img").getAttribute("src");
-              mainImage.innerHTML = `<img src="${imageSrc}" alt="Main Image">`;
-          });
+        swiperSlide.addEventListener("click", (e) => {
+          const activeThumbnail = document.querySelector(".thumbnailBox.active");
+          if (activeThumbnail) {
+            activeThumbnail.classList.remove("active");
+          }
+          swiperSlide.querySelector(".thumbnailBox").classList.add("active");
+          const imageSrc = swiperSlide.querySelector("img").getAttribute("src");
+          mainImage.innerHTML = `<img src="${imageSrc}" alt="Main Image">`;
+        });
       });
 
       // Initialize Swiper for horizontal scrolling and 4 images per slide
       const swiper = new Swiper('.swiper-container', {
-          slidesPerView: 4,       
-          spaceBetween: 5,       
-          centeredSlides: true,   
-          loop: true,             
-          navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev'
-          },
-          touchEventsTarget: 'container',
+        slidesPerView: 4,
+        spaceBetween: 5,
+        centeredSlides: true,
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        touchEventsTarget: 'container',
       });
 
       // Zoom effect on main image
       mainImage.addEventListener("mousemove", (e) => {
-          const containerWidth = mainImage.offsetWidth;
-          const containerHeight = mainImage.offsetHeight;
+        const containerWidth = mainImage.offsetWidth;
+        const containerHeight = mainImage.offsetHeight;
 
-          const image = mainImage.querySelector("img");
-          const imageWidth = image.offsetWidth;
-          const imageHeight = image.offsetHeight;
+        const image = mainImage.querySelector("img");
+        const imageWidth = image.offsetWidth;
+        const imageHeight = image.offsetHeight;
 
-          const x = e.pageX - mainImage.offsetLeft;
-          const y = e.pageY - mainImage.offsetTop;
+        const x = e.pageX - mainImage.offsetLeft;
+        const y = e.pageY - mainImage.offsetTop;
 
-          const translateX = (containerWidth / 2 - x) * 2;
-          const translateY = (containerHeight / 2 - y) * 2;
+        const translateX = (containerWidth / 2 - x) * 2;
+        const translateY = (containerHeight / 2 - y) * 2;
 
-          const scale = 3;
+        const scale = 3;
 
-          image.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+        image.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
       });
 
       // Reset zoom effect when mouse leaves
       mainImage.addEventListener("mouseleave", () => {
-          const image = mainImage.querySelector("img");
-          image.style.transform = "translate(0%, 0%) scale(1)";
+        const image = mainImage.querySelector("img");
+        image.style.transform = "translate(0%, 0%) scale(1)";
       });
-  }
+    }
   }
 });
-
-
-
 
 // checkout
 // Scoped JavaScript for shipping form
 (function () {
-  // Function to show manual address fields
+  // // Function to show manual address fields
   function manualAddress() {
     const formContainer = document.querySelector('.shipping-form-container');
     const addressContainer = formContainer.querySelector('#addressContainer');
     const manualAddressLink = formContainer.querySelector('#manualAddressLink');
     const manualAddressFields = formContainer.querySelector('#manualAddressFields');
+
     manualAddressLink.style.display = 'none';
-    manualAddressFields.style.display = 'block';
     addressContainer.style.display = 'none';
+
+    // Add smooth animation for opening
+    manualAddressFields.classList.add('open');
   }
+
 
   // Function to go back to the address view
   function goBackToAddress() {
@@ -272,7 +273,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const manualAddressLink = formContainer.querySelector('#manualAddressLink');
     const manualAddressFields = formContainer.querySelector('#manualAddressFields');
     manualAddressLink.style.display = 'block';
-    manualAddressFields.style.display = 'none';
+    manualAddressFields.classList.remove('open');
     addressContainer.style.display = 'block';
   }
 
@@ -314,30 +315,42 @@ document.addEventListener("DOMContentLoaded", function() {
   window.goBackToAddress = goBackToAddress;
 })();
 
-
-
-
-
 function selectPayment(paymentMethod) {
-// Remove the "selected" class from all payment options
-const options = document.querySelectorAll('.payment-option');
-options.forEach(option => option.classList.remove('selected'));
+  // Remove the "selected" class from all payment options
+  const options = document.querySelectorAll('.payment-option');
+  options.forEach(option => option.classList.remove('selected'));
 
-// Add the "selected" class to the clicked option
-event.target.closest('.payment-option').classList.add('selected');
+  // Add the "selected" class to the clicked option
+  event.target.closest('.payment-option').classList.add('selected');
 
-// Hide all payment forms
-const paymentForms = document.querySelectorAll('.payment-form');
-paymentForms.forEach(form => form.classList.add('d-none'));
+  // Hide all payment forms
+  const paymentForms = document.querySelectorAll('.payment-form');
+  paymentForms.forEach(form => form.classList.add('d-none'));
 
-// Show the selected payment form
-const selectedForm = document.getElementById(`${paymentMethod}-form`);
-if (selectedForm) {
-selectedForm.classList.remove('d-none');
+  // Show the selected payment form
+  const selectedForm = document.getElementById(`${paymentMethod}-form`);
+  if (selectedForm) {
+    selectedForm.classList.remove('d-none');
+  }
+}
+function showCouponInput() {
+  const title = document.getElementById('coupon-title');
+  const collapse = document.getElementById('coupon-collapse');
+
+  // Hide the title and show the input field
+  title.style.display = 'none';
+  collapse.style.display = 'block';
 }
 
-// Show the coupon section
-document.getElementById('coupon-section').classList.remove('d-none');
+function toggleApplyButton(input) {
+  const applyButton = document.getElementById('apply-button');
+
+  // Show the Apply button if input has at least one character
+  if (input.value.trim().length > 0) {
+    applyButton.style.display = 'inline-block';
+  } else {
+    applyButton.style.display = 'none';
+  }
 }
 
 jQuery(document).ready(
@@ -434,3 +447,151 @@ jQuery(document).ready(
     });
   })
 );
+
+let selectedCountry = 'United States';
+
+// Fetch address suggestions based on the input
+// Fetch address suggestions based on the input
+function fetchAddressSuggestions() {
+  const addressInput = document.getElementById('address');
+  const addressSuggestionsContainer = document.getElementById('addressSuggestions');
+  const query = addressInput.value.trim();
+
+  // Ensure the query is long enough to trigger the search
+  if (query.length > 2) {
+    const country = encodeURIComponent(selectedCountry); // Ensure country is encoded
+    const searchQuery = encodeURIComponent(query); // Ensure query is encoded
+    const url = `https://nominatim.openstreetmap.org/search?q=${searchQuery}&format=json&addressdetails=1&limit=5`;
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        addressSuggestionsContainer.innerHTML = '';
+        if (data.length > 0) {
+          data.forEach(item => {
+            const suggestion = document.createElement('div');
+            suggestion.className = 'suggestion-item fs-6';
+            suggestion.textContent = item.display_name;
+            suggestion.onclick = () => selectSuggestion(item);
+            addressSuggestionsContainer.appendChild(suggestion);
+          });
+        } else {
+          addressSuggestionsContainer.innerHTML = '<div class="fs-7">No suggestions found.</div>';
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching address suggestions:', error);
+      });
+  } else {
+    addressSuggestionsContainer.innerHTML = ''; // Clear suggestions if query is too short
+  }
+}
+
+
+// Autofill address fields when a suggestion is selected
+function selectSuggestion(item) {
+  console.log(item); // Debugging the item returned from the API
+
+  // Set values for the address fields, falling back to an empty string if not found
+  document.getElementById('address').value = item.display_name || '';
+  document.getElementById('addressLine1').value = item.address.house_number || '';
+  document.getElementById('city').value = item.address.city || item.address.town || item.address.village || '';
+  document.getElementById('zipCode').value = item.address.postcode || '';
+  document.getElementById('state').value = item.address.state || '';
+
+  // Hide the address input field and show manual address fields
+  document.getElementById('addressContainer').style.display = 'none';
+  document.getElementById('manualAddressLink').style.display = 'none';
+
+  // Ensure the manual address fields are shown correctly
+  document.getElementById('manualAddressFields').style.maxHeight = '500px';
+
+  // Optionally trigger validation for the newly populated fields
+  validateAddressFields();
+}
+
+function validateAddressFields() {
+  const addressLine1 = document.getElementById('addressLine1').value.trim();
+  const city = document.getElementById('city').value.trim();
+  const zipCode = document.getElementById('zipCode').value.trim();
+  const state = document.getElementById('state').value.trim();
+
+  // Example of validating address fields (e.g., non-empty, valid formats)
+  validateField('addressLine1', addressLine1, 'Address Line 1');
+  validateField('city', city, 'City');
+  validateField('zipCode', zipCode, 'Zip Code');
+  validateField('state', state, 'State');
+}
+
+function validateField(fieldId, value, fieldName) {
+  const field = document.getElementById(fieldId);
+  if (!value) {
+    field.classList.add('is-invalid');
+    field.classList.remove('is_valid');
+    console.log(`${fieldName} is invalid.`);
+  } else {
+    field.classList.add('is_valid');
+    field.classList.remove('is-invalid');
+    console.log(`${fieldName} is valid.`);
+  }
+}
+
+
+// Load country-specific suggestions when a country is selected
+function loadSuggestions() {
+  selectedCountry = document.getElementById('country').value;
+  fetchAddressSuggestions();  // Update the suggestions when the country changes
+}
+
+// Open manual address fields
+function manualAddress() {
+  document.getElementById('manualAddressLink').style.display = 'none';
+  document.getElementById('addressContainer').style.display = 'none';
+  document.getElementById('manualAddressFields').style.maxHeight = '500px';
+}
+
+// Go back to address input field
+function goBackToAddress() {
+  document.getElementById('manualAddressLink').style.display = 'block';
+  document.getElementById('addressContainer').style.display = 'block';
+  document.getElementById('manualAddressFields').style.maxHeight = '0';
+}
+
+// Validate address field for the selected country
+function validateAddressField(field) {
+  const value = document.getElementById(field).value;
+  let isValid = true;
+
+  switch (field) {
+    case 'addressLine1':
+      // Add validation for address line 1 based on country
+      if (selectedCountry === 'United States' && value.trim().length < 5) {
+        isValid = false;
+      }
+      break;
+    case 'city':
+      // Add validation for city
+      if (value.trim().length < 3) {
+        isValid = false;
+      }
+      break;
+    case 'zipCode':
+      // Add validation for zip code based on country
+      if (selectedCountry === 'United States' && !/^\d{5}(-\d{4})?$/.test(value)) {
+        isValid = false;
+      }
+      break;
+    case 'state':
+      // Add validation for state
+      if (value.trim().length < 2) {
+        isValid = false;
+      }
+      break;
+    default:
+      break;
+  }
+
+  // Apply color based on validity
+  document.getElementById(field).classList.toggle('is-invalid', !isValid);
+  document.getElementById(field).classList.toggle('is-valid', isValid);
+}
