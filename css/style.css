@@ -562,16 +562,20 @@ form.cdr-search-box {
   text-align: center;
   border: 1px solid #ddd;
 }
+
+.payment-methods button:hover {
+  border: 1px solid #000000;
+}
 .payment-methods .dropdown {
   width: 100%;
 }
-.payment-methods .dropdown-toggle {
+/* .payment-methods .dropdown-toggle {
   width: 100%;
   padding: 10px;
   border-radius: 6px;
   text-align: center;
   border: 1px solid #ddd;
-}
+} */
 .payment-methods .dropdown-menu {
   min-width: 100%;
 }
