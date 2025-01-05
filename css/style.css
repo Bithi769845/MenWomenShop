@@ -503,13 +503,6 @@ form.cdr-search-box {
 }
 
 
-
-
-
-
-
-
-
 .checkout-card {
   max-width: 600px;
   margin: 0 auto;
@@ -569,13 +562,7 @@ form.cdr-search-box {
 .payment-methods .dropdown {
   width: 100%;
 }
-/* .payment-methods .dropdown-toggle {
-  width: 100%;
-  padding: 10px;
-  border-radius: 6px;
-  text-align: center;
-  border: 1px solid #ddd;
-} */
+
 .payment-methods .dropdown-menu {
   min-width: 100%;
 }
@@ -594,11 +581,11 @@ form.cdr-search-box {
 
 #coupon-section {
   width: 100%;
-  max-width: 400px; /* Optional to control the width */
+  max-width: 400px;
 }
 
 #coupon-input {
-  padding-right: 70px; /* Space for the button */
+  padding-right: 70px;
 }
 
 button.btn.coupon-apply {
@@ -816,6 +803,20 @@ button.btn.coupon-apply {
   letter-spacing: 3px;
 }
 
+.product-cart-button div {
+  width: 100%;
+}
+
+.cart-button, .checkout-button {
+  width: 100%;
+  border-radius: 0;
+}
+
+.checkout-button {
+  background: transparent;
+  color: #000;
+}
+
 @media (max-width: 500px) {
   .cdr-newsletter {
     text-align: center;
@@ -824,9 +825,16 @@ button.btn.coupon-apply {
   .newslater-form {
     margin-top: 1rem;
   }
+
+  .product-cart-button {
+    width: 100%;
+    display: inline-block !important;
+  }
 }
 
-/* footer */
+
+/*================== FOOTER ============================*/
+
 .cdr-footer .footer-copyright {
   font-size: .9rem;
 }

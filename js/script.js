@@ -87,8 +87,6 @@ document.querySelectorAll('.global .dropdown-item').forEach((item) => {
   });
 });
 
-
-
 // <!-- Initialize Swiper -->
 var swiper = new Swiper(".mySwiper", {
   speed: 500,
@@ -101,10 +99,6 @@ var swiper = new Swiper(".mySwiper", {
   loop: true,
 });
 
-
-
-
-
 //checkout script 
 function selectPayment(element) {
   const options = document.querySelectorAll('.payment-option');
@@ -113,10 +107,7 @@ function selectPayment(element) {
 }
 
 
-
 // Product Details
-//  - Quantity
-// Get the minus and plus buttons
 var minusButton = document.getElementById('minusButton');
 var plusButton = document.getElementById('plusButton');
 var quantity = document.getElementById('quantity');
@@ -170,14 +161,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if (mainImage && thumbnailWrapper) {
       // List of images
       const imageList = [
-        "images/cardimage.png",
-        "images/cardimage2.png",
-        "images/cardimage.png",
-        "images/cardimage2.png",
-        "images/cardimage.png",
-        "images/cardimage2.png",
-        "images/cardimage.png",
-        "images/cardimage2.png"
+        "https://cycasdor.com/wp-content/uploads/2024/05/IMG_82861-scaled-1.jpg",
+        "https://cycasdor.com/wp-content/uploads/2024/05/ed-scaled-1.jpg",
+        "https://cycasdor.com/wp-content/uploads/2024/05/01-scaled-1.jpg",
+        "https://cycasdor.com/wp-content/uploads/2024/09/Lammy-coat-cognac-brown_Cognac-Brown_Schuin-rechts-scaled.jpg",
+        "https://cycasdor.com/wp-content/uploads/2024/09/Lammy-coat-cognac-brown_Cognac-Brown_Front-scaled.jpg",
+        "https://cycasdor.com/wp-content/uploads/2024/09/Lammy-coat-chocolate-dark-brown_Chocolate-Brown_Schuin-rechts-1-scaled.jpg",
+        "https://cycasdor.com/wp-content/uploads/2024/05/LEATHERHYPE-06252020-022-2-scaled-1.jpg",
+        "https://cycasdor.com/wp-content/uploads/2024/05/04-scaled-1.jpg"
       ];
 
       // Set the first image to be shown initially
@@ -249,7 +240,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // checkout
-// Scoped JavaScript for shipping form
 (function () {
   // // Function to show manual address fields
   function manualAddress() {
@@ -264,7 +254,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add smooth animation for opening
     manualAddressFields.classList.add('open');
   }
-
 
   // Function to go back to the address view
   function goBackToAddress() {
@@ -350,10 +339,6 @@ function selectPayment(paymentMethod) {
     document.getElementById('dropdownMore').innerHTML = '<i class="fas fa-ellipsis-h"></i> More';
   }
 }
-
-
-
-
 
 function showCouponInput() {
   const title = document.getElementById('coupon-title');
@@ -472,7 +457,6 @@ jQuery(document).ready(
 
 let selectedCountry = 'United States';
 
-// Fetch address suggestions based on the input
 // Fetch address suggestions based on the input
 function fetchAddressSuggestions() {
   const addressInput = document.getElementById('address');
