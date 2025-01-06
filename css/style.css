@@ -731,7 +731,7 @@ button.btn.coupon-apply {
 }
 
 
-/* product page */
+/*===============PRODUCT PAGE=================================*/
 
 .filter-card {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -812,7 +812,7 @@ button.btn.coupon-apply {
   border-radius: 0;
 }
 
-.checkout-button {
+.checkout-button, .disabled.checkout-button {
   background: transparent;
   color: #000;
 }

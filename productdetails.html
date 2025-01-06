@@ -147,7 +147,6 @@
                             </section>
                         </div>
                     </div>
-                    
                 </div>
                 <!-- Product Details -->
                 <div class="col-12 col-md-12 col-lg-6 mt-4 mt-md-0">
@@ -163,11 +162,11 @@
                     <div class="mb-3">
                         <div class="accordion" id="sizeSelector">
                             <div class="accordion-item">
-                                <div class="accordion-header" id="headingSize">
+                                <h2 class="accordion-header" id="headingSize">
                                     <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSize" aria-expanded="false" aria-controls="collapseSize">
                                         <span id="selectedSizeText">Choose your size</span>
                                     </button>
-                                </div>
+                                </h2>
                                 <div id="collapseSize" class="accordion-collapse collapse" aria-labelledby="headingSize" data-bs-parent="#sizeSelector">
                                     <div class="accordion-body">
                                         <ul class="nav nav-tabs" id="sizeTabs" role="tablist">
@@ -214,16 +213,16 @@
                     <!-- Add to Cart Button -->
                     <div class="d-flex gap-4 product-cart-button">
                         <div class="mt-3">
-                            <button class="btn btn-dark  ps-4 pe-4 pt-2 pb-2 cart-button">Add to Bag</button>
+                            <button class="btn btn-dark  ps-4 pe-4 pt-2 pb-2 cart-button disabled" >Add to Bag</button>
                         </div>
 
                         <div class=" mt-3">
-                            <a class="btn btn-dark ps-4 pe-4 pt-2 pb-2 checkout-button" href="checkout.html">Checkout</a>
+                            <a class="btn btn-dark ps-4 pe-4 pt-2 pb-2 disabled checkout-button " href="checkout.html">Checkout</a>
                         </div>
                     </div>
                     <hr style="margin-top: 40px;">
 
-                    <div class="accordion " id="accordionExample">
+                    <div class="accordion" id="accordionExample">
                         <div class="accordion-item border-0 border-bottom">
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button shadow-none rounded-0" type="button"
