@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!-- flag icon cdn  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/7.2.3/css/flag-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" />
 
     <!-- Custom css -->
     <link rel="stylesheet" href="css\style.css">
@@ -203,33 +203,17 @@
                     </div>
                 </div>
                 <div class="col-6 col-md-4 mb-3 col-lg-3">
-                    <div class="card border-0">
-                        <div class="image-container">
-                            <a href="productdetails.html">
-                                <img src="images/cardimage2.png" alt="Shoe image" class="first-image card-img-top">
-                                <img src="images/cardimage.png" alt="Hover image" class="second-image card-img-top">
-                            </a>
-                            <span class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra
-                                20% off</span>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="card-title fw-bold" style="font-size: 0.8rem;">Nina Ricci</h6>
-                            <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend jumper</p>
-                            <p class="card-text " style="font-size: 0.8rem;">
-                                <span><del>750 €</del></span> -40% <span class="text-danger">1.272 €</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4 mb-3 col-lg-3">
-                    <div class="card border-0">
-                        <div class="image-container">
+                    <div class="card border-0 cdr-product-card">
+                        <div class="image-container position-relative">
                             <a href="productdetails.html">
                                 <img src="images/cardimage.png" alt="Shoe image" class="first-image card-img-top">
                                 <img src="images/cardimage2.png" alt="Hover image" class="second-image card-img-top">
                             </a>
                             <span class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra
                                 20% off</span>
+                            <button class="quick-view-btn position-absolute top-0 end-0 m-2 btn btn-light">
+                                <i class="fas fa-eye"></i>
+                            </button>
                         </div>
                         <div class="card-body">
                             <h6 class="card-title fw-bold" style="font-size: 0.8rem;">Nina Ricci</h6>
@@ -241,14 +225,39 @@
                     </div>
                 </div>
                 <div class="col-6 col-md-4 mb-3 col-lg-3">
-                    <div class="card border-0">
-                        <div class="image-container">
+                    <div class="card border-0 cdr-product-card">
+                        <div class="image-container position-relative">
                             <a href="productdetails.html">
-                                <img src="images/cardimage2.png" alt="Shoe image" class="first-image card-img-top">
-                                <img src="images/cardimage.png" alt="Hover image" class="second-image card-img-top">
+                                <img src="images/cardimage.png" alt="Shoe image" class="first-image card-img-top">
+                                <img src="images/cardimage2.png" alt="Hover image" class="second-image card-img-top">
                             </a>
                             <span class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra
                                 20% off</span>
+                            <button class="quick-view-btn position-absolute top-0 end-0 m-2 btn btn-light">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold" style="font-size: 0.8rem;">Nina Ricci</h6>
+                            <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend jumper</p>
+                            <p class="card-text " style="font-size: 0.8rem;">
+                                <span><del>750 €</del></span> -40% <span class="text-danger">1.272 €</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 mb-3 col-lg-3">
+                    <div class="card border-0 cdr-product-card">
+                        <div class="image-container position-relative">
+                            <a href="productdetails.html">
+                                <img src="images/cardimage.png" alt="Shoe image" class="first-image card-img-top">
+                                <img src="images/cardimage2.png" alt="Hover image" class="second-image card-img-top">
+                            </a>
+                            <span class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra
+                                20% off</span>
+                            <button class="quick-view-btn position-absolute top-0 end-0 m-2 btn btn-light">
+                                <i class="fas fa-eye"></i>
+                            </button>
                         </div>
                         <div class="card-body">
                             <h6 class="card-title fw-bold" style="font-size: 0.8rem;">Nina Ricci</h6>
@@ -649,13 +658,13 @@
             <h2>Oceania</h2>
             <ul>
                 <li data-country="Australia"><button data-country="Australia"><span data-country="Australia"
-                            class="flag-icon country_selector_page_flag flag-icon-au simple"></span> Australia</button>
+                            class="fi country_selector_page_flag fi-au simple"></span> Australia</button>
                     <ul class="datacountry Australia" style="display:none;">
                         <li><a href="https://cycasdor.com/en-au/">ENGLISH</a></li>
                     </ul>
                 </li>
                 <li data-country="New Zealand"><button data-country="New Zealand"><span data-country="New Zealand"
-                            class="flag-icon country_selector_page_flag flag-icon-nz simple"></span> New
+                            class="fi country_selector_page_flag fi-nz simple"></span> New
                         Zealand</button>
                     <ul class="datacountry New Zealand" style="display:none;">
                         <li><a href="https://cycasdor.com/en-nz/">ENGLISH</a></li>
@@ -667,14 +676,14 @@
             <h2>Americas</h2>
             <ul>
                 <li data-country="Canada"><button data-country="Canada"><span data-country="Canada"
-                            class="flag-icon country_selector_page_flag flag-icon-ca simple"></span> Canada</button>
+                            class="fi country_selector_page_flag fi-ca simple"></span> Canada</button>
                     <ul class="datacountry Canada" style="display:none;">
                         <li><a href="https://cycasdor.com/fr-ca/">FRENCH (Canada)</a></li>
                         <li><a href="https://cycasdor.com/en-ca/">ENGLISH (Canada)</a></li>
                     </ul>
                 </li>
                 <li data-country="United States"><button data-country="United States"><span data-country="United States"
-                            class="flag-icon country_selector_page_flag flag-icon-us simple"></span> United
+                            class="fi country_selector_page_flag fi-us simple"></span> United
                         States</button>
                     <ul class="datacountry United States" style="display:none;">
                         <li><a href="https://cycasdor.com/?currency=USD">ENGLISH</a></li>
@@ -686,73 +695,73 @@
             <h2>Europe</h2>
             <ul>
                 <li data-country="Austria"><button data-country="Austria"><span data-country="Austria"
-                            class="flag-icon country_selector_page_flag flag-icon-at simple"></span> Austria</button>
+                            class="fi country_selector_page_flag fi-at simple"></span> Austria</button>
                     <ul class="datacountry Austria" style="display:none;">
                         <li><a href="https://cycasdor.com/de-at/">German Austria</a></li>
                         <li><a href="https://cycasdor.com/en-at/">English</a></li>
                     </ul>
                 </li>
                 <li data-country="Belgium"><button data-country="Belgium"><span data-country="Belgium"
-                            class="flag-icon country_selector_page_flag flag-icon-be simple"></span> Belgium</button>
+                            class="fi country_selector_page_flag fi-be simple"></span> Belgium</button>
                     <ul class="datacountry Belgium" style="display:none;">
                         <li><a href="https://cycasdor.com/fr-be/">French Belgium</a></li>
                         <li><a href="https://cycasdor.com/en-be/">English</a></li>
                     </ul>
                 </li>
                 <li data-country="Croatia"><button data-country="Croatia"><span data-country="Croatia"
-                            class="flag-icon country_selector_page_flag flag-icon-hr simple"></span> Croatia</button>
+                            class="fi country_selector_page_flag fi-hr simple"></span> Croatia</button>
                     <ul class="datacountry Croatia" style="display:none;">
                         <li><a href="https://cycasdor.com/en-hr/">ENGLISH</a></li>
                     </ul>
                 </li>
                 <li data-country="Czech Republic"><button data-country="Czech Republic"><span
-                            data-country="Czech Republic"
-                            class="flag-icon country_selector_page_flag flag-icon-cz simple"></span> Czech
+                            data-country="Czech Republic" class="fi country_selector_page_flag fi-cz simple"></span>
+                        Czech
                         Republic</button>
                     <ul class="datacountry Czech Republic" style="display:none;">
                         <li><a href="https://cycasdor.com/en-cz/">ENGLISH</a></li>
                     </ul>
                 </li>
                 <li data-country="Denmark"><button data-country="Denmark"><span data-country="Denmark"
-                            class="flag-icon country_selector_page_flag flag-icon-dk simple"></span> Denmark</button>
+                            class="fi country_selector_page_flag fi-dk simple"></span> Denmark</button>
                     <ul class="datacountry Denmark" style="display:none;">
                         <li><a href="https://cycasdor.com/da-dk/">Danish</a></li>
                         <li><a href="https://cycasdor.com/en-dk/">English</a></li>
                     </ul>
                 </li>
                 <li data-country="Finland"><button data-country="Finland"><span data-country="Finland"
-                            class="flag-icon country_selector_page_flag flag-icon-fi simple"></span> Finland</button>
+                            class="fi country_selector_page_flag fi-fi simple"></span> Finland</button>
                     <ul class="datacountry Finland" style="display:none;">
                         <li><a href="https://cycasdor.com/en-fi/">ENGLISH</a></li>
                     </ul>
                 </li>
                 <li data-country="France"><button data-country="France"><span data-country="France"
-                            class="flag-icon country_selector_page_flag flag-icon-fr simple"></span> France</button>
+                            class="fi country_selector_page_flag fi-fr simple"></span> France</button>
                     <ul class="datacountry France" style="display:none;">
                         <li><a href="https://cycasdor.com/fr-fr/">French</a></li>
                     </ul>
                 </li>
                 <li data-country="Germany"><button data-country="Germany"><span data-country="Germany"
-                            class="flag-icon country_selector_page_flag flag-icon-de simple"></span> Germany</button>
+                            class="fi country_selector_page_flag fi-de simple"></span> Germany</button>
                     <ul class="datacountry Germany" style="display:none;">
                         <li><a href="https://cycasdor.com/de-de/">German</a></li>
                         <li><a href="https://cycasdor.com/en-de/">English</a></li>
                     </ul>
                 </li>
                 <li data-country="Iceland"><button data-country="Iceland"><span data-country="Iceland"
-                            class="flag-icon country_selector_page_flag flag-icon-is simple"></span> Iceland</button>
+                            class="fi country_selector_page_flag fi-is simple"></span> Iceland</button>
                     <ul class="datacountry Iceland" style="display:none;">
                         <li><a href="https://cycasdor.com/en-is/">ENGLISH</a></li>
                     </ul>
                 </li>
                 <li data-country="Ireland"><button data-country="Ireland"><span data-country="Ireland"
-                            class="flag-icon country_selector_page_flag flag-icon-us simple"></span> Ireland</button>
+                            class="fi country_selector_page_flag fi-us simple"></span> Ireland</button>
                     <ul class="datacountry Ireland" style="display:none;">
                         <li><a href="https://cycasdor.com/en-ie/">ENGLISH</a></li>
                     </ul>
                 </li>
                 <li data-country="Italy"><button data-country="Italy"><span data-country="Italy"
-                            class="flag-icon country_selector_page_flag flag-icon-it simple"></span> Italy</button>
+                            class="fi country_selector_page_flag fi-it simple"></span> Italy</button>
                     <ul class="datacountry Italy" style="display:none;">
                         <li><a href="https://cycasdor.com/it-it/">Italian</a></li>
                         <li><a href="https://cycasdor.com/en-it/">English</a></li>
@@ -765,25 +774,25 @@
                     </ul>
                 </li>
                 <li data-country="Luxembourg"><button data-country="Luxembourg"><span data-country="Luxembourg"
-                            class="flag-icon country_selector_page_flag flag-icon-lu"></span> Luxembourg</button>
+                            class="fi country_selector_page_flag fi-lu"></span> Luxembourg</button>
                     <ul class="datacountry Luxembourg" style="display:none;">
                         <li><a href="https://cycasdor.com/en-lu/">ENGLISH</a></li>
                     </ul>
                 </li>
                 <li data-country="Malta"><button data-country="Malta"><span data-country="Malta"
-                            class="flag-icon country_selector_page_flag flag-icon-mt"></span> Malta</button>
+                            class="fi country_selector_page_flag fi-mt"></span> Malta</button>
                     <ul class="datacountry Malta" style="display:none;">
                         <li><a href="https://cycasdor.com/en-mt/">ENGLISH</a></li>
                     </ul>
                 </li>
                 <li data-country="Monaco"><button data-country="Monaco"><span data-country="Monaco"
-                            class="flag-icon country_selector_page_flag flag-icon-mc"></span> Monaco</button>
+                            class="fi country_selector_page_flag fi-mc"></span> Monaco</button>
                     <ul class="datacountry Monaco" style="display:none;">
                         <li><a href="https://cycasdor.com/en-mc/">ENGLISH</a></li>
                     </ul>
                 </li>
                 <li data-country="Netherlands"><button data-country="Netherlands"><span data-country="Netherlands"
-                            class="flag-icon country_selector_page_flag flag-icon-nl"></span>
+                            class="fi country_selector_page_flag fi-nl"></span>
                         Netherlands</button>
                     <ul class="datacountry Netherlands" style="display:none;">
                         <li><a href="https://cycasdor.com/nl-nl/">Dutch</a></li>
@@ -791,63 +800,62 @@
                     </ul>
                 </li>
                 <li data-country="Norway"><button data-country="Norway"><span data-country="Norway"
-                            class="flag-icon country_selector_page_flag flag-icon-no"></span> Norway</button>
+                            class="fi country_selector_page_flag fi-no"></span> Norway</button>
                     <ul class="datacountry Norway" style="display:none;">
                         <li><a href="https://cycasdor.com/nb-no/">Norwegian (Bokmål)</a></li>
                         <li><a href="https://cycasdor.com/en-no/">English</a></li>
                     </ul>
                 </li>
                 <li data-country="Poland"><button data-country="Poland"><span data-country="Poland"
-                            class="flag-icon country_selector_page_flag flag-icon-pl"></span> Poland</button>
+                            class="fi country_selector_page_flag fi-pl"></span> Poland</button>
                 </li>
                 <li data-country="Portugal"><button data-country="Portugal"><span data-country="Portugal"
-                            class="flag-icon country_selector_page_flag flag-icon-pt"></span> Portugal</button>
+                            class="fi country_selector_page_flag fi-pt"></span> Portugal</button>
                     <ul class="datacountry Portugal" style="display:none;">
                         <li><a href="https://cycasdor.com/en-pt/">ENGLISH</a></li>
                     </ul>
                 </li>
                 <li data-country="Romania"><button data-country="Romania"><span data-country="Romania"
-                            class="flag-icon country_selector_page_flag flag-icon-ro"></span> Romania</button>
+                            class="fi country_selector_page_flag fi-ro"></span> Romania</button>
                     <ul class="datacountry Romania" style="display:none;">
                         <li><a href="https://cycasdor.com/en-ro/">ENGLISH</a></li>
                     </ul>
                 </li>
                 <li data-country="Russia"><button data-country="Russia"><span data-country="Russia"
-                            class="flag-icon country_selector_page_flag flag-icon-ru"></span> Russia</button>
+                            class="fi country_selector_page_flag fi-ru"></span> Russia</button>
                     <ul class="datacountry Russia" style="display:none;">
                         <li><a href="https://cycasdor.com/en-ru/">ENGLISH</a></li>
                     </ul>
                 </li>
                 <li data-country="Slovakia"><button data-country="Slovakia"><span data-country="Slovakia"
-                            class="flag-icon country_selector_page_flag flag-icon-sk"></span> Slovakia</button>
+                            class="fi country_selector_page_flag fi-sk"></span> Slovakia</button>
                     <ul class="datacountry Slovakia" style="display:none;">
                         <li><a href="https://cycasdor.com/en-sk/">ENGLISH</a></li>
                     </ul>
                 </li>
                 <li data-country="Spain"><button data-country="Spain"><span data-country="Spain"
-                            class="flag-icon country_selector_page_flag flag-icon-es"></span> Spain</button>
+                            class="fi country_selector_page_flag fi-es"></span> Spain</button>
                     <ul class="datacountry Spain" style="display:none;">
                         <li><a href="https://cycasdor.com/es-es/">Spanish</a></li>
                         <li><a href="https://cycasdor.com/en-es/">English</a></li>
                     </ul>
                 </li>
                 <li data-country="Sweden"><button data-country="Sweden"><span data-country="Sweden"
-                            class="flag-icon country_selector_page_flag flag-icon-se"></span> Sweden</button>
+                            class="fi country_selector_page_flag fi-se"></span> Sweden</button>
                     <ul class="datacountry Sweden" style="display:none;">
                         <li><a href="https://cycasdor.com/sv-se/">Swedish</a></li>
                         <li><a href="https://cycasdor.com/en-se/">English</a></li>
                     </ul>
                 </li>
                 <li data-country="Switzerland"><button data-country="Switzerland"><span data-country="Switzerland"
-                            class="flag-icon country_selector_page_flag flag-icon-ch"></span>
+                            class="fi country_selector_page_flag fi-ch"></span>
                         Switzerland</button>
                     <ul class="datacountry Switzerland" style="display:none;">
                         <li><a href="https://cycasdor.com/de-ch/">German</a></li>
                     </ul>
                 </li>
                 <li data-country="United Kingdom"><button data-country="United Kingdom"><span
-                            data-country="United Kingdom"
-                            class="flag-icon country_selector_page_flag flag-icon-gb"></span> United
+                            data-country="United Kingdom" class="fi country_selector_page_flag fi-gb"></span> United
                         Kingdom</button>
                     <ul class="datacountry United Kingdom" style="display:none;">
                         <li><a href="https://cycasdor.com/en-gb/">ENGLISH</a></li>
@@ -859,21 +867,21 @@
             <h2>Middle East</h2>
             <ul>
                 <li data-country="Qatar"><button data-country="Qatar"><span data-country="Qatar"
-                            class="flag-icon country_selector_page_flag flag-icon-qa"></span> Qatar</button>
+                            class="fi country_selector_page_flag fi-qa"></span> Qatar</button>
                     <ul class="datacountry Qatar" style="display:none;">
                         <li><a href="https://cycasdor.com/en-qa/">ENGLISH</a></li>
                     </ul>
                 </li>
                 <li data-country="Saudi Arabia"><button data-country="Saudi Arabia"><span data-country="Saudi Arabia"
-                            class="flag-icon country_selector_page_flag flag-icon-sa"></span> Saudi
+                            class="fi country_selector_page_flag fi-sa"></span> Saudi
                         Arabia</button>
                     <ul class="datacountry Saudi Arabia" style="display:none;">
                         <li><a href="https://cycasdor.com/en-sa/">ENGLISH</a></li>
                     </ul>
                 </li>
                 <li data-country="United Arab Emirates"><button data-country="United Arab Emirates"><span
-                            data-country="United Arab Emirates"
-                            class="flag-icon flag-icon-ae country_selector_page_flag"></span> United Arab
+                            data-country="United Arab Emirates" class="fi fi-ae country_selector_page_flag"></span>
+                        United Arab
                         Emirates</button>
                     <ul class="datacountry United Arab Emirates" style="display:none;">
                         <li><a href="https://cycasdor.com/en-ae/">ENGLISH</a></li>
