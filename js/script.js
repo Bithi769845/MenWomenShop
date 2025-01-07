@@ -87,50 +87,9 @@ document.querySelectorAll('.global .dropdown-item').forEach((item) => {
   });
 });
 
-// <!-- Initialize Swiper -->
-var swiper = new Swiper(".mySwiper", {
-  speed: 500,
-  effect: 'fade',
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
-  autoplay: false,
-  loop: true,
-});
-
-//checkout script 
-function selectPayment(element) {
-  const options = document.querySelectorAll('.payment-option');
-  options.forEach(option => option.classList.remove('selected'));
-  element.classList.add('selected');
-}
 
 
 // Product Details
-var minusButton = document.getElementById('minusButton');
-var plusButton = document.getElementById('plusButton');
-var quantity = document.getElementById('quantity');
-
-// Add event listeners only if the elements exist
-if (minusButton && quantity) {
-  minusButton.addEventListener('click', function () {
-    var currentValue = parseInt(quantity.value);
-    if (currentValue > 1) {
-      quantity.value = currentValue - 1;
-    }
-  });
-}
-
-if (plusButton && quantity) {
-  plusButton.addEventListener('click', function () {
-    var currentValue = parseInt(quantity.value);
-    if (currentValue < 10) {
-      quantity.value = currentValue + 1;
-    }
-  });
-}
-
 //Choose your size selector
 // Event listener for selecting size from EU Size list
 document.querySelectorAll('#euSizeList .list-group-item').forEach(function (item) {
@@ -152,39 +111,12 @@ document.querySelectorAll('#manufacturerSizeList .list-group-item').forEach(func
 
 // product image zoom effect
 document.addEventListener("DOMContentLoaded", function () {
-  if (document.querySelector(".product-details")) {
-    // Document selectors
+  const productDetails = document.querySelector(".product-details");
+  if (productDetails) {
     const thumbnailWrapper = document.querySelector(".swiper-wrapper");
     const mainImage = document.querySelector(".mainImage");
 
-    // Check if the necessary elements exist on the page
     if (mainImage && thumbnailWrapper) {
-      // List of images
-      const imageList = [
-        "https://cycasdor.com/wp-content/uploads/2024/05/IMG_82861-scaled-1.jpg",
-        "https://cycasdor.com/wp-content/uploads/2024/05/ed-scaled-1.jpg",
-        "https://cycasdor.com/wp-content/uploads/2024/05/01-scaled-1.jpg",
-        "https://cycasdor.com/wp-content/uploads/2024/09/Lammy-coat-cognac-brown_Cognac-Brown_Schuin-rechts-scaled.jpg",
-        "https://cycasdor.com/wp-content/uploads/2024/09/Lammy-coat-cognac-brown_Cognac-Brown_Front-scaled.jpg",
-        "https://cycasdor.com/wp-content/uploads/2024/09/Lammy-coat-chocolate-dark-brown_Chocolate-Brown_Schuin-rechts-1-scaled.jpg",
-        "https://cycasdor.com/wp-content/uploads/2024/05/LEATHERHYPE-06252020-022-2-scaled-1.jpg",
-        "https://cycasdor.com/wp-content/uploads/2024/05/04-scaled-1.jpg"
-      ];
-
-      // Set the first image to be shown initially
-      mainImage.innerHTML = `<img src="${imageList[0]}" alt="Main Image">`;
-
-      // Generate thumbnail boxes and add them to the carousel
-      imageList.forEach((image, index) => {
-        const child = `<div class="swiper-slide">
-              <div class="thumbnailBox">
-                  <img src="${image}" alt="Thumbnail ${index + 1}">
-              </div>
-          </div>`;
-        thumbnailWrapper.innerHTML += child;
-      });
-
-      // Add click event listener for thumbnails (swiper slides)
       thumbnailWrapper.querySelectorAll(".swiper-slide").forEach((swiperSlide) => {
         swiperSlide.addEventListener("click", (e) => {
           const activeThumbnail = document.querySelector(".thumbnailBox.active");
@@ -192,15 +124,29 @@ document.addEventListener("DOMContentLoaded", function () {
             activeThumbnail.classList.remove("active");
           }
           swiperSlide.querySelector(".thumbnailBox").classList.add("active");
-          const imageSrc = swiperSlide.querySelector("img").getAttribute("src");
-          mainImage.innerHTML = `<img src="${imageSrc}" alt="Main Image">`;
+
+          const imageElement = swiperSlide.querySelector("img");
+          const videoElement = swiperSlide.querySelector("video");
+
+          if (imageElement) {
+            const imageSrc = imageElement.getAttribute("src");
+            mainImage.innerHTML = `<img src="${imageSrc}" alt="Main Image">`;
+          } else if (videoElement) {
+            const videoSrc = videoElement.querySelector("source").getAttribute("src");
+            mainImage.innerHTML = `
+              <video controls style="width: 100%; height: auto;">
+                <source src="${videoSrc}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            `;
+          }
         });
       });
 
-      // Initialize Swiper for horizontal scrolling and 4 images per slide
       const swiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
         slidesPerView: 4,
-        spaceBetween: 5,
+        spaceBetween: 3,
         centeredSlides: true,
         loop: true,
         navigation: {
@@ -210,7 +156,6 @@ document.addEventListener("DOMContentLoaded", function () {
         touchEventsTarget: 'container',
       });
 
-      // Zoom effect on main image
       mainImage.addEventListener("mousemove", (e) => {
         const containerWidth = mainImage.offsetWidth;
         const containerHeight = mainImage.offsetHeight;
@@ -230,7 +175,6 @@ document.addEventListener("DOMContentLoaded", function () {
         image.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
       });
 
-      // Reset zoom effect when mouse leaves
       mainImage.addEventListener("mouseleave", () => {
         const image = mainImage.querySelector("img");
         image.style.transform = "translate(0%, 0%) scale(1)";
@@ -238,6 +182,67 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+// Full screen zoom modal in thumbnail swiper
+$('#FullscreenModal').on('shown.bs.modal', function () {
+  var modelswiper = new Swiper(".mySwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    slidesPerView: 1,
+    spaceBetween: 0,
+    centeredSlides: true,
+  });
+});
+
+// product detaisl suggestion product swiper
+if (document.querySelector(".suggested-section .suggestedSwiper")) {
+
+  var swiper = new Swiper(".suggested-section .suggestedSwiper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    spaceBetween: 5,
+    breakpoints: {
+      768: {
+
+        slidesPerView: 4,
+        spaceBetween: 10,
+      },
+      0: {
+
+        slidesPerView: 2,
+      },
+    },
+  });
+}
+
+// Initialize small Screen gallery Swiper
+if (document.querySelector(".smallScreengallery .SmallGallerySwipper")) {
+  var swiper = new Swiper(".smallScreengallery .SmallGallerySwipper", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    spaceBetween: 10,
+    breakpoints: {
+      768: {
+        slidesPerView: 4, // 4 slides for devices >= 768px
+        spaceBetween: 20,
+      },
+      0: {
+        slidesPerView: 1, // 2 slides for devices < 768px
+        spaceBetween: 10,
+      },
+    },
+  });
+}
 
 // checkout
 (function () {
@@ -306,7 +311,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function selectPayment(paymentMethod) {
   // Hide all payment fields first
-  document.querySelectorAll('.payment-fields').forEach(function(field) {
+  document.querySelectorAll('.payment-fields').forEach(function (field) {
     field.style.display = 'none';
   });
 
