@@ -732,18 +732,17 @@ button.btn.coupon-apply {
 
 .wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #ffffff;
+  flex-direction: row; 
   border-radius: 10px;
+  gap: 20px; 
 }
 
 .mainImage {
   width: 100%;
-  overflow: hidden;
-  border-radius: 10px;
-  cursor: crosshair;
   max-width: 600px;
+  flex-grow: 1;
+  overflow: hidden;
+  cursor: zoom-in;
 }
 
 .mainImage img {
@@ -755,23 +754,22 @@ button.btn.coupon-apply {
 
 .thumbnail {
   width: 100%;
+  height: 450px;
+  max-width: 100px;
   position: relative;
-  margin-top: 20px;
-}
-
-.swiper-container {
-  width: 100%;
   overflow: hidden;
 }
 
-.swiper-wrapper {
-  display: flex;
+.thumbnail .swiper-container {
+  width: 100%;
+  height: 600px; 
 }
 
-.swiper-slide {
-  width: 25%;
-  padding: 5px;
+.thumbnail .swiper-wrapper {
+  display: flex;
+  flex-direction: column; 
 }
+
 
 .thumbnailBox {
   border-radius: 4px;
@@ -791,38 +789,86 @@ button.btn.coupon-apply {
   object-fit: cover;
 }
 
+.thumbnail .swiper-container-vertical .swiper-button-next,
+.thumbnail .swiper-container-vertical .swiper-button-prev {
+  left: 50%;
+  transform: rotate(90deg);
+  transform-origin: left center;
+}
+
+.thumbnail .swiper-container-vertical .swiper-button-prev {
+  top: 10px;
+}
+
+.thumbnail .swiper-container-vertical .swiper-button-next {
+  top: auto;
+  bottom: 10px;
+}
+
 /* Swiper Next and Prev buttons style */
-.swiper-button-next,
-.swiper-button-prev {
+.thumbnail .swiper-button-next,
+.thumbnail .swiper-button-prev {
   cursor: pointer;
 }
 
-.swiper-button-next::after,
+ .swiper-button-next::after,
 .swiper-button-prev::after {
   font-size: 20px;
   color: black;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-  .swiper-slide {
-    width: 33.33%;
-  }
-
-  .mainImage {
-    max-width: 100%;
-  }
+#FullscreenModal .modal-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
-@media (max-width: 576px) {
-  .swiper-slide {
-    width: 50%;
+#FullscreenModal .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+#FullscreenModal .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#FullscreenModal .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+   /* Custom Styles for the Gallery */
+   .smallScreengallery .swiper {
+    width: 100%;
+    height: 100%;
   }
 
-  .mainImage {
-    max-width: 100%;
+  .smallScreengallery .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-}
+
+  .smallScreengallery .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
 
 
 /*===============PRODUCT PAGE=================================*/
