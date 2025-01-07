@@ -383,66 +383,6 @@ form.cdr-search-box {
   }
 }
 
-/*==========MOBILE HERO SECTION ==================*/
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  background-color: #cecece;
-  height: 3px;
-  border-radius: 2px;
-  padding: 0 55px;
-}
-
-.swiper-horizontal>.swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal {
-  top: 0;
-  bottom: auto;
-}
-
-.video-overlay {
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  z-index: 10;
-}
-
-.video-controls {
-  display: flex;
-  gap: 10px;
-}
-
-.shop-btn {
-  background-color: transparent;
-  color: white;
-  border: none;
-  padding: 8px 40px;
-  font-size: 14px;
-  font-weight: bold;
-  cursor: pointer;
-  border: 1px solid #c0c0c0;
-  text-decoration: none;
-}
-
-.mute-btn,
-.play-btn {
-  width: 50px;
-  height: 50px;
-  background-color: #00000080;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 50%;
-  font-size: 16px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
 /* man product about  */
 .men-about .image-box img,
 .men-about .image-box video {
@@ -872,6 +812,9 @@ button.btn.coupon-apply {
 
 
 /*===============PRODUCT PAGE=================================*/
+.cdr-image-gallery .swiper-button-next::after, .cdr-image-gallery .swiper-button-prev::after{
+  color: #ffffff;
+}
 
 .filter-card {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -1217,7 +1160,6 @@ button.btn.coupon-apply {
 .location-lang .close-popup:hover:before,
 .location-back .close-popup:hover:before {
   left: 0;
-  /* Adjust the value as needed */
 }
 
 .location-section ul li button {
@@ -1353,6 +1295,20 @@ button.close-popup-1 {
   font-size: .8rem;
 }
 
+.cdr-product-card .quick-view-btn {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Show the quick-view button on hover */
+.cdr-product-card:hover .quick-view-btn {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
 /*================CUSTOM PEODUCT QUICK VIEW MODAL==================*/
 .custom-modal {
   display: none;
@@ -1451,4 +1407,14 @@ button.close-popup-1 {
 
 .swiper-pagination-bullet { 
   background: #000;
+}
+
+/*=================STYLE INSPIRETION ==================*/
+.style-inspiration img, .style-inspiration video{
+  width: 100%;
+  object-fit: cover;
+}
+
+.style-inspiration .styleInsiration video{
+  height: 575px;
 }

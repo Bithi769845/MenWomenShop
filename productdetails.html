@@ -141,13 +141,13 @@
                                                         alt="Thumbnail 1">
                                                 </div>
                                             </div>
-                                            <div class="swiper-slide">
+                                            <!-- <div class="swiper-slide">
                                                 <div class="thumbnailBox">
-                                                    <video controls style="width: 100%; height: auto;">
+                                                    <video controls style="width: 100%; height: auto">
                                                         <source src="vedio\intro1.mov" type="video/mp4">
                                                     </video>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                             <div class="swiper-slide">
                                                 <div class="thumbnailBox">
                                                     <img src="https://cycasdor.com/wp-content/uploads/2024/05/01-scaled-1.jpg"
@@ -190,9 +190,9 @@
                                     </div>
                                 </div>
 
-                                <div class="d-flex align-items-center justify-content-center btn btn-outline-dark rounded-0 fw-bold mt-1"
+                                <div class="d-flex align-items-center justify-content-center btn btn-outline-dark rounded-0 mt-1"
                                     data-bs-toggle="modal" data-bs-target="#FullscreenModal">
-                                    ZOOM<i class="fa-solid fa-magnifying-glass-plus ms-2 "></i>
+                                    ZOOM<i class="fa-solid fa-magnifying-glass-plus ms-2"></i>
                                 </div>
                             </section>
 
@@ -214,11 +214,11 @@
                                         <img src="https://cycasdor.com/wp-content/uploads/2024/05/IMG_82861-scaled-1.jpg"
                                             alt="Thumbnail 1">
                                     </div>
-                                    <div class="swiper-slide">
-                                        <video controls style="width: 100%; height: auto;">
+                                    <!-- <div class="swiper-slide">
+                                        <video controls style="width: 100%; height: 506px;">
                                             <source src="vedio\intro1.mov" type="video/mp4">
                                         </video>
-                                    </div>
+                                    </div> -->
                                     <div class="swiper-slide" data-bs-toggle="modal" data-bs-target="#FullscreenModal">
                                         <img src="https://cycasdor.com/wp-content/uploads/2024/05/01-scaled-1.jpg"
                                             alt="Thumbnail 3">
@@ -511,229 +511,151 @@
                     </div>
                 </div>
             </div>
-            <!-- Description Section -->
-            <div class="product-description-section mt-5">
-                <h3 class="text-center fw-bold  mt-5">Description</h3>
-                <hr style="width: 100px; " class="mx-auto">
-                <div class=" d-flex flex-column flex-md-row gap-4 justify-content-center ">
-                    <div>
-                        <p class="text-muted">With eye-catching artwork, step-by-step diagrams, and illustrations that
-                            break
-                            down complicated ideas into manageable concepts,
-                            The Science Book will have readers conversant in genetic engineering, black holes, and
-                            global
-                            warming in no time. Along the way
-                            are found mini-biographies of the most well-known scientists, and a glossary of helpful
-                            scientific terms. For students, and students
-                            of the world, there is no better way to explore the fascinating, strange, and mysterious
-                            world
-                            of science than in The Science Book.</p>
+        </div>
+    </section>
+
+    <!-- Style Inspiration -->
+    <section class="style-inspiration mt-5">
+        <div class="container">
+            <h3 class="fs-5 fw-bold">Style Inspiration</h3>
+            <div class="swiper styleInsiration">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <video autoplay loop src="vedio/intro1.mov"></video>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://cycasdor.com/wp-content/uploads/2024/05/IMG_8437-scaled-1.jpg"
+                        alt="styleinspiration2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://cycasdor.com/wp-content/uploads/2024/05/IMG_84131-scaled-1.jpg"
+                        alt="styleinspiration2">
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Description Section -->
+    <section class="product-description-section mt-5">
+        <div class="container">
+            <h3 class="fw-bold fs-5 mt-5">Description</h3>
+            <div class=" d-flex flex-column flex-md-row gap-4 justify-content-center ">
+                <div>
+                    <p class="text-muted">With eye-catching artwork, step-by-step diagrams, and illustrations that
+                        break
+                        down complicated ideas into manageable concepts,
+                        The Science Book will have readers conversant in genetic engineering, black holes, and
+                        global
+                        warming in no time. Along the way
+                        are found mini-biographies of the most well-known scientists, and a glossary of helpful
+                        scientific terms. For students, and students
+                        of the world, there is no better way to explore the fascinating, strange, and mysterious
+                        world
+                        of science than in The Science Book.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Suggested Products Section -->
+    <section class="container mt-5 suggested-section">
+        <h4 class="fs-5">You might also like</h4>
+        <div class="swiper suggestedSwiper product">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card border-0 cdr-product-card">
+                        <div class="image-container position-relative">
+                            <a href="productdetails.html">
+                                <img src="images/cardimage.png" alt="Shoe image" class="first-image card-img-top">
+                                <img src="images/cardimage2.png" alt="Hover image" class="second-image card-img-top">
+                            </a>
+                            <span class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra
+                                20% off</span>
+                            <button class="quick-view-btn position-absolute top-0 end-0 m-2 btn btn-light">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold" style="font-size: 0.8rem;">Nina Ricci</h6>
+                            <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend jumper</p>
+                            <p class="card-text " style="font-size: 0.8rem;">
+                                <span><del>750 €</del></span> -40% <span class="text-danger">1.272 €</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card border-0 cdr-product-card">
+                        <div class="image-container position-relative">
+                            <a href="productdetails.html">
+                                <img src="images/cardimage.png" alt="Shoe image" class="first-image card-img-top">
+                                <img src="images/cardimage2.png" alt="Hover image" class="second-image card-img-top">
+                            </a>
+                            <span class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra
+                                20% off</span>
+                            <button class="quick-view-btn position-absolute top-0 end-0 m-2 btn btn-light">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold" style="font-size: 0.8rem;">Nina Ricci</h6>
+                            <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend jumper</p>
+                            <p class="card-text " style="font-size: 0.8rem;">
+                                <span><del>750 €</del></span> -40% <span class="text-danger">1.272 €</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card border-0 cdr-product-card">
+                        <div class="image-container position-relative">
+                            <a href="productdetails.html">
+                                <img src="images/cardimage.png" alt="Shoe image" class="first-image card-img-top">
+                                <img src="images/cardimage2.png" alt="Hover image" class="second-image card-img-top">
+                            </a>
+                            <span class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra
+                                20% off</span>
+                            <button class="quick-view-btn position-absolute top-0 end-0 m-2 btn btn-light">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold" style="font-size: 0.8rem;">Nina Ricci</h6>
+                            <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend jumper</p>
+                            <p class="card-text " style="font-size: 0.8rem;">
+                                <span><del>750 €</del></span> -40% <span class="text-danger">1.272 €</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card border-0 cdr-product-card">
+                        <div class="image-container position-relative">
+                            <a href="productdetails.html">
+                                <img src="images/cardimage.png" alt="Shoe image" class="first-image card-img-top">
+                                <img src="images/cardimage2.png" alt="Hover image" class="second-image card-img-top">
+                            </a>
+                            <span class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra
+                                20% off</span>
+                            <button class="quick-view-btn position-absolute top-0 end-0 m-2 btn btn-light">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold" style="font-size: 0.8rem;">Nina Ricci</h6>
+                            <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend jumper</p>
+                            <p class="card-text " style="font-size: 0.8rem;">
+                                <span><del>750 €</del></span> -40% <span class="text-danger">1.272 €</span>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Suggested Products Section -->
-            <div class="container mt-5 suggested-section">
-                <h4 class="text-center">You might also like</h4>
-                <hr style="width: 100px; " class="mx-auto  mb-5">
-                <div class="swiper suggestedSwiper product">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="card border-0">
-                                <div class="image-container">
-                                    <a href="productdetails.html">
-                                        <img src="images/cardimage.png" alt="Shoe image"
-                                            class="first-image card-img-top">
-                                        <img src="images/cardimage2.png" alt="Hover image"
-                                            class="second-image card-img-top">
-                                    </a>
-                                    <span
-                                        class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra
-                                        20% off</span>
-                                </div>
-                                <div class="card-body">
-                                    <h6 class="card-title fw-bold" style="font-size: 0.8rem;">Nina Ricci</h6>
-                                    <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend
-                                        jumper</p>
-                                    <p class="card-text " style="font-size: 0.8rem;">
-                                        <span><del>750 €</del></span> -40% <span class="text-danger">1.272
-                                            €</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card border-0">
-                                <div class="image-container">
-                                    <a href="productdetails.html">
-                                        <img src="images/cardimage2.png" alt="Shoe image"
-                                            class="first-image card-img-top">
-                                        <img src="images/cardimage.png" alt="Hover image"
-                                            class="second-image card-img-top">
-                                    </a>
-                                    <span
-                                        class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra
-                                        20% off</span>
-                                </div>
-                                <div class="card-body">
-                                    <h6 class="card-title fw-bold" style="font-size: 0.8rem;">Nina Ricci</h6>
-                                    <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend
-                                        jumper</p>
-                                    <p class="card-text " style="font-size: 0.8rem;">
-                                        <span><del>750 €</del></span> -40% <span class="text-danger">1.272
-                                            €</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card border-0">
-                                <div class="image-container">
-                                    <a href="productdetails.html">
-                                        <img src="images/cardimage.png" alt="Shoe image"
-                                            class="first-image card-img-top">
-                                        <img src="images/cardimage2.png" alt="Hover image"
-                                            class="second-image card-img-top">
-                                    </a>
-                                    <span
-                                        class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra
-                                        20% off</span>
-                                </div>
-                                <div class="card-body">
-                                    <h6 class="card-title fw-bold" style="font-size: 0.8rem;">Nina Ricci</h6>
-                                    <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend
-                                        jumper</p>
-                                    <p class="card-text " style="font-size: 0.8rem;">
-                                        <span><del>750 €</del></span> -40% <span class="text-danger">1.272
-                                            €</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card border-0">
-                                <div class="image-container">
-                                    <a href="productdetails.html">
-                                        <img src="images/cardimage2.png" alt="Shoe image"
-                                            class="first-image card-img-top">
-                                        <img src="images/cardimage.png" alt="Hover image"
-                                            class="second-image card-img-top">
-                                    </a>
-                                    <span
-                                        class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra
-                                        20% off</span>
-                                </div>
-                                <div class="card-body">
-                                    <h6 class="card-title fw-bold" style="font-size: 0.8rem;">Nina Ricci</h6>
-                                    <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend
-                                        jumper</p>
-                                    <p class="card-text " style="font-size: 0.8rem;">
-                                        <span><del>750 €</del></span> -40% <span class="text-danger">1.272
-                                            €</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card border-0">
-                                <div class="image-container">
-                                    <a href="productdetails.html">
-                                        <img src="images/cardimage.png" alt="Shoe image"
-                                            class="first-image card-img-top">
-                                        <img src="images/cardimage2.png" alt="Hover image"
-                                            class="second-image card-img-top">
-                                    </a>
-                                    <span
-                                        class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra
-                                        20% off</span>
-                                </div>
-                                <div class="card-body">
-                                    <h6 class="card-title fw-bold" style="font-size: 0.8rem;">Nina Ricci</h6>
-                                    <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend
-                                        jumper</p>
-                                    <p class="card-text " style="font-size: 0.8rem;">
-                                        <span><del>750 €</del></span> -40% <span class="text-danger">1.272
-                                            €</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card border-0">
-                                <div class="image-container">
-                                    <a href="productdetails.html">
-                                        <img src="images/cardimage2.png" alt="Shoe image"
-                                            class="first-image card-img-top">
-                                        <img src="images/cardimage.png" alt="Hover image"
-                                            class="second-image card-img-top">
-                                    </a>
-                                    <span
-                                        class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra
-                                        20% off</span>
-                                </div>
-                                <div class="card-body">
-                                    <h6 class="card-title fw-bold" style="font-size: 0.8rem;">Nina Ricci</h6>
-                                    <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend
-                                        jumper</p>
-                                    <p class="card-text " style="font-size: 0.8rem;">
-                                        <span><del>750 €</del></span> -40% <span class="text-danger">1.272
-                                            €</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card border-0">
-                                <div class="image-container">
-                                    <a href="productdetails.html">
-                                        <img src="images/cardimage.png" alt="Shoe image"
-                                            class="first-image card-img-top">
-                                        <img src="images/cardimage2.png" alt="Hover image"
-                                            class="second-image card-img-top">
-                                    </a>
-                                    <span
-                                        class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra
-                                        20% off</span>
-                                </div>
-                                <div class="card-body">
-                                    <h6 class="card-title fw-bold" style="font-size: 0.8rem;">Nina Ricci</h6>
-                                    <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend
-                                        jumper</p>
-                                    <p class="card-text " style="font-size: 0.8rem;">
-                                        <span><del>750 €</del></span> -40% <span class="text-danger">1.272
-                                            €</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card border-0">
-                                <div class="image-container">
-                                    <a href="productdetails.html">
-                                        <img src="images/cardimage2.png" alt="Shoe image"
-                                            class="first-image card-img-top">
-                                        <img src="images/cardimage.png" alt="Hover image"
-                                            class="second-image card-img-top">
-                                    </a>
-                                    <span
-                                        class="badge bg-light text-dark position-absolute top-0 start-0 mt-2 rounded-0">Extra
-                                        20% off</span>
-                                </div>
-                                <div class="card-body">
-                                    <h6 class="card-title fw-bold" style="font-size: 0.8rem;">Nina Ricci</h6>
-                                    <p class="card-text" style="font-size: 0.8rem;">bead-embellished wool-blend
-                                        jumper</p>
-                                    <p class="card-text " style="font-size: 0.8rem;">
-                                        <span><del>750 €</del></span> -40% <span class="text-danger">1.272
-                                            €</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>
-            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </section>
 
@@ -742,7 +664,7 @@
         <div class="container">
             <div class="row d-flex align-items-stretch g-3">
                 <div class="col-12 col-md-6 col-lg-4 text-center d-flex">
-                    <div class="card w-100"> <!-- w-100 ensures the card fills the column -->
+                    <div class="card w-100">
                         <div class="pt-3">
                             <i class="fas fa-user fa-2x"></i>
                         </div>
@@ -894,7 +816,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- Modal of image gallery-->
     <div class="modal fade" id="FullscreenModal" tabindex="-1" aria-labelledby="FullscreenModalLabel"
