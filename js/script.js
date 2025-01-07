@@ -99,6 +99,16 @@ var swiper = new Swiper(".mySwiper", {
   loop: true,
 });
 
+var swiper = new Swiper(".mbl-hero-slider", {
+  autoplay: {
+    delay: 9500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
+
 //checkout script 
 function selectPayment(element) {
   const options = document.querySelectorAll('.payment-option');
@@ -306,7 +316,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function selectPayment(paymentMethod) {
   // Hide all payment fields first
-  document.querySelectorAll('.payment-fields').forEach(function(field) {
+  document.querySelectorAll('.payment-fields').forEach(function (field) {
     field.style.display = 'none';
   });
 
@@ -601,3 +611,58 @@ function validateAddressField(field) {
   document.getElementById(field).classList.toggle('is-invalid', !isValid);
   document.getElementById(field).classList.toggle('is-valid', isValid);
 }
+
+//PRODUDT QUICK VIEW
+$(document).ready(function () {
+  const modal = $("#customModal");
+  const modalClose = $(".custom-modal-close");
+
+  // Quick view button click
+  $(".quick-view-btn").on("click", function () {
+    const btn = $(this);
+    const icon = btn.find("i");
+
+    // Change icon to spinner
+    icon.removeClass("fa-eye").addClass("fa-spinner fa-spin");
+
+    // Simulate loading and open modal
+    setTimeout(() => {
+      modal.show(); // Show the modal
+      icon.removeClass("fa-spinner fa-spin").addClass("fa-eye");
+    }, 1000); // Simulated delay
+  });
+
+  $(".size-box").on("click", function () {
+    $(".size-box").removeClass("active");
+
+    $(this).addClass("active");
+
+    const selectedSize = $(this).data("size");
+    $("#selectedSize").text(`Size: ${selectedSize}`);
+  });
+
+  // Close modal
+  modalClose.on("click", function () {
+    modal.hide();
+  });
+
+  $(window).on("click", function (e) {
+    if ($(e.target).is(modal)) {
+      modal.hide();
+    }
+  });
+
+  var swiper = new Swiper(".product-thumbnail", {
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    slidesPerView: 1, 
+    spaceBetween: 10,
+  });
+});
